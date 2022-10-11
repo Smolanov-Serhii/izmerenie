@@ -1,0 +1,103 @@
+.banner{
+  position: relative;
+  &__image{
+    position: absolute;
+    top: 106px;
+    right: 40px;
+  }
+  &__block{
+    min-height: 324px;
+  }
+  &__mask{
+    transition: 1s ease-in-out;
+    -webkit-mask-image: url(../../img/banner/mask.png);
+    mask-image: url(../../img/banner/mask.png);
+    -webkit-mask-position: right top;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: right top;
+    width: 876px;
+    height: 876px;
+    position: relative;
+    img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+      transition: 1s ease-in-out;
+      height: 100%;
+    }
+  }
+  &__decoration{
+    img{
+      position: absolute;
+    }
+    .left{
+      top: 0;
+      left: -131px;
+    }
+    .top{
+      top: 0;
+      left: 466px;
+    }
+    .right{
+      right: 30px;
+      bottom: 173px;
+    }
+  }
+  &__container{
+    height: 100%;
+    padding: 0 136px;
+  }
+  &__content{
+    height: 100%;
+  }
+  .swiper-container{
+    height: 100%;
+    overflow: visible;
+  }
+  &__wrapper{
+    height: 100%;
+  }
+  &__slide{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 101.9%;
+    text-transform: uppercase;
+    color: #213540;
+    margin-bottom: 0;
+    max-width: 770px;
+  }
+  &__button{
+    margin-top: 166px;
+  }
+  .swiper-pagination{
+    position: absolute;
+    left: 0;
+    bottom: 16vh;
+    display: flex;
+    > div{
+      margin-right: 22px;
+      cursor: pointer;
+    }
+  }
+  &__bottom{
+    position: absolute;
+    bottom: 8vh;
+    left: 0;
+    width: calc(100% - 200px);
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6F8C9E;
+  }
+}

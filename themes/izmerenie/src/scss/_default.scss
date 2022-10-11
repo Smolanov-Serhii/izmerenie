@@ -1,0 +1,231 @@
+pre{
+  white-space: break-spaces;
+}
+
+h1{
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  color: #000B44;
+  margin-bottom: 50px;
+  text-align: center;
+  @media all and (max-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 42px;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 32px;
+    margin-bottom: 36px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+  @media all and (max-width: 500px) {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+}
+strong, b{
+  font-weight: 600;
+}
+em{
+  font-style: italic;
+}
+h2{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #616BA0;
+  margin-bottom: 1em;
+  @media all and (max-width: 1200px) {
+    font-size: 22px;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 18px;
+  }
+  @media all and (max-width: 500px) {
+    font-size: 16px;
+  }
+}
+h3{
+  font-weight: 600;
+  font-size: 3.6rem;
+  @media all and (max-width: 1200px) {
+    font-size: 3.2rem;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 2.4rem;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 14px
+  }
+}
+h4{
+  font-weight: 600;
+  font-size: 3rem;
+  @media all and (max-width: 1200px) {
+    font-size: 2.6rem;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 2.2rem;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 12px
+  }
+}
+h5{
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+h6{
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing:0 16px;
+  margin-bottom: 38px;
+  th{
+    font-weight: 400;
+    padding: 19px 26px;
+  }
+  tr{
+
+  }
+  td{
+    font-weight: 400;
+  }
+  th, td{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #616BA0;
+    padding: 26px;
+    text-align: left;
+    @media all and (max-width: 768px){
+      padding: 12px 28px;
+    }
+  }
+  thead{
+    th{
+      padding: 4px 26px;
+    }
+  }
+  tbody{
+    tr{
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      &:nth-child(even){
+        td{
+          background: rgba(230, 232, 241, 0.5);
+        }
+      }
+      td{
+        &:first-child{
+          border-radius: 10px 0 0 10px;
+        }
+        &:last-child{
+          border-radius: 0 10px 10px 0;
+        }
+        border-top: 1px solid #E6E8F1;
+        border-bottom: 1px solid #E6E8F1;
+        &:first-child{
+          border-left: 1px solid #E6E8F1;
+        }
+        &:last-child{
+          border-right: 1px solid #E6E8F1;
+        }
+        img{
+          margin-right: 14px;
+        }
+      }
+      &:nth-child(even){
+
+      }
+    }
+  }
+}
+p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 138.52%;
+  color: #000000;
+  margin-bottom: 36px;
+  @media all and (max-width: 1204px){
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+  @media all and (max-width: 500px){
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+strong{
+  font-weight: 600;
+}
+.text{
+  margin-bottom: 70px;
+  ul{
+    list-style: none;
+  }
+  ol{
+    list-style: decimal;
+  }
+  ul,ol{
+    margin-bottom: 1.2em;
+    padding-left: 0;
+    @media all and (max-width: 500px){
+      margin-bottom: 1em;
+    }
+    li{
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 138.52%;
+      color: #000000;
+      position: relative;
+      padding-left: 30px;
+      @media all and (max-width: 1204px){
+        font-size: 15px;
+        margin-bottom: 28px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+        margin-bottom: 8px;
+        padding-left: 18px;
+      }
+      &::before {
+        content: "";
+        background-color: #00CFFD; /* Change the color */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 5px;
+        height: 5px;
+        margin-right: 24px;
+        border-radius: 50%;
+        margin-bottom: 3px;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        @media all and (max-width: 500px){
+          margin-right: 11px;
+        }
+      }
+    }
+  }
+  a{
+    text-decoration-line: underline;
+    color: #00CFFD;
+  }
+}
+
