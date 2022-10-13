@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 //
 //     var $menu = $(".header");
 //     $(window).scroll(function () {
@@ -102,6 +103,16 @@ $(document).ready(function () {
         $( ".banner .next" ).on( "click", function() {
             let next = $('.swiper-slide-duplicate-next').data('img');
             $('.banner__mask img').attr('src',next);
+        });
+    }
+
+    if ($('#app').length) {
+        // import SwiperGL from 'swiper-gl.esm.js';
+        var section = new Swiper("#app > .swiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
         });
     }
 });
