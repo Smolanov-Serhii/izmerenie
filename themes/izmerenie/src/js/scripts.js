@@ -113,6 +113,10 @@ $(document).ready(function () {
             slidesPerView: 1,
             spaceBetween: 30,
             mousewheel: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
         });
     }
 });

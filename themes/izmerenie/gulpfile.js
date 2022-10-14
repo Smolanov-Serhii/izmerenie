@@ -97,11 +97,11 @@ gulp.task('del', () => {
 
 //Таск для отслеживания изменений в файлах
 gulp.task('watch', () => {
-   browserSync.init({
-      server: {
-         baseDir: "./"
-      }
-   });
+   // browserSync.init({
+   //    server: {
+   //       baseDir: "./"
+   //    }
+   // });
    //Следить за файлами со стилями с нужным расширением
    gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
    //Следить за JS файлами
