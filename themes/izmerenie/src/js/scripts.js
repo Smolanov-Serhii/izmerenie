@@ -113,11 +113,29 @@ $(document).ready(function () {
             slidesPerView: 1,
             spaceBetween: 30,
             mousewheel: true,
+            allowTouchMove: false,
             effect: 'fade',
             fadeEffect: {
                 crossFade: true
             },
         });
+    }
+
+    if ($('section.team').length) {
+        var team = new Swiper("section.team .swiper-container", {
+            slidesPerView: 3,
+            spaceBetween: 60,
+        });
+    }
+
+    if($('.tabs-elements').length){
+        $(".tabs-elements .tabs-nav-item").click(function() {
+            $(".tabs-elements .tabs-nav-item").removeClass("active").eq($(this).index()).addClass("active");
+            $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "flex")
+                .hide()
+                .fadeIn();
+        }).eq(0).addClass("active");
+        $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
     }
 });
 

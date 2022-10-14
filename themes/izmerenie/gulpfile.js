@@ -39,7 +39,7 @@ const scriptFiles = [
    // './src/js/jquery.selectric.js',
    './src/js/swiper-bundle.js',
    // './src/client/js/jquery.mCustomScrollbar.js',
-   // './src/client/js/fresco.min.js',
+   './src/js/fresco.min.js',
    './src/js/scripts.js'
 
 ]

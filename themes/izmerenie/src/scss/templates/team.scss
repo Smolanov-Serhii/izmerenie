@@ -1,0 +1,50 @@
+.team{
+  position: relative;
+  &__decoration{
+    img{
+      position: absolute;
+      z-index: -1;
+    }
+    &-left{
+      top: 51vh;
+      left: -277px;
+    }
+    &-right{
+      top: -1vh;
+      right: -255px;
+    }
+  }
+  &__container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  &__swiper{
+    width: 100%;
+  }
+  .swiper-wrapper{
+    width: 100%;
+  }
+  &__slide{
+    img{
+      width: 100%;
+    }
+    &-img{
+      margin-bottom: 36px;
+    }
+  }
+  &__name{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 139.9%;
+    letter-spacing: 0.04em;
+    color: #213540;
+    margin-bottom: 0;
+  }
+  &__work{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 101.9%;
+    color: #6F8C9E;
+  }
+}

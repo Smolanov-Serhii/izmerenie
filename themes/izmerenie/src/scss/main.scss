@@ -1,6 +1,7 @@
 @import "normalize";
 @import "aos";
 @import "preloader";
+@import "fresco";
 @import "swiper-bundle";
 @import "swiper-gl";
 //@import "selectric";
@@ -36,52 +37,20 @@ main{
   overflow: hidden;
 }
 .padding-right{
-  padding-right: 310px;
-  @media all and (max-width: 1700px){
-    padding-right: 200px;
-  }
-  @media all and (max-width: 1600px){
-    padding-right: 100px;
-  }
-  @media all and (max-width: 1400px){
-    padding-right: 75px;
-  }
-  @media all and (max-width: 1024px){
-    padding-right: 50px;
-  }
-  @media all and (max-width: 768px){
-    padding-right: 35px;
-  }
-  @media all and (max-width: 500px){
-    padding-right: 20px;
-  }
+  padding-right: 136px;
 }
 .padding-left{
-  padding-left: 310px;
-  @media all and (max-width: 1700px){
-    padding-left: 200px;
-  }
-  @media all and (max-width: 1600px){
-    padding-left: 100px;
-  }
-  @media all and (max-width: 1400px){
-    padding-left: 75px;
-  }
-  @media all and (max-width: 1024px){
-    padding-left: 50px;
-  }
-  @media all and (max-width: 768px){
-    padding-left: 35px;
-  }
-  @media all and (max-width: 500px){
-    padding-left: 20px;
-  }
+  padding-left: 136px;
 }
 .main-container{
   max-width: 1920px;
   margin: auto;
   @extend .padding-left;
   @extend .padding-right;
+}
+.vertical-center{
+  //display: flex;
+  //align-items: center;
 }
 .middle-container{
   max-width: 1700px;
@@ -174,6 +143,12 @@ main{
 @import "templates/header";
 @import "templates/preloader";
 @import "templates/banner";
+@import "templates/select";
+@import "templates/power";
+@import "templates/programs";
+@import "templates/person";
+@import "templates/team";
+@import "templates/reviews";
 
 @import "templates/main";
 

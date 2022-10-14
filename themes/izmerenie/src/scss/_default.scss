@@ -191,11 +191,11 @@ strong{
     li{
       margin-bottom: 1.2rem;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 138.52%;
-      color: #000000;
+      color: #213540;
       position: relative;
-      padding-left: 30px;
+      padding-left: 28px;
       @media all and (max-width: 1204px){
         font-size: 15px;
         margin-bottom: 28px;
@@ -207,12 +207,11 @@ strong{
       }
       &::before {
         content: "";
-        background-color: #00CFFD; /* Change the color */
+        background-color: #BFD9EB; /* Change the color */
         display: inline-block; /* Needed to add space between the bullet and the text */
-        width: 5px;
-        height: 5px;
-        margin-right: 24px;
-        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        margin-right: 22px;
         margin-bottom: 3px;
         position: absolute;
         left: 0;

@@ -1,0 +1,83 @@
+.select{
+  position: relative;
+  overflow: hidden;
+  &__decoration{
+    z-index: 3;
+    position: absolute;
+    left: calc(53% + 33px);
+    top: 33px;
+    width: 100%;
+    height: calc(100vh - 66px);
+    display: flex;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    img{
+      height: 100%;
+      width: auto;
+      mix-blend-mode: overlay;
+    }
+  }
+  &__container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__left{
+    width: 53%;
+    padding-top: 115px;
+    padding-bottom: 103px;
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #213540;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    h2, p{
+      z-index: 2;
+      position: relative;
+      color: white;
+    }
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 112.4%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &__button{
+    z-index: 2;
+  }
+  &__video{
+    position: absolute;
+    top: calc(50% - 80px);
+    left: calc(53% + 196px);
+    cursor: pointer;
+    transition: $transition;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}

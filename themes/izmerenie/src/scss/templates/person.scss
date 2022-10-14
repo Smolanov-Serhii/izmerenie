@@ -1,0 +1,42 @@
+.person{
+  position: relative;
+  &__decoration{
+    img{
+      position: absolute;
+      z-index: -1;
+    }
+    &-left{
+      top: 56vh;
+      left: -294px;
+    }
+    &-right{
+      top: 41vh;
+      right: -10px;
+    }
+  }
+  &__container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  &__text{
+    width: calc(50% - 50px);
+  }
+  &__image{
+    width: calc(50% - 50px);
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 101.9%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #213540;
+  }
+}
