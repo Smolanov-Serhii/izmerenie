@@ -128,6 +128,18 @@ $(document).ready(function () {
         });
     }
 
+    if ($('section.reviews').length) {
+        var reviews = new Swiper("section.reviews .swiper-container", {
+            slidesPerView: 2,
+            spaceBetween: 48,
+            loop: true,
+            navigation: {
+                nextEl: "section.reviews .next",
+                prevEl: "section.reviews .prev",
+            },
+        });
+    }
+
     if($('.tabs-elements').length){
         $(".tabs-elements .tabs-nav-item").click(function() {
             $(".tabs-elements .tabs-nav-item").removeClass("active").eq($(this).index()).addClass("active");

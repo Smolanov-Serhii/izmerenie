@@ -1,0 +1,124 @@
+.footer{
+  position: relative;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__top{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__socials{
+    margin-bottom: 40px;
+    a{
+      text-decoration: none;
+      img{
+        margin: -10px;
+      }
+    }
+  }
+  &__form{
+    width: calc(50% - 60px);
+    .wpcf7{
+      width: 100%;
+      .wpcf7-submit{
+        margin-top: 50px;
+      }
+      p{
+        margin-bottom: 16px;
+      }
+      label{
+        div{
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 139.9%;
+          letter-spacing: 0.04em;
+          color: #A0BCC8;
+        }
+        width: 100%;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 139.9%;
+        letter-spacing: 0.04em;
+        color: #A0BCC8;
+        &.phone-line{
+          display: flex;
+          flex-wrap: wrap;
+
+          .wpcf7-form-control-wrap{
+            width: calc(100% - 74px);
+            &.phonetext{
+              width: 74px;
+            }
+            input{
+              margin-top: 0;
+            }
+          }
+          .wpcf7-phonetext{
+            width: 60px;
+          }
+        }
+      }
+      span{
+        width: 100%;
+        display: block;
+        input, textarea{
+          margin-top: 6px;
+          width: 100%;
+          background: #FFFFFF;
+          opacity: 0.5;
+          border: 1px solid #A0BCC8;
+          border-radius: 5px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 139.9%;
+          letter-spacing: 0.04em;
+          color: #213540;
+          padding: 11px 25px;
+        }
+      }
+    }
+  }
+  &__img{
+    width: calc(50% - 60px);
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 101.9%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #213540;
+    margin-bottom: 23px;
+  }
+  &__bottom{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    align-items: center;
+    top: calc(100vh - 38px);
+  }
+  &__copyright{
+    flex: 1;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139.9%;
+    color: #A0BCC8;
+  }
+  &__phone, &__mail{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139.9%;
+    letter-spacing: 0.04em;
+    color: #213540;
+    margin-left: 49px;
+  }
+}
