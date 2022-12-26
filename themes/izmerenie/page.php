@@ -174,43 +174,27 @@ get_header();
             </div>
             <div class="programs__container main-container">
                 <div class="programs__list">
-                    <a href="#" class="programs__list-item">
+                    <?php
+                    $page_children = new WP_Query(array(
+                            'post_type' => 'page',
+                            'post_parent' => 78 // из основного цикла
+                        )
+                    );
+
+                    if($page_children->have_posts()) :
+                        while($page_children->have_posts()): $page_children->the_post();
+                            ?>
+                            <a href="<?php the_permalink();?>" class="programs__list-item">
                                     <span class="programs__list-bg">
-                                        <img src="<?php echo get_template_directory_uri() . '/img/programs/bg1.jpg'; ?>" alt="">
+                                        <?php the_post_thumbnail(); ?>
                                     </span>
-                        Организационные
-                        программы
-                    </a>
-                    <a href="#" class="programs__list-item">
-                                    <span class="programs__list-bg">
-                                        <img src="<?php echo get_template_directory_uri() . '/img/programs/bg2.jpg'; ?>" alt="">
-                                    </span>
-                        Управленческие программы
-                    </a>
-                    <a href="#" class="programs__list-item">
-                                    <span class="programs__list-bg">
-                                        <img src="<?php echo get_template_directory_uri() . '/img/programs/bg3.jpg'; ?>" alt="">
-                                    </span>
-                        Лидерские программы
-                    </a>
-                    <a href="#" class="programs__list-item">
-                                    <span class="programs__list-bg">
-                                        <img src="<?php echo get_template_directory_uri() . '/img/programs/bg4.jpg'; ?>" alt="">
-                                    </span>
-                        Командные программы
-                    </a>
-                    <a href="#" class="programs__list-item">
-                                    <span class="programs__list-bg">
-                                        <img src="<?php echo get_template_directory_uri() . '/img/programs/bg5.jpg'; ?>" alt="">
-                                    </span>
-                        Менторские программы
-                    </a>
-                    <a href="#" class="programs__list-item">
-                                    <span class="programs__list-bg">
-                                        <img src="<?php echo get_template_directory_uri() . '/img/programs/bg6.jpg'; ?>" alt="">
-                                    </span>
-                        Самостоятельные программы
-                    </a>
+                                <?php the_title(); ?>
+                            </a>
+                        <?php
+                        endwhile;
+                    endif;
+                    wp_reset_query(); //обнуляем запрос
+                    ?>
                 </div>
             </div>
         </section>
