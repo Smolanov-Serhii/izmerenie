@@ -6,7 +6,9 @@
   height: 100vh;
   background: #FFFFFF;
   box-shadow: 0px 0px 173px rgba(191, 217, 235, 0.19);
-  padding: 35px 40px;
+  &__container{
+    padding: 35px 40px;
+  }
   z-index: 50;
   &__branding{
     margin-bottom: 66px;
@@ -38,9 +40,60 @@
       }
     }
   }
+  #primary-menu{
+    > .menu-item{
+      padding-right: 40px;
+      padding-left: 40px;
+      &:hover{
+        .sub-menu{
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
   &__nav{
     .menu-item{
       margin-bottom: 32px;
+      position: relative;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .sub-menu{
+        opacity: 0;
+        pointer-events: 0;
+        transition: $transition;
+        position: absolute;
+        left: 222px;
+        top: -44px;
+        background-color: white;
+        padding: 44px 0;
+        border: 1px solid rgba(191, 217, 235, 0.5);
+        box-shadow: 0px 0px 47px rgba(191, 217, 235, 0.19);
+        border-radius: 11px;
+        > .menu-item{
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+        &:before{
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border: 0 solid transparent;
+          border-top-width: 12px;
+          border-bottom-width: 12px;
+          border-right: 22px solid white;
+          position: absolute;
+          left: -22px;
+        }
+      }
+      &.noclick{
+        a{
+          pointer-events: auto;
+          cursor: pointer;
+        }
+      }
       a{
         font-weight: 600;
         font-size: 18px;

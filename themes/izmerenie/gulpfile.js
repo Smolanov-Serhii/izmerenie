@@ -38,6 +38,7 @@ const scriptFiles = [
    // './src/js/feedback.js',
    // './src/js/jquery.selectric.js',
    './src/js/swiper-bundle.js',
+   './src/js/jquery.onepage-scroll.js',
    // './src/client/js/jquery.mCustomScrollbar.js',
    './src/js/fresco.min.js',
    './src/js/scripts.js'

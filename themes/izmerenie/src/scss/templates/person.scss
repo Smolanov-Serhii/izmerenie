@@ -21,6 +21,16 @@
     justify-content: space-between;
     height: 100vh;
   }
+  &__item{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 225vw * $px 0;
+    &:nth-child(even){
+      flex-direction: row-reverse;
+    }
+  }
   &__text{
     width: calc(50% - 50px);
   }

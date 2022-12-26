@@ -38,6 +38,16 @@
       display: flex;
       align-items: center;
       color: #FFFFFF;
+      &:hover{
+        .programs__list-bg{
+          &:before{
+            opacity: 0;
+          }
+        }
+        img{
+          filter: grayscale(0%);
+        }
+      }
     }
     &-bg{
       position: absolute;
@@ -58,12 +68,14 @@
         content: "";
         display: block;
         z-index: 1;
+        transition: $transition;
       }
       img{
         object-fit: cover;
         width: 100%;
         height: 100%;
         filter: grayscale(100%);
+        transition: $transition;
       }
     }
   }

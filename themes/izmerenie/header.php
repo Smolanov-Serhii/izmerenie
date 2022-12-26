@@ -39,12 +39,12 @@
 </div>
 <?php wp_body_open(); ?>
 <header id="header" class="header">
-    <div class="header__branding">
+    <div class="header__branding header__container">
         <?php
         the_custom_logo();
         ?>
     </div>
-    <ul class="header__language">
+    <ul class="header__language header__container">
         <?php
         pll_the_languages();
         ?>
@@ -59,7 +59,7 @@
         );
         ?>
     </nav>
-    <div class="header__soc">
+    <div class="header__soc header__container">
         <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/fb.svg" width="24" height="24" alt="facebook"> </a>
         <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/youtube.svg" width="24" height="24" alt="youtube"> </a>
         <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/li.svg" width="24" height="24" alt="linkedin"> </a>

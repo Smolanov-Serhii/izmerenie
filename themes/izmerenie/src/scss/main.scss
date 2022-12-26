@@ -50,8 +50,8 @@ main{
   @extend .padding-right;
 }
 .vertical-center{
-  //display: flex;
-  //align-items: center;
+  display: flex;
+  align-items: center;
 }
 .middle-container{
   max-width: 1700px;
@@ -112,6 +112,15 @@ main{
 .height-section{
   height: 100vh;
 }
+.page-title{
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 101.9%;
+  text-transform: uppercase;
+  color: #213540;
+}
 .section-title{
   font-weight: 800;
   font-size: 48px;
@@ -148,6 +157,7 @@ main{
     font-size: 14px;
   }
 }
+@import "templates/onepage-scroll";
 @import "templates/header";
 @import "templates/preloader";
 @import "templates/banner";

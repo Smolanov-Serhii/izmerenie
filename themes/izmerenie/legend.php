@@ -18,7 +18,7 @@ get_header();
 $post_id = get_the_ID();
 ?>
 <main id="main" class="main">
-    <section class="legend-page">
+    <section class="legend-page height-section">
         <div class="legend-page__container main-container">
             <h1 class="legend-page__title page-title">
                 <?php echo the_field("zagolovok", $post_id); ?>
@@ -32,6 +32,7 @@ $post_id = get_the_ID();
             </a>
         </div>
     </section>
+
 </main>
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri() . '/dist/js/main.js'; ?>"></script>

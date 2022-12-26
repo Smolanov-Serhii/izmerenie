@@ -16,7 +16,7 @@
 get_header();
 ?>
     <main id="main" class="main">
-        <section class="banner height-section">
+        <section class="banner height-section scroll-section">
             <div class="banner__decoration">
                 <img class="left" src="<?php echo get_template_directory_uri(); ?>/img/banner/left.svg" alt="decoration">
                 <img class="top" src="<?php echo get_template_directory_uri(); ?>/img/banner/top.svg" alt="decoration">
@@ -76,7 +76,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="select height-section">
+        <section class="select height-section scroll-section">
             <div class="select__decoration">
                 <img src="<?php echo get_template_directory_uri() . '/img/select/dec.svg'; ?>" alt="decoration">
             </div>
@@ -103,7 +103,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="power height-section vertical-center">
+        <section class="power height-section vertical-center scroll-section">
             <div class="power__decoration">
                 <img class="power__decoration-left" src="<?php echo get_template_directory_uri() . '/img/power/dec-left.svg'; ?>" alt="decoration">
                 <img class="power__decoration-right" src="<?php echo get_template_directory_uri() . '/img/power/dec-right.svg'; ?>" alt="decoration">
@@ -167,7 +167,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="programs height-section vertical-center">
+        <section class="programs height-section vertical-center scroll-section">
             <div class="programs__decoration">
                 <img class="programs__decoration-left" src="<?php echo get_template_directory_uri() . '/img/programs/dec-left.svg'; ?>" alt="decoration">
                 <img class="programs__decoration-right" src="<?php echo get_template_directory_uri() . '/img/programs/dec-right.svg'; ?>" alt="decoration">
@@ -214,7 +214,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="person height-section vertical-center">
+        <section class="person height-section vertical-center scroll-section">
             <div class="person__decoration">
                 <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
                 <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
@@ -239,7 +239,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="team height-section vertical-center">
+        <section class="team height-section vertical-center scroll-section">
             <div class="team__decoration">
                 <img class="team__decoration-left" src="<?php echo get_template_directory_uri() . '/img/team/dec-left.svg'; ?>" alt="decoration">
                 <img class="team__decoration-right" src="<?php echo get_template_directory_uri() . '/img/team/dec-right.svg'; ?>" alt="decoration">
@@ -290,7 +290,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="reviews height-section vertical-center">
+        <section class="reviews height-section vertical-center scroll-section">
             <div class="reviews__decoration">
                 <img class="reviews__decoration-left" src="<?php echo get_template_directory_uri() . '/img/reviews/dec-left.svg'; ?>" alt="decoration">
                 <img class="reviews__decoration-right" src="<?php echo get_template_directory_uri() . '/img/reviews/dec-right.svg'; ?>" alt="decoration">
@@ -360,6 +360,26 @@ get_header();
         ?>
     </main>
 <?php wp_footer(); ?>
-<script src="<?php echo get_template_directory_uri() . '/dist/js/main.js'; ?>"></script>
+<a href="#" class="to-up">
+    <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_381_1971)">
+            <rect x="23" y="19" width="60" height="60" rx="30" fill="#A0BCC8"/>
+        </g>
+        <rect x="61.9707" y="50.4854" width="2" height="12" rx="1" transform="rotate(135 61.9707 50.4854)" fill="white"/>
+        <rect x="53.4854" y="42.0001" width="2" height="12" rx="1" transform="rotate(45 53.4854 42.0001)" fill="white"/>
+        <defs>
+            <filter id="filter0_d_381_1971" x="0" y="0" width="106" height="106" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="11.5"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 0.73 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_381_1971"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_381_1971" result="shape"/>
+            </filter>
+        </defs>
+    </svg>
+</a>
 </body>
 </html>
