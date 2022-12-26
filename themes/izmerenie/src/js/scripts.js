@@ -106,20 +106,20 @@ $(document).ready(function () {
         });
     }
 
-    if ($('#app').length) {
-        // import SwiperGL from 'swiper-gl.esm.js';
-        var section = new Swiper("#app > .swiper", {
-            direction: "vertical",
-            slidesPerView: 1,
-            spaceBetween: 30,
-            mousewheel: true,
-            allowTouchMove: false,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
-        });
-    }
+    // if ($('#app').length) {
+    //     // import SwiperGL from 'swiper-gl.esm.js';
+    //     var section = new Swiper("#app > .swiper", {
+    //         direction: "vertical",
+    //         slidesPerView: 1,
+    //         spaceBetween: 30,
+    //         mousewheel: true,
+    //         allowTouchMove: false,
+    //         effect: 'fade',
+    //         fadeEffect: {
+    //             crossFade: true
+    //         },
+    //     });
+    // }
 
     if ($('section.team').length) {
         var team = new Swiper("section.team .swiper-container", {

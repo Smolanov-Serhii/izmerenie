@@ -25,6 +25,8 @@ body{
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
 }
 .locked{
   overflow: hidden;
@@ -34,7 +36,6 @@ img{
 }
 main{
   flex: 1;
-  overflow: hidden;
 }
 .padding-right{
   padding-right: 136px;
