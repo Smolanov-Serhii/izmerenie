@@ -94,7 +94,7 @@ get_header();
                             Эта легенда помогла нам понять, кто мы, как мы хотим работать и что должны делать. Тогда мы еще не знали, что судьба так сложится, что нам придется стать частью этой истории и воплощать ее.</p>
                         <p>Если вы хотите понять, что для нас важно и чем мы отличаемся от других, узнайте об этой легенде, которая сопровождает нашу деятельность уже более двадцати лет.</p>
                     </div>
-                    <a class="button red-button select__button" href="#"><span>Подробнее</span></a>
+                    <a class="button red-button select__button" href="<?php echo get_home_url() . '/legend'; ?>"><span>Подробнее</span></a>
                 </div>
                 <div class="select__video">
                     <div class="select__video-btn fresco" href="https://www.youtube.com/watch?v=4IHa7cL8l-c&ab_channel=%D0%9D%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8.LIVE">
