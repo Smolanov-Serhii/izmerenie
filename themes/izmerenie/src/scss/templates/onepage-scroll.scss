@@ -4,6 +4,10 @@ body, html {
   -webkit-transition: opacity 400ms;
   -moz-transition: opacity 400ms;
   transition: opacity 400ms;
+  &.non-scroll{
+    height: auto!important;
+    overflow: auto;
+  }
 }
 
 body, .onepage-wrapper, html {

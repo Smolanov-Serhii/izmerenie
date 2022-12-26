@@ -16,7 +16,7 @@
 get_header();
 ?>
 <main id="main" class="main">
-    <section class="team-page height-section vertical-center">
+    <section class="team-page height-section vertical-center scroll-section">
         <div class="team-page__container main-container">
             <h1 class="team-page__title page-title">
                 Команда
@@ -34,7 +34,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="person height-section vertical-center">
+    <section class="person height-section vertical-center scroll-section">
         <div class="person__decoration">
             <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
             <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
@@ -59,44 +59,14 @@ get_header();
                     <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
                 </div>
             </div>
-            <div class="person__item">
-                <div class="person__text">
-                    <h2 class="person__title section-title">
-                        Виктория журавлева
-                    </h2>
-                    <div class="person__content text">
-                        <ul>
-                            <li>Основатель и управляющий партнер компании с 2001 года</li>
-                            <li>Консультант по управлению и организационному развитию</li>
-                            <li>Автор и ведущая Менторских программ</li>
-                            <li>Преподадватель МВА</li>
-                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="person__image">
-                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
-                </div>
-            </div>
-            <div class="person__item">
-                <div class="person__text">
-                    <h2 class="person__title section-title">
-                        Виктория журавлева
-                    </h2>
-                    <div class="person__content text">
-                        <ul>
-                            <li>Основатель и управляющий партнер компании с 2001 года</li>
-                            <li>Консультант по управлению и организационному развитию</li>
-                            <li>Автор и ведущая Менторских программ</li>
-                            <li>Преподадватель МВА</li>
-                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="person__image">
-                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
-                </div>
-            </div>
+        </div>
+    </section>
+    <section class="person height-section vertical-center scroll-section">
+        <div class="person__decoration">
+            <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
+            <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
+        </div>
+        <div class="person__container main-container">
             <div class="person__item">
                 <div class="person__text">
                     <h2 class="person__title section-title">
@@ -118,6 +88,61 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="person height-section vertical-center scroll-section">
+        <div class="person__decoration">
+            <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
+            <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
+        </div>
+        <div class="person__container main-container">
+            <div class="person__item">
+                <div class="person__text">
+                    <h2 class="person__title section-title">
+                        Виктория журавлева
+                    </h2>
+                    <div class="person__content text">
+                        <ul>
+                            <li>Основатель и управляющий партнер компании с 2001 года</li>
+                            <li>Консультант по управлению и организационному развитию</li>
+                            <li>Автор и ведущая Менторских программ</li>
+                            <li>Преподадватель МВА</li>
+                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="person__image">
+                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="person height-section vertical-center scroll-section">
+        <div class="person__decoration">
+            <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
+            <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
+        </div>
+        <div class="person__container main-container">
+            <div class="person__item">
+                <div class="person__text">
+                    <h2 class="person__title section-title">
+                        Виктория журавлева
+                    </h2>
+                    <div class="person__content text">
+                        <ul>
+                            <li>Основатель и управляющий партнер компании с 2001 года</li>
+                            <li>Консультант по управлению и организационному развитию</li>
+                            <li>Автор и ведущая Менторских программ</li>
+                            <li>Преподадватель МВА</li>
+                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="person__image">
+                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri() . '/dist/js/main.js'; ?>"></script>

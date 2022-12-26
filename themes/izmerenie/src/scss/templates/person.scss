@@ -1,5 +1,10 @@
 .person{
   position: relative;
+  &:nth-child(even){
+    .person__item{
+      flex-direction: row-reverse;
+    }
+  }
   &__decoration{
     img{
       position: absolute;
@@ -27,9 +32,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 225vw * $px 0;
-    &:nth-child(even){
-      flex-direction: row-reverse;
-    }
   }
   &__text{
     width: calc(50% - 50px);

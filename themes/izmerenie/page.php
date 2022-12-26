@@ -360,7 +360,7 @@ get_header();
         ?>
     </main>
 <?php wp_footer(); ?>
-<a href="#" class="to-up">
+<a href="#main" class="to-up">
     <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_381_1971)">
             <rect x="23" y="19" width="60" height="60" rx="30" fill="#A0BCC8"/>

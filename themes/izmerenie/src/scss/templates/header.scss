@@ -48,6 +48,7 @@
         .sub-menu{
           opacity: 1;
           pointer-events: all;
+          visibility: visible;
         }
       }
     }
@@ -71,9 +72,13 @@
         border: 1px solid rgba(191, 217, 235, 0.5);
         box-shadow: 0px 0px 47px rgba(191, 217, 235, 0.19);
         border-radius: 11px;
+        visibility: hidden;
         > .menu-item{
           padding-right: 40px;
           padding-left: 40px;
+          a{
+            white-space: nowrap;
+          }
         }
         &:before{
           content: "";

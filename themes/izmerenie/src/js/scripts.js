@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
 //
 //     var $menu = $(".header");
 //     $(window).scroll(function () {
@@ -135,6 +136,11 @@ $(document).ready(function () {
         direction: "vertical"
 
     });
+    if($('.to-up').length){
+        $(".to-up").click(function() {
+            $(".main").moveUp(1);
+        })
+    }
 
     jQuery('a.noclick').on('click', function (e) {
         e.preventDefault();
