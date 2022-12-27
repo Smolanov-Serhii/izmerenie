@@ -46,6 +46,7 @@ main{
 .main-container{
   max-width: 1920px;
   margin: auto;
+  width: 100%;
   @extend .padding-left;
   @extend .padding-right;
 }
