@@ -114,55 +114,49 @@ get_header();
                 </h2>
                 <div class="power__container main-container tabs-elements">
                     <div class="power__nav">
-                        <div class="power__nav-item tabs-nav-item">
-                            Сила духа
-                            <span class="arrow"></span>
-                            <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17155 0.496976L4.35353 4.38589C4.54879 4.62453 4.54879 5.01145 4.35353 5.25009L1.17155 9.13901C0.976284 9.37765 0.659702 9.37765 0.46444 9.13901C0.269178 8.90037 0.269178 8.51345 0.46444 8.27481L3.29287 4.81799L0.46444 1.36118C0.269178 1.12254 0.269178 0.735619 0.46444 0.496976C0.659702 0.258332 0.976284 0.258332 1.17155 0.496976Z" fill="#213540"/>
-                            </svg>
+                        <?php
+                        $page_children = new WP_Query(array(
+                                'post_type' => 'page',
+                                'post_parent' => 140 // из основного цикла
+                            )
+                        );
 
-                        </div>
-                        <div class="power__nav-item tabs-nav-item">
-                            Сила мышления
-                            <span class="arrow"></span>
-                            <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17155 0.496976L4.35353 4.38589C4.54879 4.62453 4.54879 5.01145 4.35353 5.25009L1.17155 9.13901C0.976284 9.37765 0.659702 9.37765 0.46444 9.13901C0.269178 8.90037 0.269178 8.51345 0.46444 8.27481L3.29287 4.81799L0.46444 1.36118C0.269178 1.12254 0.269178 0.735619 0.46444 0.496976C0.659702 0.258332 0.976284 0.258332 1.17155 0.496976Z" fill="#213540"/>
-                            </svg>
-
-                        </div>
-                        <div class="power__nav-item tabs-nav-item">
-                            Сила эмоций
-                            <span class="arrow"></span>
-                            <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17155 0.46444L4.35353 3.64642C4.54879 3.84168 4.54879 4.15826 4.35353 4.35353L1.17155 7.53551C0.976284 7.73077 0.659702 7.73077 0.46444 7.53551C0.269178 7.34025 0.269178 7.02366 0.46444 6.8284L3.29287 3.99997L0.46444 1.17155C0.269178 0.976284 0.269178 0.659702 0.46444 0.46444C0.659702 0.269178 0.976284 0.269178 1.17155 0.46444Z" fill="#213540"/>
-                            </svg>
-                        </div>
-                        <div class="power__nav-item tabs-nav-item">
-                            Сила поступков
-                            <span class="arrow"></span>
-                            <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17155 0.496976L4.35353 4.38589C4.54879 4.62453 4.54879 5.01145 4.35353 5.25009L1.17155 9.13901C0.976284 9.37765 0.659702 9.37765 0.46444 9.13901C0.269178 8.90037 0.269178 8.51345 0.46444 8.27481L3.29287 4.81799L0.46444 1.36118C0.269178 1.12254 0.269178 0.735619 0.46444 0.496976C0.659702 0.258332 0.976284 0.258332 1.17155 0.496976Z" fill="#213540"/>
-                            </svg>
-
-                        </div>
+                        if($page_children->have_posts()) :
+                            while($page_children->have_posts()): $page_children->the_post();
+                                ?>
+                                <div class="power__nav-item tabs-nav-item">
+                                    <?php the_title(); ?>
+                                    <span class="arrow"></span>
+                                    <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17155 0.496976L4.35353 4.38589C4.54879 4.62453 4.54879 5.01145 4.35353 5.25009L1.17155 9.13901C0.976284 9.37765 0.659702 9.37765 0.46444 9.13901C0.269178 8.90037 0.269178 8.51345 0.46444 8.27481L3.29287 4.81799L0.46444 1.36118C0.269178 1.12254 0.269178 0.735619 0.46444 0.496976C0.659702 0.258332 0.976284 0.258332 1.17155 0.496976Z" fill="#213540"/>
+                                    </svg>
+                                </div>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query(); //обнуляем запрос
+                        ?>
                     </div>
                     <div class="power__content">
-                        <div class="power__content-item tabs-content-item">
-                            <p>«4 силы» – это то, что делает любую компанию мощной, результативной и сбалансированной. В определенной степени «4 силы» - это идеал, мечта, видение, которым должны вдохновляться лидеры, стремящиеся сделать свой бизнес, способным изменять мир к лучшему.</p>
-                            <p>Достаточно распространенная метафора, в которой организацию наделяют человеческими качествами и придают ей человеческие свойства. Это имеет смысл.</p>
-                            <p>У многих из нас есть опыт взаимодействия с честными и порядочными людьми, высокие стандарты которых мы можем ощущать, работая с ними рядом. Их сила духа поражает и вдохновляет.</p>
-                            <p>Но мы знаем, и то, что люди могут быть циничными и беспринципными.</p>
-                            <a class="button red-button power__button" href="#"><span>Больше</span></a>
-                        </div>
-                        <div class="power__content-item tabs-content-item">
-                            2
-                        </div>
-                        <div class="power__content-item tabs-content-item">
-                            3
-                        </div>
-                        <div class="power__content-item tabs-content-item">
-                            4
-                        </div>
+                        <?php
+                        $page_children = new WP_Query(array(
+                                'post_type' => 'page',
+                                'post_parent' => 140 // из основного цикла
+                            )
+                        );
+                        $post_id = get_the_ID();
+                        if($page_children->have_posts()) :
+                            while($page_children->have_posts()): $page_children->the_post();
+                                ?>
+                                <div class="power__content-item tabs-content-item">
+                                    <?php echo the_field("korotkyj_opys_dlya_golovnoyi_storinky"); ?>
+                                    <a class="button red-button power__button" href="<?php the_permalink();?>"><span>Больше</span></a>
+                                </div>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query(); //обнуляем запрос
+                        ?>
                     </div>
                 </div>
             </div>
