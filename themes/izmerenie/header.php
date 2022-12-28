@@ -40,29 +40,39 @@
 </div>
 <?php wp_body_open(); ?>
 <header id="header" class="header">
-    <div class="header__branding header__container">
-        <?php
-        the_custom_logo();
-        ?>
+    <div class="header__mobile main-container">
+        <img class="header__mobile-logo" src="<?php echo get_template_directory_uri() . '/img/header/logo-mobile.svg'; ?>" alt="logo-mobile">
+        <div class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-    <ul class="header__language header__container">
-        <?php
-        pll_the_languages();
-        ?>
-    </ul>
-    <nav id="header__nav" class="header__nav">
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'Aside-menu',
-                'menu_id'        => 'primary-menu',
-            )
-        );
-        ?>
-    </nav>
-    <div class="header__soc header__container">
-        <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/fb.svg" width="24" height="24" alt="facebook"> </a>
-        <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/youtube.svg" width="24" height="24" alt="youtube"> </a>
-        <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/li.svg" width="24" height="24" alt="linkedin"> </a>
+    <div class="header__wrapper">
+        <div class="header__branding header__container">
+            <?php
+            the_custom_logo();
+            ?>
+        </div>
+        <ul class="header__language header__container">
+            <?php
+            pll_the_languages();
+            ?>
+        </ul>
+        <nav id="header__nav" class="header__nav">
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'Aside-menu',
+                    'menu_id'        => 'primary-menu',
+                )
+            );
+            ?>
+        </nav>
+        <div class="header__soc header__container">
+            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/fb.svg" width="24" height="24" alt="facebook"> </a>
+            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/youtube.svg" width="24" height="24" alt="youtube"> </a>
+            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/li.svg" width="24" height="24" alt="linkedin"> </a>
+        </div>
     </div>
 </header>

@@ -1,12 +1,43 @@
 .banner{
   position: relative;
+  @media all and (max-width: 768px){
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 97px;
+    align-items: center;
+    height: 100vh;
+  }
+  @media all and (max-width: 500px){
+
+  }
   &__image{
     position: absolute;
     top: 106px;
     right: 40px;
+    @media all and (max-width: 1720px){
+      width: 49vw;
+    }
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+      position: static;
+      width: 90%;
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
   &__block{
     min-height: 324px;
+    @media all and (max-width: 1024px){
+      display: flex;
+      align-items: flex-end;
+      min-height: auto;
+    }
   }
   &__mask{
     transition: 1s ease-in-out;
@@ -19,6 +50,23 @@
     width: 876px;
     height: 876px;
     position: relative;
+    @media all and (max-width: 1720px){
+      width: 100%;
+    }
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+      height: auto;
+    }
+    @media all and (max-width: 768px){
+      -webkit-mask-position: center;
+      mask-position: center;
+      left: 15px;
+    }
+    @media all and (max-width: 500px){
+      left: 8px;
+    }
     img{
       position: absolute;
       top: 0;
@@ -26,6 +74,18 @@
       width: auto;
       transition: 1s ease-in-out;
       height: 100%;
+      @media all and (max-width: 1400px){
+
+      }
+      @media all and (max-width: 1024px){
+        position: static;
+      }
+      @media all and (max-width: 768px){
+
+      }
+      @media all and (max-width: 500px){
+
+      }
     }
   }
   &__decoration{
@@ -47,6 +107,10 @@
   }
   &__container{
     height: 100vh;
+    @media all and (max-width: 768px){
+      height: auto;
+      flex: 1;
+    }
   }
   &__content{
     height: 100%;
@@ -68,21 +132,51 @@
   }
   &__title{
     font-weight: 900;
-    font-size: 60px;
+    font-size: 6rem;
     line-height: 101.9%;
     text-transform: uppercase;
     color: #213540;
     margin-bottom: 0;
     max-width: 770px;
+    @media all and (max-width: 1400px){
+      font-size: 50px;
+    }
+    @media all and (max-width: 1024px){
+      font-size: 40px;
+    }
+    @media all and (max-width: 768px){
+      font-size: 30px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 24px;
+      br{
+        display: none;
+      }
+    }
   }
   &__button{
-    margin-top: 166px;
+    margin-top: 16vh;
+    @media all and (max-width: 1024px){
+      margin-top: 40px;
+    }
+    @media all and (max-width: 500px){
+      width: 100%;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+    }
   }
   .swiper-pagination{
     position: absolute;
     left: 0;
-    bottom: 16vh;
+    bottom: 7vh;
     display: flex;
+    @media all and (max-width: 1024px){
+      bottom: 3vh;
+    }
+    @media all and (max-width: 768px){
+      width: 100%;
+      justify-content: center;
+    }
     > div{
       margin-right: 22px;
       cursor: pointer;
@@ -98,5 +192,8 @@
     font-size: 14px;
     line-height: 19px;
     color: #6F8C9E;
+    @media all and (max-width: 768px){
+      display: none;
+    }
   }
 }

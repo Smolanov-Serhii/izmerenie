@@ -20,10 +20,10 @@ html{
   font-size: 10px;
   font-weight: 400;
   @media all and (max-width: 1400px){
-
+    font-size: 90%;
   }
   @media all and (max-width: 1024px){
-
+    font-size: 80%;
   }
   @media all and (max-width: 768px){
 
@@ -51,9 +51,33 @@ main{
 }
 .padding-right{
   padding-right: 136px;
+  @media all and (max-width: 1400px){
+    padding-right: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-right: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-right: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-right: 20px;
+  }
 }
 .padding-left{
   padding-left: 136px;
+  @media all and (max-width: 1400px){
+    padding-left: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-left: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-left: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+  }
 }
 .main-container{
   max-width: 1920px;
@@ -97,6 +121,21 @@ main{
   text-transform: uppercase;
   color: #FFFFFF;
   border: none;
+  @media all and (max-width: 1720px){
+
+  }
+  @media all and (max-width: 1400px){
+
+  }
+  @media all and (max-width: 1024px){
+
+  }
+  @media all and (max-width: 768px){
+    padding: 14px;
+  }
+  @media all and (max-width: 500px){
+
+  }
   &:hover{
     background-color: #C1272D;
   }
@@ -136,22 +175,14 @@ main{
 }
 .section-title{
   font-weight: 800;
-  font-size: 48px;
+  font-size: 4.8rem;
   line-height: 107%;
   text-transform: uppercase;
   color: #093A84;
   margin-bottom: 30px;
-  @media all and (max-width: 1400px){
-    font-size: 45px;
-  }
-  @media all and (max-width: 1024px){
-    font-size: 42px;
-  }
-  @media all and (max-width: 768px){
-    font-size: 39px;
-  }
   @media all and (max-width: 500px){
-    font-size: 36px;
+    font-weight: 900;
+    font-size: 24px;
   }
 }
 .section-subtitle{

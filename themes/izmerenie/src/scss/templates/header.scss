@@ -10,24 +10,74 @@
 
   }
   @media all and (max-width: 1024px){
-
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 0px 110px rgba(191, 217, 235, 0.19);
   }
   @media all and (max-width: 768px){
-
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
   @media all and (max-width: 500px){
 
   }
+  &__mobile{
+    display: none;
+    @media all and (max-width: 1024px){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-logo{
+      max-width: 138px;
+      height: auto;
+    }
+  }
+  &__burger{
+    display: none;
+    cursor: pointer;
+    @media all and (max-width: 1024px){
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+    span{
+      transition: $transition;
+      display: block;
+      width: 24px;
+      height: 3px;
+      background: #A0BCC8;
+      border-radius: 2px;
+      margin: 3px 0;
+      &:first-child{
+        width: 13px;
+      }
+      &:last-child{
+        width: 19px;
+      }
+    }
+    &:hover{
+      span{
+        width: 24px;
+      }
+    }
+  }
+  &__wrapper{
+    @media all and (max-width: 1024px){
+      display: none;
+      padding: 7px 20px;
+    }
+  }
   &__container{
-    padding: 35px 40px;
+    padding: 2vh 40px;
   }
   z-index: 50;
   &__branding{
-    margin-bottom: 66px;
+    margin-bottom: 6vh;
   }
   &__language{
     padding-left: 0;
-    margin-bottom: 134px;
+    margin-bottom: 10vh;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -67,7 +117,7 @@
   }
   &__nav{
     .menu-item{
-      margin-bottom: 32px;
+      margin-bottom: 2vh;
       position: relative;
       &:last-child{
         margin-bottom: 0;
@@ -122,7 +172,7 @@
     }
   }
   &__soc{
-    margin-top: 134px;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
