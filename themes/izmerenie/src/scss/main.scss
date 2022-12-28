@@ -17,8 +17,20 @@ $px: 0.0520833333333333;
 }
 html{
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 400;
+  @media all and (max-width: 1400px){
+
+  }
+  @media all and (max-width: 1024px){
+
+  }
+  @media all and (max-width: 768px){
+
+  }
+  @media all and (max-width: 500px){
+
+  }
 }
 body{
   background-color: #F5F5F5;

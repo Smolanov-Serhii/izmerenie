@@ -50,19 +50,6 @@
         &.phone-line{
           display: flex;
           flex-wrap: wrap;
-
-          .wpcf7-form-control-wrap{
-            width: calc(100% - 74px);
-            &.phonetext{
-              width: 74px;
-            }
-            input{
-              margin-top: 0;
-            }
-          }
-          .wpcf7-phonetext{
-            width: 60px;
-          }
         }
       }
       span{
@@ -87,6 +74,18 @@
   }
   &__img{
     width: calc(50% - 60px);
+  }
+  &__map{
+    width: calc(50% - 60px);
+    height: 100%;
+    transition: 1s ease-in-out;
+    -webkit-mask-image: url(../../img/footer/map-mask.png);
+    mask-image: url(../../img/footer/map-mask.png);
+    -webkit-mask-position: center center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-position: center center;
   }
   &__title{
     font-weight: 900;
@@ -120,6 +119,26 @@
     letter-spacing: 0.04em;
     color: #213540;
     margin-left: 49px;
+  }
+  &__contacts{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+    &-row{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 139.9%;
+      color: #000000;
+      margin-bottom: 12px;
+      svg{
+        margin-right: 15px;
+      }
+    }
   }
 }
 .to-up{
