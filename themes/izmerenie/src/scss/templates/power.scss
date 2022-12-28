@@ -24,20 +24,50 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 30px;
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+      flex-direction: column;
+    }
+    @media all and (max-width: 768px){
+      margin-top: 0;
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
   &__title{
     width: 100%;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 101.9%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     color: #213540;
+    @media all and (max-width: 768px){
+      margin-bottom: 20px;
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
   &__nav{
     width: 248px;
     display: flex;
     flex-direction: column;
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+      flex-direction: row;
+      width: 100%;
+    }
+    @media all and (max-width: 1000px){
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+
+    }
     &-item{
       border: 1px solid #BFD9EB;
       box-shadow: 0px 0px 53px rgba(191, 217, 235, 0.35);
@@ -53,11 +83,27 @@
       position: relative;
       margin-right: 0;
       width: 100%;
+      @media all and (max-width: 1400px){
+
+      }
+      @media all and (max-width: 1000px){
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+      }
+      @media all and (max-width: 768px){
+        width: 100%;
+      }
+      @media all and (max-width: 500px){
+        margin-bottom: 19px;
+      }
       svg{
         position: absolute;
         right: 21px;
         top: calc(50% - 5px);
         opacity: 0;
+        @media all and (max-width: 1024px){
+          display: none;
+        }
       }
       .arrow{
         display: inline-block;
@@ -69,12 +115,22 @@
         right: 21px;
         top: calc(50% - 1px);
         transition: $transition;
+        @media all and (max-width: 1024px){
+          display: none;
+        }
       }
       &.active{
         background: #BFD9EB;
         margin-right: -45px;
         width: calc(100% + 45px);
         transition: $transition;
+        @media all and (max-width: 1024px){
+          width: calc(50% - 10px);
+          margin-right: 0;
+        }
+        @media all and (max-width: 768px){
+          width: 100%;
+        }
         svg{
           opacity: 1;
         }
@@ -83,12 +139,26 @@
         }
       }
       &:last-child{
-        margin-bottom: 0;
+        @media all and (min-width: 1024px){
+          margin-bottom: 0;
+        }
       }
     }
   }
   &__content{
     width: calc(100% - 442px);
+    @media all and (max-width: 1400px){
+      width: calc(100% - 340px);
+    }
+    @media all and (max-width: 1024px){
+      width: 100%;
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+
+    }
     &-item{
       display: none;
       &.active{
