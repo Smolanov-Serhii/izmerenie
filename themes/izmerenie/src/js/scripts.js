@@ -65,6 +65,9 @@ $(document).ready(function () {
         let ImageCorner = 120;
         let click = 1;
         $( ".banner .prev" ).on( "click", function() {
+
+            console.log('clixk');
+
             if (click == 1){
                 ImageCorner = 0;
             }else if(click == 2){
