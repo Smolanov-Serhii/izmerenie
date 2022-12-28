@@ -180,6 +180,15 @@ main{
   text-transform: uppercase;
   color: #093A84;
   margin-bottom: 30px;
+  @media all and (max-width: 1400px){
+    font-size: 40px;
+  }
+  @media all and (max-width: 1024px){
+    font-size: 36px;
+  }
+  @media all and (max-width: 768px){
+    font-size: 28px;
+  }
   @media all and (max-width: 500px){
     font-weight: 900;
     font-size: 24px;
