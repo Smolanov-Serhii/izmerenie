@@ -41,7 +41,17 @@
 <?php wp_body_open(); ?>
 <header id="header" class="header">
     <div class="header__mobile main-container">
-        <img class="header__mobile-logo" src="<?php echo get_template_directory_uri() . '/img/header/logo-mobile.svg'; ?>" alt="logo-mobile">
+        <?php
+            if(!is_front_page()){
+                ?>
+                    <a href="<?php echo get_home_url(); ?>"><img class="header__mobile-logo" src="<?php echo get_template_directory_uri() . '/img/header/logo-mobile.svg'; ?>" alt="logo-mobile"></a>
+                <?php
+            } else {
+                ?>
+                    <img class="header__mobile-logo" src="<?php echo get_template_directory_uri() . '/img/header/logo-mobile.svg'; ?>" alt="logo-mobile">
+                <?php
+            }
+        ?>
         <div class="header__burger">
             <span></span>
             <span></span>

@@ -1,11 +1,49 @@
 .footer{
   position: relative;
+  @media all and (max-width: 1024px){
+    margin-top: 60px;
+    overflow: visible;
+  }
+  &.footer-page-contacts{
+    @media all and (max-width: 1024px){
+      margin-top: 140px;
+      position: relative;
+      .footer__title{
+        position: absolute;
+        top: -60px;
+      }
+      .footer__desc{
+        margin-top: 30px;
+      }
+      .footer__contacts{
+        span, a{
+          font-size: 16px;
+        }
+        p{
+          width: calc(100% - 45px);
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          margin-bottom: 0;
+          font-size: 16px;
+        }
+        svg{
+          width: 32px!important;
+          height: 32px;
+        }
+      }
+    }
+
+  }
   &__container{
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
     align-items: center;
     justify-content: space-between;
+    @media all and (max-width: 1024px){
+      height: auto;
+    }
   }
   &__top{
     display: flex;
@@ -16,6 +54,9 @@
   }
   &__socials{
     margin-bottom: 40px;
+    @media all and (max-width: 500px){
+      margin-bottom: 24px;
+    }
     a{
       text-decoration: none;
       img{
@@ -25,8 +66,15 @@
   }
   &__form{
     width: calc(50% - 60px);
+    @media all and (max-width: 1024px){
+      width: 100%;
+      order: 2;
+    }
     .wpcf7{
       width: 100%;
+      .wpcf7-spinner{
+        display: none!important;
+      }
       .wpcf7-submit{
         margin-top: 50px;
       }
@@ -47,6 +95,12 @@
         line-height: 139.9%;
         letter-spacing: 0.04em;
         color: #A0BCC8;
+        @media all and (max-width: 768px){
+          font-size: 16px;
+        }
+        @media all and (max-width: 500px){
+          font-size: 14px;
+        }
         &.phone-line{
           display: flex;
           flex-wrap: wrap;
@@ -69,31 +123,46 @@
           color: #213540;
           padding: 11px 25px;
         }
+        textarea{
+          @media all and (max-width: 500px){
+            height: 130px;
+          }
+        }
       }
     }
   }
   &__img{
     width: calc(50% - 60px);
+    @media all and (max-width: 1024px){
+      display: none;
+    }
   }
   &__map{
     width: calc(50% - 60px);
     height: 100%;
     transition: 1s ease-in-out;
-    -webkit-mask-image: url(../../img/footer/map-mask.png);
-    mask-image: url(../../img/footer/map-mask.png);
-    -webkit-mask-position: center center;
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    mask-position: center center;
+    @media all and (min-width: 1025px){
+      -webkit-mask-image: url(../../img/footer/map-mask.png);
+      mask-image: url(../../img/footer/map-mask.png);
+      -webkit-mask-position: center center;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      mask-position: center center;
+    }
+    @media all and (max-width: 1024px){
+      width: 100%;
+      order: 1;
+      height: 50vh;
+    }
   }
   &__title{
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 101.9%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #213540;
+    //font-weight: 900;
+    //font-size: 48px;
+    //line-height: 101.9%;
+    //letter-spacing: 0.04em;
+    //text-transform: uppercase;
+    //color: #213540;
     margin-bottom: 23px;
   }
   &__bottom{
@@ -103,6 +172,21 @@
     left: 0;
     align-items: center;
     top: calc(100vh - 38px);
+    @media all and (max-width: 1600px){
+      top: auto;
+      bottom: 15px;
+    }
+    @media all and (max-width: 1024px){
+      flex-direction: column;
+      position: static;
+      margin-bottom: 15px;
+      align-items: flex-start;
+      padding: 0;
+      order: 3;
+    }
+    @media all and (max-width: 500px){
+      align-items: center;
+    }
   }
   &__copyright{
     flex: 1;
@@ -110,6 +194,15 @@
     font-size: 18px;
     line-height: 139.9%;
     color: #A0BCC8;
+    @media all and (max-width: 1024px){
+      order: 3;
+    }
+    @media all and (max-width: 768px){
+      font-size: 16px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 12px;
+    }
   }
   &__phone, &__mail{
     text-decoration: none;
@@ -119,6 +212,24 @@
     letter-spacing: 0.04em;
     color: #213540;
     margin-left: 49px;
+    @media all and (max-width: 1024px){
+      margin-left: 0;
+    }
+    @media all and (max-width: 500px){
+      font-size: 16px;
+    }
+  }
+  &__phone{
+    @media all and (max-width: 1024px){
+      order: 1;
+    }
+  }
+  &__mail{
+    @media all and (max-width: 1024px){
+      order: 2;
+      margin-bottom: 20px;
+    }
+
   }
   &__contacts{
     display: flex;

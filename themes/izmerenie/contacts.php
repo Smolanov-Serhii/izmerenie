@@ -17,7 +17,7 @@ get_header();
 ?>
 <main id="main" class="main">
 
-    <footer id="footer" class="footer height-section vertical-center scroll-section">
+    <footer id="footer" class="footer height-section vertical-center scroll-section footer-page-contacts">
         <div class="footer__container main-container">
             <div class="footer__form">
                 <h2 class="footer__title section-title">
@@ -42,7 +42,7 @@ get_header();
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.9993 10.6667C23.9993 6.25333 20.4127 2.66667 15.9993 2.66667C11.586 2.66667 7.99935 6.25333 7.99935 10.6667C7.99935 16.6667 15.9993 25.3333 15.9993 25.3333C15.9993 25.3333 23.9993 16.6667 23.9993 10.6667ZM13.3327 10.6667C13.3327 9.2 14.5327 8 15.9993 8C17.466 8 18.666 9.2 18.666 10.6667C18.666 11.3739 18.3851 12.0522 17.885 12.5523C17.3849 13.0524 16.7066 13.3333 15.9993 13.3333C15.2921 13.3333 14.6138 13.0524 14.1137 12.5523C13.6136 12.0522 13.3327 11.3739 13.3327 10.6667ZM6.66602 26.6667V29.3333H25.3327V26.6667H6.66602Z" fill="#BFD9EB"/>
                         </svg>
-                        04214, Украина, Киев, ул. Героев Днепра, 40Б, офис 58
+                        <p>04214, Украина, Киев, ул. Героев Днепра, 40Б, офис 58</p>
                     </span>
                     <a href="tel:+380 50 751 91 43" class="footer__contacts-row">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

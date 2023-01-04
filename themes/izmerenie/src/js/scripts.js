@@ -32,20 +32,13 @@ $(document).ready(function () {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
     });
-//
-//
-//     if ($('.faq').length) {
-//         $(".faq__item-header").click(function () {
-//             $(this).closest('.faq__item').toggleClass('active');
-//             $(this).closest('.faq__item').find('.faq__item-content').fadeToggle(300);
-//         });
-//     }
-//
-//     $(".header__mobile-burger").click(function () {
-//         $(this).toggleClass('active');
-//         $('body').toggleClass('locked');
-//         $('.header__container').fadeToggle().css('display', 'flex');
-//     });
+
+    $(".header__burger").click(function () {
+        $(this).toggleClass('active');
+        $('body').toggleClass('locked');
+        $('.header__wrapper').fadeToggle(300);
+    });
+
     if ($('.banner').length) {
         var banner = new Swiper(".banner .swiper-container", {
             slidesPerView: 1,
@@ -110,20 +103,6 @@ $(document).ready(function () {
         });
     }
 
-    // if ($('#app').length) {
-    //     // import SwiperGL from 'swiper-gl.esm.js';
-    //     var section = new Swiper("#app > .swiper", {
-    //         direction: "vertical",
-    //         slidesPerView: 1,
-    //         spaceBetween: 30,
-    //         mousewheel: true,
-    //         allowTouchMove: false,
-    //         effect: 'fade',
-    //         fadeEffect: {
-    //             crossFade: true
-    //         },
-    //     });
-    // }
     if (window.innerWidth > 1024) {
         $(".main").onepage_scroll({
             sectionContainer: ".scroll-section", // контейнер, к которому будет применяться скролл
