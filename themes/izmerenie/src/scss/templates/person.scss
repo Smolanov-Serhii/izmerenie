@@ -1,5 +1,8 @@
 .person{
   position: relative;
+  @media all and (max-width: 1024px){
+    flex-direction: column;
+  }
   &:nth-child(even){
     .person__item{
       flex-direction: row-reverse;
@@ -28,6 +31,22 @@
       flex-direction: column-reverse;
       flex-wrap: nowrap;
       justify-content: center;
+      height: auto;
+    }
+    &-title{
+      display: none;
+      @media all and (max-width: 1024px){
+        display: block;
+        //font-family: 'Nunito Sans';
+        //font-style: normal;
+        //font-weight: 900;
+        //font-size: 24px;
+        //line-height: 101.9%;
+        color: #213540;
+        //text-transform: uppercase;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
     }
   }
   &__item{
@@ -59,7 +78,7 @@
     }
     @media all and (max-width: 1024px){
       width: 100%;
-      max-height: 40vh;
+      //max-height: 40vh;
       margin-bottom: 15px;
       text-align: center;
     }
@@ -73,7 +92,7 @@
       width: 100%;
       border-radius: 10px;
       @media all and (max-width: 1024px){
-        max-height: 100%;
+        max-height: 40vh;
         width: auto;
       }
       @media all and (max-width: 500px){

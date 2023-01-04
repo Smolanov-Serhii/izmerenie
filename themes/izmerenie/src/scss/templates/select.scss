@@ -15,7 +15,7 @@
 
     }
     @media all and (max-width: 1024px){
-
+      height: auto;
     }
     @media all and (max-width: 768px){
 
@@ -36,8 +36,11 @@
     display: flex;
     align-items: center;
     z-index: 2;
+    @media all and (max-width: 1204px){
+      height: auto;
+    }
     @media all and (max-width: 768px){
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   }
   &__bg{
@@ -46,6 +49,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    @media all and (max-width: 768px){
+      position: static;
+      height: 500px;
+    }
+    @media all and (max-width: 500px){
+      height: 60vh;
+    }
     img{
       object-fit: cover;
       width: 100%;
@@ -102,13 +112,23 @@
     left: calc(53% + 196px);
     cursor: pointer;
     transition: $transition;
+    @media all and (max-width: 1024px){
+
+    }
     @media all and (max-width: 768px){
-      position: static;
       z-index: 1;
       flex: 1;
       display: flex;
       align-items: center;
+      top: calc(250px - 80px);
+      left: calc(50% - 80px);
     }
+    @media all and (max-width: 500px){
+      height: 60vh;
+      top: 0;
+      left: calc(50% - 80px);
+    }
+
     &:hover{
       transform: scale(1.2);
     }

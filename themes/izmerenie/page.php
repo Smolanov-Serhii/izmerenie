@@ -182,7 +182,7 @@ get_header();
                                     <span class="programs__list-bg">
                                         <?php the_post_thumbnail(); ?>
                                     </span>
-                                <?php the_title(); ?>
+                                <h3><?php the_title(); ?></h3>
                             </a>
                         <?php
                         endwhile;
@@ -193,15 +193,18 @@ get_header();
             </div>
         </section>
         <section class="person height-section vertical-center scroll-section">
+            <h2 class="person__container-title main-container section-title">
+                Команда
+            </h2>
             <div class="person__decoration">
                 <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
                 <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
             </div>
             <div class="person__container main-container">
                 <div class="person__text">
-                    <h2 class="person__title section-title">
+                    <h3 class="person__title section-title">
                         Виктория журавлева
-                    </h2>
+                    </h3>
                     <div class="person__content text">
                         <ul>
                             <li>Основатель и управляющий партнер компании с 2001 года</li>

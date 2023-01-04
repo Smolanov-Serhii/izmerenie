@@ -1,9 +1,11 @@
 body, html {
   margin: 0;
-  overflow: hidden;
   -webkit-transition: opacity 400ms;
   -moz-transition: opacity 400ms;
   transition: opacity 400ms;
+  @media all and (min-width: 1025px){
+    overflow: hidden;
+  }
   &.non-scroll{
     height: auto!important;
     overflow: auto;

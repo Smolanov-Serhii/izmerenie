@@ -33,7 +33,7 @@ const scriptFiles = [
    './src/js/jquery-3.5.1.js',
    // './src/js/swiper-gl.esm.js',
    // './src/js/gl/gl.js',
-   // './src/js/aos.js',
+   './src/js/aos.js',
    // './src/js/slick.js',
    // './src/js/feedback.js',
    // './src/js/jquery.selectric.js',

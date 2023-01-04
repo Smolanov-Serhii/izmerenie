@@ -17,6 +17,19 @@
     flex-wrap: wrap;
     align-items: center;
     height: 100vh;
+    @media all and (max-width: 1024px){
+      height: auto;
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+    @media all and (max-width: 768px){
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+    @media all and (max-width: 500px){
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
   &__container{
     width: 100%;
@@ -34,7 +47,7 @@
       margin-top: 0;
     }
     @media all and (max-width: 500px){
-
+      flex-direction: column-reverse;
     }
   }
   &__title{
@@ -96,6 +109,7 @@
       }
       @media all and (max-width: 500px){
         margin-bottom: 19px;
+        font-size: 16px;
       }
       svg{
         position: absolute;
@@ -155,10 +169,12 @@
       width: 100%;
     }
     @media all and (max-width: 768px){
-
+      p{
+        font-weight: 400;
+      }
     }
     @media all and (max-width: 500px){
-
+      margin-bottom: 60px;
     }
     &-item{
       display: none;
