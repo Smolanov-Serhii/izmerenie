@@ -28,9 +28,32 @@ get_header();
             <h1 class="page-clients__title page-title">нам доверяют </h1>
             <p class="page-clients__subtitle page-subtitle">6 из 10 компаний, входящих в топ лучших работодателей Украины – наши постоянные клиенты </p>
             <div class="page-clients__list">
-                <a href="#">
-                    <img src="" alt="">
-                </a>
+                <?php
+                $counter = 0;
+                if( have_rows('logotypy') ):
+                    while( have_rows('logotypy') ) : the_row();
+                        $img = get_sub_field('zobrazhennya_logotypa');
+                        $title = get_sub_field('nazva_kompaniyi');
+                        $lnk = get_sub_field('posilannya_yakshho_ye');
+                        if($lnk){
+                            ?>
+                            <a class="page-clients__item" href="<?php echo $lnk;?>">
+                                <img src="<?php echo $img;?>" alt="<?php echo $title;?>">
+                            </a>
+                            <?php
+                        } else {
+                            ?>
+                            <div class="page-clients__item" >
+                                <img src="<?php echo $img;?>" alt="<?php echo $title;?>">
+                            </div>
+                            <?php
+                        }
+                        ?>
+
+                    <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
         </div>
     </section>
@@ -99,6 +122,17 @@ get_header();
             </div>
         </div>
     </section>
+    <footer id="footer" class="footer footer__static">
+        <div class="footer__container main-container">
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    © 2022. Четвертое измерение. Все права защищены.
+                </div>
+                <a class="footer__phone" href="tel:+38(063)000-00-00">+38(063)000-00-00</a>
+                <a class="footer__mail" href="mailto:4izmerenie@4izmerenie.com">4izmerenie@4izmerenie.com</a>
+            </div>
+        </div>
+    </footer>
 </main>
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri() . '/dist/js/main.js'; ?>"></script>
