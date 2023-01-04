@@ -1,5 +1,8 @@
 .reviews{
   position: relative;
+  @media all and (max-width: 1024px){
+    margin-top: 30px;
+  }
   &__decoration{
     img{
       position: absolute;
@@ -24,6 +27,15 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    @media all and (max-width: 1024px){
+      height: auto;
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
   &__swiper{
 
@@ -33,14 +45,25 @@
     box-shadow: 0px 4px 32px rgba(193, 219, 237, 0.15);
     border-radius: 18px;
     padding: 20px 36px 36px 36px;
+    @media all and (max-width: 500px){
+      padding: 20px;
+    }
     &-header{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 23px;
+      @media all and (max-width: 500px){
+        flex-wrap: nowrap;
+        padding-right: 20px;
+        justify-content: space-between;
+      }
     }
     &-img{
       margin-right: 20px;
+      @media all and (max-width: 500px){
+        max-width: 122px;
+      }
     }
     &-name{
       font-weight: 400;
@@ -48,6 +71,10 @@
       line-height: 139.9%;
       color: #6F8C9E;
       margin-bottom: 0;
+      @media all and (max-width: 768px){
+        font-weight: 400;
+        font-size: 14px;
+      }
     }
     &-desc{
       position: relative;
@@ -57,16 +84,27 @@
       font-size: 18px;
       line-height: 139.9%;
       color: #213540;
+      @media all and (max-width: 768px){
+        margin-top: 53px;
+        padding-left: 0;
+      }
       svg{
         position: absolute;
         top: 0;
         left: 0;
+        @media all and (max-width: 768px){
+          top: -40px;
+        }
       }
     }
   }
   .swiper-pagination{
     display: flex;
     justify-content: flex-start;
+    @media all and (max-width: 768px){
+      justify-content: center;
+      margin-top: 30px;
+    }
     > div{
       margin-right: 22px;
       cursor: pointer;

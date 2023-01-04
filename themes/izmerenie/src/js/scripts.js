@@ -151,11 +151,52 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+
+
     if ($('section.team').length) {
-        var team = new Swiper("section.team .swiper-container", {
-            slidesPerView: 3,
-            spaceBetween: 60,
+        let teamSlider;
+        const teamInit = () => {
+            teamSlider = new Swiper("section.team .swiper-container", {
+                slidesPerView: 3,
+                spaceBetween: 60,
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    // when window width is >= 480px
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 640px
+                    1200: {
+                        slidesPerView: 2,
+                        spaceBetween: 40
+                    },
+                    1400: {
+                        slidesPerView: 3,
+                        spaceBetween: 50
+                    }
+                }
+            });
+            console.log(teamSlider);
+        }
+        if (window.innerWidth > 1024) {
+            teamInit();
+        }
+        $( window ).resize(function() {
+            if (window.innerWidth < 1025) {
+                if (teamSlider !== undefined) {
+                    teamSlider.destroy('true','true');
+                }
+            } else {
+                teamInit();
+            }
         });
+
+
     }
 
     if ($('section.reviews').length) {
@@ -167,6 +208,27 @@ $(document).ready(function () {
                 nextEl: "section.reviews .next",
                 prevEl: "section.reviews .prev",
             },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                // when window width is >= 480px
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                // when window width is >= 640px
+                1200: {
+                    slidesPerView: 2,
+                    spaceBetween: 40
+                },
+            }
         });
     }
 

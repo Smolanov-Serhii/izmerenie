@@ -2,6 +2,7 @@
   position: relative;
   @media all and (max-width: 1024px){
     flex-direction: column;
+    margin-bottom: 30px;
   }
   &:nth-child(even){
     .person__item{
@@ -114,6 +115,7 @@
       font-weight: 700;
       font-size: 38px;
       text-transform: capitalize;
+      margin-top: 15px;
     }
     @media all and (max-width: 768px){
       font-size: 32px;
@@ -128,6 +130,9 @@
       margin-bottom: 0;
     }
     &.text{
+      @media all and (max-width: 500px){
+        margin-bottom: 0;
+      }
       ul{
         li{
           margin-bottom: 16px;
