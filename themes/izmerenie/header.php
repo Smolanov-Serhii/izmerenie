@@ -31,7 +31,7 @@
 
     }
 </script>
-<?php if ( is_page( array( '45', '47', '122', '124', '126', '128' ) ) ) { $class='non-scroll'; } else  { $class=''; }?>
+<?php if ( is_page( array( '45', '47', '122', '124', '126', '128', '50' ) ) ) { $class='non-scroll'; } else  { $class=''; }?>
 <body <?php body_class($class); ?> >
 <div class="preloader">
     <div class="preloader__row">

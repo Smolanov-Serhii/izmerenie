@@ -214,6 +214,44 @@ register_post_type('programs', [
     'rewrite' => true,
     'query_var' => true,
 ]);
+register_post_type('podcasts', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Підкасти', // основное название для типа записи
+        'singular_name' => 'Підкаст', // название для одной записи этого типа
+        'add_new' => 'Додати підкаст', // для добавления новой записи
+        'add_new_item' => 'Додати новий', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редагувати підкаст', // для редактирования типа записи
+        'new_item' => 'Новий підкаст', // текст новой записи
+        'view_item' => 'Дивитися підкаст', // для просмотра записи этого типа.
+        'search_items' => 'Шукати підкаст', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Підкасти', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'podcasts-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-images-alt',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
 add_action( 'init', 'mayak_taxonomy_register' );
 function mayak_taxonomy_register(){
     $labels = array(
@@ -262,3 +300,136 @@ function mayak_taxonomy_register(){
     register_taxonomy('programs-category', array('programs'), $args);
 }
 
+add_action( 'init', 'mayak_taxonomy_register1' );
+function mayak_taxonomy_register1(){
+    $labels = array(
+        'name'                     => 'Категорії', // основное название во множественном числе
+        'singular_name'            => 'Категорія', // название единичного элемента таксономии
+        'menu_name'                => 'Категорії', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Всі категорії',
+        'edit_item'                => 'Змінити категорію',
+        'view_item'                => 'Дивитись категорію', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Оновити категорію',
+        'add_new_item'             => 'Додати категорію',
+        'new_item_name'            => 'Назва нової новой',
+        'parent_item'              => 'Батьківська категорія', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Батьківська категорія:',
+        'search_items'             => 'Шукати категорію',
+        'popular_items'            => 'Популярні категорії', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категорії',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('podcasts-category', array('podcasts'), $args);
+}
+
+register_post_type('videos', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Відео', // основное название для типа записи
+        'singular_name' => 'Відео', // название для одной записи этого типа
+        'add_new' => 'Додати відео', // для добавления новой записи
+        'add_new_item' => 'Додати відео', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редагувати відео', // для редактирования типа записи
+        'new_item' => 'Нове відео', // текст новой записи
+        'view_item' => 'Дивитися відео', // для просмотра записи этого типа.
+        'search_items' => 'Шукати відео', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Відео', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'videos-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-format-video',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+add_action( 'init', 'mayak_taxonomy_register2' );
+function mayak_taxonomy_register2(){
+    $labels = array(
+        'name'                     => 'Категорії', // основное название во множественном числе
+        'singular_name'            => 'Категорія', // название единичного элемента таксономии
+        'menu_name'                => 'Категорії', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Всі категорії',
+        'edit_item'                => 'Змінити категорію',
+        'view_item'                => 'Дивитись категорію', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Оновити категорію',
+        'add_new_item'             => 'Додати категорію',
+        'new_item_name'            => 'Назва нової новой',
+        'parent_item'              => 'Батьківська категорія', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Батьківська категорія:',
+        'search_items'             => 'Шукати категорію',
+        'popular_items'            => 'Популярні категорії', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категорії',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('videos-category', array('videos'), $args);
+}
