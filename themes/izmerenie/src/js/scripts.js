@@ -33,10 +33,17 @@ $(document).ready(function () {
 
     });
 
+    if (window.innerWidth <= 1024) {
+        $(".noclick.menu-item").click(function () {
+            $(this).find('.sub-menu').fadeToggle(300);
+            $(this).toggleClass('active');
+        });
+    }
+
     $(".header__burger").click(function () {
         $(this).toggleClass('active');
         $('body').toggleClass('locked');
-        $('.header__wrapper').fadeToggle(300);
+        $('.header__wrapper').fadeToggle().css('display', 'flex');
     });
 
     if ($('.banner').length) {

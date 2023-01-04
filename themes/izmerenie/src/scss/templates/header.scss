@@ -91,6 +91,7 @@
       box-shadow: 0px 0px 110px rgba(191, 217, 235, 0.19);
       text-align: center;
       z-index: 999;
+      flex-direction: column;
     }
   }
   &__container{
@@ -132,9 +133,17 @@
     }
   }
   #primary-menu{
+    @media all and (max-width: 1024px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     > .menu-item{
       padding-right: 40px;
       padding-left: 40px;
+      @media all and (max-width: 1024px){
+        display: inline-block;
+      }
       &:hover{
         .sub-menu{
           opacity: 1;
@@ -145,15 +154,46 @@
     }
   }
   &__nav{
+    @media all and (max-width: 1024px){
+      flex: 1;
+      overflow: scroll;
+    }
     .menu-item{
       margin-bottom: 2vh;
       position: relative;
+      &.menu-item-has-children{
+        @media all and (max-width: 1024px){
+          > a{
+            position: relative;
+            &:after{
+              position: absolute;
+              right: -20px;
+              top: 5px;
+              content: "";
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-top: 1px solid #EC1C24;
+              border-right: 1px solid #EC1C24;
+              transform: rotate(135deg);
+            }
+          }
+          &.active{
+            > a{
+              &:after{
+                transform: rotate(-45deg);
+                top: 12px;
+              }
+            }
+          }
+        }
+      }
       &:last-child{
         margin-bottom: 0;
       }
       .sub-menu{
         opacity: 0;
-        pointer-events: 0;
+        pointer-events: none;
         transition: $transition;
         position: absolute;
         left: 222px;
@@ -164,9 +204,28 @@
         box-shadow: 0px 0px 47px rgba(191, 217, 235, 0.19);
         border-radius: 11px;
         visibility: hidden;
+        @media all and (max-width: 1024px){
+          position: static;
+          opacity: 1;
+          pointer-events: auto;
+          visibility: visible;
+          box-shadow: none;
+          border: none;
+          padding: 20px 0;
+          display: none;
+        }
         > .menu-item{
           padding-right: 40px;
           padding-left: 40px;
+          @media all and (max-width: 1024px){
+            margin-bottom: 1vh;
+            padding-right: 0;
+            padding-left: 0;
+            a{
+              font-size: 16px;
+              color: #EC1C24;
+            }
+          }
           a{
             white-space: nowrap;
           }
@@ -205,6 +264,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media all and (max-width: 1350px){
+      padding-bottom: 80px;
+    }
     a{
       margin: 0 7px;
       text-decoration: none;
