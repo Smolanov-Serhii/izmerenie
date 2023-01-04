@@ -4,6 +4,15 @@
     margin-top: 60px;
     overflow: visible;
   }
+  &__static{
+    .footer__container{
+      height: auto;
+    }
+    .footer__bottom{
+      position: static;
+      padding-bottom: 38px;
+    }
+  }
   &.footer-page-contacts{
     @media all and (max-width: 1024px){
       margin-top: 140px;

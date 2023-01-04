@@ -14,137 +14,68 @@
  */
 
 get_header();
+$post_id = get_the_ID();
 ?>
 <main id="main" class="main">
     <section class="team-page height-section vertical-center scroll-section">
         <div class="team-page__container main-container">
+            <div class="back-button" onclick="window.history.back()">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.2" cx="21" cy="21" r="21" fill="#BFD9EB"/>
+                    <rect x="23.4854" y="13" width="2" height="12" rx="1" transform="rotate(45 23.4854 13)" fill="#A0BCC8"/>
+                    <rect x="15" y="21.4853" width="2" height="12" rx="1" transform="rotate(-45 15 21.4853)" fill="#A0BCC8"/>
+                </svg>
+            </div>
             <h1 class="team-page__title page-title">
-                Команда
+                <?php echo the_field("zagolovok_storinky", $post_id); ?>
             </h1>
             <div class="team-page__content">
-                <p>Компания «Четвертое измерение» работает в сфере управленческого консалтинга, обучения и развития персонала с 2001 года.</p>
-                <p>За 20 лет работы наши программы обучения прошли более 15000 человек.</p>
-                <p>Нам удалось успешно реализовать более 100 проектов.</p>
-                <p>6 из 10 компаний, входящих в топ лучших работодателей Украины – наши постоянные клиенты и готовы рекомендовать наши услуги.</p>
-                <p>Наши методы работы отличают – гибкость и вариабельность, ориентация на результат, аналитичность и ответственность.</p>
-                <p>Консультанты, тренеры, аналитики и другие специалисты нашей команды на протяжении многих лет различались по опыту и образованию, но все соответствовали и разделяют основные ценности нашей компании.</p>
-                <p>Каждый из них внес свой вклад в развитие компании, сделав ее наиболее уважаемой и экспертной на рынке обучения и развития персонала.</p>
-                <p>Мы благодарны каждому, кто на протяжении нашей двадцатилетний истории, был частью «Четвертого измерения», со многими мы продолжаем сотрудничество в новых проектах.</p>
-
+                <?php echo the_field("opys_storinky", $post_id); ?>
             </div>
         </div>
     </section>
-    <section class="person height-section vertical-center scroll-section">
-        <div class="person__decoration">
-            <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
-            <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
-        </div>
-        <div class="person__container main-container">
-            <div class="person__item">
-                <div class="person__text">
-                    <h2 class="person__title section-title">
-                        Виктория журавлева
-                    </h2>
-                    <div class="person__content text">
-                        <ul>
-                            <li>Основатель и управляющий партнер компании с 2001 года</li>
-                            <li>Консультант по управлению и организационному развитию</li>
-                            <li>Автор и ведущая Менторских программ</li>
-                            <li>Преподадватель МВА</li>
-                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
-                        </ul>
+    <?php
+        $counter = 0;
+        if( have_rows('komanda') ):
+            while( have_rows('komanda') ) : the_row();
+                $img = get_sub_field('fotografiya_spivrobitnyka');
+                $fio = get_sub_field('fio');
+                $about = get_sub_field('opys');
+                ?>
+                <section class="person height-section vertical-center scroll-section">
+<!--                    --><?php
+//                        if($counter == 0) {
+//                            ?>
+<!--                            -->
+<!--                            --><?php
+//                        }
+//                        $counter++;
+//                    ?>
+                    <div class="person__decoration">
+                        <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
+                        <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
                     </div>
-                </div>
-                <div class="person__image">
-                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="person height-section vertical-center scroll-section">
-        <div class="person__decoration">
-            <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
-            <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
-        </div>
-        <div class="person__container main-container">
-            <div class="person__item">
-                <div class="person__text">
-                    <h2 class="person__title section-title">
-                        Виктория журавлева
-                    </h2>
-                    <div class="person__content text">
-                        <ul>
-                            <li>Основатель и управляющий партнер компании с 2001 года</li>
-                            <li>Консультант по управлению и организационному развитию</li>
-                            <li>Автор и ведущая Менторских программ</li>
-                            <li>Преподадватель МВА</li>
-                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
-                        </ul>
+                    <div class="person__container main-container">
+                        <div class="person__item">
+                            <div class="person__text">
+                                <h2 class="person__title section-title">
+                                    <?php echo $fio;?>
+                                </h2>
+                                <div class="person__content text">
+                                    <?php echo $about;?>
+                                </div>
+                            </div>
+                            <div class="person__image">
+                                <img src="<?php echo $img ?>" alt="<?php echo $fio;?>">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="person__image">
-                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="person height-section vertical-center scroll-section">
-        <div class="person__decoration">
-            <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
-            <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
-        </div>
-        <div class="person__container main-container">
-            <div class="person__item">
-                <div class="person__text">
-                    <h2 class="person__title section-title">
-                        Виктория журавлева
-                    </h2>
-                    <div class="person__content text">
-                        <ul>
-                            <li>Основатель и управляющий партнер компании с 2001 года</li>
-                            <li>Консультант по управлению и организационному развитию</li>
-                            <li>Автор и ведущая Менторских программ</li>
-                            <li>Преподадватель МВА</li>
-                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="person__image">
-                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="person height-section vertical-center scroll-section">
-        <div class="person__decoration">
-            <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
-            <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
-        </div>
-        <div class="person__container main-container">
-            <div class="person__item">
-                <div class="person__text">
-                    <h2 class="person__title section-title">
-                        Виктория журавлева
-                    </h2>
-                    <div class="person__content text">
-                        <ul>
-                            <li>Основатель и управляющий партнер компании с 2001 года</li>
-                            <li>Консультант по управлению и организационному развитию</li>
-                            <li>Автор и ведущая Менторских программ</li>
-                            <li>Преподадватель МВА</li>
-                            <li>Основатель и шеф-редактор ресурса SHORTBOOK</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="person__image">
-                    <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
-                </div>
-            </div>
-        </div>
-    </section>
-
+                </section>
+                <?php
+            endwhile;
+        endif;
+    ?>
 </main>
 <?php wp_footer(); ?>
-<script src="<?php echo get_template_directory_uri() . '/dist/js/main.js'; ?>"></script>
 </body>
 </html>

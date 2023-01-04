@@ -166,7 +166,7 @@ main{
 }
 .height-section{
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   @media all and (max-width: 1024px){
     height: auto;
@@ -180,6 +180,18 @@ main{
   line-height: 101.9%;
   text-transform: uppercase;
   color: #213540;
+  @media all and (max-width: 1400px){
+    font-size: 50px;
+  }
+  @media all and (max-width: 1024px){
+    font-size: 40px;
+  }
+  @media all and (max-width: 768px){
+    font-size: 35px;
+  }
+  @media all and (max-width: 500px){
+    font-size: 30px;
+  }
 }
 .section-title{
   font-weight: 800;
@@ -228,6 +240,8 @@ main{
 @import "templates/person";
 @import "templates/team";
 @import "templates/reviews";
+@import "templates/legend-page";
+@import "templates/page-clients";
 
 @import "templates/main";
 

@@ -1,10 +1,63 @@
+.page-template-team{
+  .person{
+    .person__content{
+      margin-bottom: 0;
+      p:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .team-page{
+    position: relative;
+    @media all and (max-width: 1024px){
+      padding-top: 63px;
+      padding-bottom: 220px;
+      .team-page__title{
+        margin-top: 40px;
+      }
+    }
+    @media all and (max-width: 768px){
+      padding-bottom: 150px;
+    }
+    @media all and (max-width: 500px){
+      padding-bottom: 60px;
+    }
+    .back-button{
+      position: absolute;
+      top: 63px;
+      @media all and (max-width: 1024px){
+        position: static;
+      }
+    }
+  }
+  .person{
+    @media all and (max-width: 1024px){
+      .team-page__content{
+        margin-bottom: 60px;
+      }
+      .person__item{
+        margin: 0;
+      }
+      &:nth-child(odd){
+        .person__item{
+          flex-direction: column-reverse;
+        }
+      }
+      &:nth-child(even){
+        .person__item{
+          flex-direction: column-reverse;
+        }
+      }
+    }
+  }
+}
 .person{
   position: relative;
   @media all and (max-width: 1024px){
     flex-direction: column;
     margin-bottom: 30px;
   }
-  &:nth-child(even){
+  &:nth-child(odd){
     .person__item{
       flex-direction: row-reverse;
     }
@@ -58,7 +111,7 @@
     margin: 225vw * $px 0;
   }
   &__text{
-    width: calc(50% - 50px);
+    width: 50%;
     @media all and (max-width: 1400px){
 
     }
@@ -142,8 +195,5 @@
         }
       }
     }
-  }
-  &__text{
-    width: auto;
   }
 }

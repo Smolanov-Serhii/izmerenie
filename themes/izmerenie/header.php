@@ -30,7 +30,7 @@
 
     }
 </script>
-<?php if ( is_page( array( 'legend' ) ) ) { $class='non-scroll'; } else  { $class=''; }?>
+<?php if ( is_page( array( 'legend', '47' ) ) ) { $class='non-scroll'; } else  { $class=''; }?>
 <body <?php body_class($class); ?> >
 <div class="preloader">
     <div class="preloader__row">
