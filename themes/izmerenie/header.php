@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:wght@300&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 <script>
@@ -30,7 +31,7 @@
 
     }
 </script>
-<?php if ( is_page( array( '45', '47' ) ) ) { $class='non-scroll'; } else  { $class=''; }?>
+<?php if ( is_page( array( '45', '47', '122', '124', '126', '128' ) ) ) { $class='non-scroll'; } else  { $class=''; }?>
 <body <?php body_class($class); ?> >
 <div class="preloader">
     <div class="preloader__row">

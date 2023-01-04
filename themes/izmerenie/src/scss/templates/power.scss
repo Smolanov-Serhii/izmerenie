@@ -185,6 +185,11 @@
         align-items: flex-start;
       }
     }
-
+  }
+  &__button{
+    margin-top: 40px;
+    @media all and (max-width: 500px){
+      margin-top: 30px;
+    }
   }
 }
