@@ -85,7 +85,7 @@ $(document).ready(function () {
             });
             $('.banner__mask img').removeClass('new-img').addClass('current-img').css('z-index', 0);
             console.log(ImageCorner)
-            $('.banner__mask').prepend($('<img class="new-img" src="'+prev+'" style="opacity: 0; z-index: 1; transform: rotate('+ImageCorner+'deg)">'));
+            $('.banner__mask').prepend($('<img class="new-img" src="'+prev+'" style="opacity: 0; z-index: 1; transform: rotate('+ImageCorner+'deg) translateX(50px) translateX(50px)">'));
             $('.banner__mask .new-img').animate({opacity: '100%'}, 500);
             setTimeout(function() {
                 $('.current-img').remove()

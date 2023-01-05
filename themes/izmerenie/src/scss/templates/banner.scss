@@ -14,6 +14,8 @@
     position: absolute;
     top: 106px;
     right: 40px;
+    border-radius: 50%;
+    overflow: hidden;
     @media all and (max-width: 1720px){
       width: 49vw;
     }
@@ -41,8 +43,8 @@
   }
   &__mask{
     transition: 1s ease-in-out;
-    -webkit-mask-image: url(../../img/banner/mask.png);
-    mask-image: url(../../img/banner/mask.png);
+    -webkit-mask-image: url(../../img/banner/mask-new.png);
+    mask-image: url(../../img/banner/mask-new.png);
     -webkit-mask-position: right top;
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
@@ -68,7 +70,7 @@
       left: 8px;
     }
     img{
-      position: absolute;
+      position: relative;
       top: 0;
       right: 0;
       width: auto;

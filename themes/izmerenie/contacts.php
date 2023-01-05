@@ -38,12 +38,6 @@ get_header();
                     </a>
                 </div>
                 <div class="footer__contacts">
-                    <span class="footer__contacts-row">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23.9993 10.6667C23.9993 6.25333 20.4127 2.66667 15.9993 2.66667C11.586 2.66667 7.99935 6.25333 7.99935 10.6667C7.99935 16.6667 15.9993 25.3333 15.9993 25.3333C15.9993 25.3333 23.9993 16.6667 23.9993 10.6667ZM13.3327 10.6667C13.3327 9.2 14.5327 8 15.9993 8C17.466 8 18.666 9.2 18.666 10.6667C18.666 11.3739 18.3851 12.0522 17.885 12.5523C17.3849 13.0524 16.7066 13.3333 15.9993 13.3333C15.2921 13.3333 14.6138 13.0524 14.1137 12.5523C13.6136 12.0522 13.3327 11.3739 13.3327 10.6667ZM6.66602 26.6667V29.3333H25.3327V26.6667H6.66602Z" fill="#BFD9EB"/>
-                        </svg>
-                        <p>04214, Украина, Киев, ул. Героев Днепра, 40Б, офис 58</p>
-                    </span>
                     <a href="tel:+380 50 751 91 43" class="footer__contacts-row">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 13H22C21.9992 12.2046 21.6829 11.442 21.1204 10.8796C20.558 10.3171 19.7954 10.0008 19 10V8C20.3256 8.00159 21.5964 8.52888 22.5338 9.46622C23.4711 10.4036 23.9984 11.6744 24 13Z" fill="#BFD9EB"/>
@@ -60,8 +54,8 @@ get_header();
                 </div>
                 <?php echo do_shortcode('[contact-form-7 id="145" title="contact form"]') ?>
             </div>
-            <div class="footer__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.6925003207443!2d30.506446451810927!3d50.521288090037594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d238c5b15555%3A0x17b82fe7dc33177f!2z0YPQuy4g0JPQtdGA0L7QtdCyINCU0L3QtdC_0YDQsCwgNDDQsSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1672214642448!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="footer__img">
+                <img src="<?php echo get_template_directory_uri() . '/img/footer/img.png'; ?>" alt="bg">
             </div>
             <div class="footer__bottom main-container">
                 <div class="footer__copyright">
