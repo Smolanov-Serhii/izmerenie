@@ -34,13 +34,45 @@ $post_id = get_the_ID();
                                         $sub_title = get_sub_field('zagolovok_slajdu');
                                         $sub_image = get_sub_field('zobrazhennya_slajdu');
                                         $sub_lnk = get_sub_field('posylannya_na_knopku');
-                                        // Do something...
+                                        $sub_repeater = get_sub_field('logotypy');
                                         ?>
                                         <div class="banner__slide swiper-slide <?php if($counter == 1){echo 'first-slide';};?>" data-img="<?php echo $sub_image; ?>">
                                             <div class="banner__block">
                                                 <h2 class="banner__title">
                                                     <?php echo $sub_title; ?>
                                                 </h2>
+                                                <?php
+                                                if( have_rows('logotypy', $post_id) ):
+                                                    ?>
+                                                    <div class="banner__logos">
+                                                    <?php
+                                                    while( have_rows('logotypy', $post_id) ) : the_row();
+                                                        $subin_title = get_sub_field('opys_logotypu');
+                                                        $subin_image = get_sub_field('logotyp_v_slajd');
+                                                        $subin_lnk = get_sub_field('posilannya_dlya_logotypa');
+                                                        if($subin_lnk){
+                                                            ?>
+                                                            <a href="<?php echo $subin_lnk; ?>" class="banner__logo">
+                                                                <img src="<?php echo $subin_image; ?>" alt="<?php echo $subin_title; ?>">
+                                                            </a>
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <div class="banner__logo">
+                                                                <img src="<?php echo $subin_image; ?>" alt="<?php echo $subin_title; ?>">
+                                                            </div>
+                                                            <?php
+                                                        }
+                                                        ?>
+
+                                                        <?php
+
+                                                    endwhile;
+                                                    ?>
+                                                        </div>
+                                                            <?php
+                                                endif;
+                                                ?>
                                             </div>
                                             <a class="button red-button banner__button" href="<?php echo $sub_lnk; ?>"><span>Больше</span></a>
                                         </div>

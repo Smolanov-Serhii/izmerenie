@@ -3,7 +3,7 @@
   @media all and (max-width: 768px){
     display: flex;
     flex-direction: column-reverse;
-    padding-top: 97px;
+    padding-top: 4vh;
     align-items: center;
     height: 100vh;
   }
@@ -17,8 +17,8 @@
     border-radius: 50%;
     overflow: hidden;
     @media all and (max-width: 1720px){
-      width: 49vw;
-      height: 49vw;
+      width: 47vw;
+      height: 47vw;
     }
     @media all and (max-width: 1400px){
 
@@ -30,6 +30,7 @@
       position: static;
       width: 90%;
       height: 40vh;
+      flex: 1;
     }
     @media all and (max-width: 500px){
 
@@ -37,11 +38,31 @@
   }
   &__block{
     min-height: 324px;
+    max-width: 50%;
     @media all and (max-width: 1024px){
       display: flex;
-      align-items: flex-end;
+      flex-direction: column;
+      justify-content: flex-end;
       min-height: auto;
+      max-width: none;
+      width: 100%;
     }
+  }
+  &__logos{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 35px;
+  }
+  &__logo{
+    width: calc(33.333% - 12px);
+    margin-right: 12px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.72px 37.76px rgba(193, 219, 237, 0.15);
+    border-radius: 5.9px;
   }
   &__mask{
     transition: 0.7s ease-in-out;
@@ -142,9 +163,12 @@
     text-transform: uppercase;
     color: #213540;
     margin-bottom: 0;
-    max-width: 50vw;
+    max-width: 100%;
+    @media all and (max-width: 1800px){
+      font-size: 5rem;
+    }
     @media all and (max-width: 1400px){
-      font-size: 50px;
+      font-size: 46px;
     }
     @media all and (max-width: 1024px){
       font-size: 40px;
@@ -167,8 +191,8 @@
     }
     @media all and (max-width: 500px){
       width: 100%;
-      margin-top: 10vh;
-      margin-bottom: 10vh;
+      margin-top: 6vh;
+      margin-bottom: 14vh;
     }
   }
   .swiper-pagination{
