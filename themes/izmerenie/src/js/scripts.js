@@ -45,8 +45,9 @@ $(document).ready(function () {
         $('body').toggleClass('locked');
         $('.header__wrapper').fadeToggle().css('display', 'flex');
     });
-
     if ($('.banner').length) {
+        var startimage = $('.first-slide').data('img');
+        $('.banner__mask img').attr('src', startimage);
         var banner = new Swiper(".banner .swiper-container", {
             slidesPerView: 1,
             spaceBetween: 40,
@@ -56,26 +57,28 @@ $(document).ready(function () {
             fadeEffect: {
                 crossFade: true
             },
-            navigation: {
-                nextEl: ".banner .next",
-                prevEl: ".banner .prev",
-            },
         });
         let RotateCorner = 120;
         let ImageCorner = 120;
-        let click = 1;
+        let click = 0;
+        let nextclick = 1;
         $( ".banner .prev" ).on( "click", function() {
-
-            console.log('clixk');
-
+            banner.slidePrev();
+            click ++;
+            nextclick ++;
             if (click == 1){
-                ImageCorner = 0;
+                if(nextclick == 4){
+                    ImageCorner = 120;
+                    nextclick = 2;
+                } else {
+                    ImageCorner = 0;
+                }
             }else if(click == 2){
                 ImageCorner = 120;
             }else if(click == 3){
                 ImageCorner = 240;
             }
-            let prev = $('.swiper-slide-duplicate-prev').data('img');
+            let prev = $('.swiper-slide-active').data('img');
             $('.banner__mask').css({
                 '-moz-transform':'rotate(-'+RotateCorner+'deg)',
                 '-webkit-transform':'rotate(-'+RotateCorner+'deg)',
@@ -84,12 +87,11 @@ $(document).ready(function () {
                 'transform':'rotate(-'+RotateCorner+'deg)'
             });
             $('.banner__mask img').removeClass('new-img').addClass('current-img').css('z-index', 0);
-            console.log(ImageCorner)
-            $('.banner__mask').prepend($('<img class="new-img" src="'+prev+'" style="opacity: 0; z-index: 1; transform: rotate('+ImageCorner+'deg) translateX(50px) translateX(50px)">'));
+            $('.banner__mask').prepend($('<img class="new-img" src="'+prev+'" style="opacity: 0; z-index: 2; transform: rotate('+ImageCorner+'deg) translate(-70px, 50px)">'));
             $('.banner__mask .new-img').animate({opacity: '100%'}, 500);
             setTimeout(function() {
                 $('.current-img').remove()
-            }, 1000);
+            }, 500);
             $('.banner__mask img').css({
                 '-moz-transform':'rotate('+click * 120+'deg)',
                 '-webkit-transform':'rotate('+click * 120+'deg)',
@@ -98,15 +100,51 @@ $(document).ready(function () {
                 'transform':'rotate('+click * 120+'deg)'
             });
             RotateCorner = RotateCorner + 120;
-            console.log(click)
             if(click == 3){
                 click = 0;
             }
-            click ++;
         });
         $( ".banner .next" ).on( "click", function() {
-            let next = $('.swiper-slide-duplicate-next').data('img');
-            $('.banner__mask img').attr('src',next);
+            banner.slideNext();
+            click ++;
+            nextclick ++;
+            if (click == 1){
+                if(nextclick == 4){
+                    ImageCorner = 120;
+                    nextclick = 2;
+                } else {
+                    ImageCorner = 0;
+                }
+            }else if(click == 2){
+                ImageCorner = 120;
+            }else if(click == 3){
+                ImageCorner = 240;
+            }
+            let next = $('.swiper-slide-active').data('img');
+            $('.banner__mask').css({
+                '-moz-transform':'rotate(-'+RotateCorner+'deg)',
+                '-webkit-transform':'rotate(-'+RotateCorner+'deg)',
+                '-o-transform':'rotate(-'+RotateCorner+'deg)',
+                '-ms-transform':'rotate(-'+RotateCorner+'deg)',
+                'transform':'rotate(-'+RotateCorner+'deg)'
+            });
+            $('.banner__mask img').removeClass('new-img').addClass('current-img').css('z-index', 0);
+            $('.banner__mask').prepend($('<img class="new-img" src="'+next+'" style="opacity: 0; z-index: 2; transform: rotate('+ImageCorner+'deg) translate(-70px, 50px)">'));
+            $('.banner__mask .new-img').animate({opacity: '100%'}, 500);
+            setTimeout(function() {
+                $('.current-img').remove()
+            }, 500);
+            $('.banner__mask img').css({
+                '-moz-transform':'rotate('+click * 120+'deg)',
+                '-webkit-transform':'rotate('+click * 120+'deg)',
+                '-o-transform':'rotate('+click * 120+'deg)',
+                '-ms-transform':'rotate('+click * 120+'deg)',
+                'transform':'rotate('+click * 120+'deg)'
+            });
+            RotateCorner = RotateCorner + 120;
+            if(click == 3){
+                click = 0;
+            }
         });
     }
 
@@ -171,7 +209,6 @@ $(document).ready(function () {
                     }
                 }
             });
-            console.log(teamSlider);
         }
         if (window.innerWidth > 1024) {
             teamInit();

@@ -14,6 +14,7 @@
  */
 
 get_header();
+$post_id = get_the_ID();
 ?>
     <main id="main" class="main">
         <section class="banner height-section scroll-section">
@@ -26,24 +27,28 @@ get_header();
                 <div class="banner__content">
                     <div class="swiper-container">
                         <div class="banner__wrapper swiper-wrapper">
-                            <div class="banner__slide swiper-slide" data-img="<?php echo get_template_directory_uri(); ?>/img/banner/bg1.jpg">
-                                <div class="banner__block">
-                                    <h2 class="banner__title">
-                                        20 лет <br>успешного <br>опыта
-                                    </h2>
-                                </div>
-                                <a class="button red-button banner__button" href="#"><span>Больше</span></a>
-                            </div>
-                            <div class="banner__slide swiper-slide" data-img="<?php echo get_template_directory_uri(); ?>/img/banner/bg2.jpg">
-                                <div class="banner__block">
-                                    <h2 class="banner__title">
-                                        слабых делаем сильными
-                                        <br><br>
-                                        Сильных ответственными
-                                    </h2>
-                                </div>
-                                <a class="button red-button banner__button" href="#"><span>Больше</span></a>
-                            </div>
+                            <?php
+                            $counter = 1;
+                                if( have_rows('slajder', $post_id) ):
+                                    while( have_rows('slajder', $post_id) ) : the_row();
+                                        $sub_title = get_sub_field('zagolovok_slajdu');
+                                        $sub_image = get_sub_field('zobrazhennya_slajdu');
+                                        $sub_lnk = get_sub_field('posylannya_na_knopku');
+                                        // Do something...
+                                        ?>
+                                        <div class="banner__slide swiper-slide <?php if($counter == 1){echo 'first-slide';};?>" data-img="<?php echo $sub_image; ?>">
+                                            <div class="banner__block">
+                                                <h2 class="banner__title">
+                                                    <?php echo $sub_title; ?>
+                                                </h2>
+                                            </div>
+                                            <a class="button red-button banner__button" href="<?php echo $sub_lnk; ?>"><span>Больше</span></a>
+                                        </div>
+                                        <?php
+                                        $counter ++;
+                                    endwhile;
+                                endif;
+                            ?>
                         </div>
                         <div class="banner__bottom">
                             скрольте вниз
