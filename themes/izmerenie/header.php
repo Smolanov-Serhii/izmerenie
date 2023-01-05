@@ -31,8 +31,7 @@
 
     }
 </script>
-<?php if ( is_page( array( '45', '47', '122', '124', '126', '128', '50', '52' ) ) ) { $class='non-scroll'; } else  { $class=''; }?>
-<?php if( get_post_type() == 'blog' ) { $class='non-scroll'; } else  { $class=''; }?>
+<?php if ( is_page( array( '45', '47', '122', '124', '126', '128', '50', '52', '56' ) ) || get_post_type() == 'blog') { $class='non-scroll'; } else  { $class=''; }?>
 <body <?php body_class($class); ?> >
 <div class="preloader">
     <div class="preloader__row">

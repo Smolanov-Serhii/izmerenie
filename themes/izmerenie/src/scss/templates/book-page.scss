@@ -1,0 +1,90 @@
+.book-page{
+  padding-top: 63px;
+  padding-bottom: 187px;
+  @media all and (max-width: 768px){
+    padding-bottom: 150px;
+  }
+  @media all and (max-width: 500px){
+    padding-bottom: 60px;
+  }
+  &__title{
+    text-align: left;
+    margin-top: 40px;
+  }
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__img{
+    width: 48%;
+    @media all and (max-width: 1700px){
+      width: 35%;
+    }
+    @media all and (max-width: 768px){
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__desc{
+    width: calc(52% - 44px);
+    @media all and (max-width: 1700px){
+      width: calc(65% - 44px);
+    }
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
+  }
+  &__name{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 101.9%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #213540;
+    margin-bottom: 40px;
+    @media all and (max-width: 1400px){
+      font-size: 38px;
+    }
+    @media all and (max-width: 1024px){
+      font-size: 32px;
+    }
+    @media all and (max-width: 768px){
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  &__link{
+    width: 100%;
+    margin-top: 29px;
+    a{
+      font-weight: 700;
+      text-decoration-line: underline;
+      color: #213540;
+    }
+  }
+  &__about{
+    padding: 60px 45px;
+    background-color: rgba(160,188,200,0.1);
+    border-radius: 15px;
+    @media all and (max-width: 768px){
+      padding: 40px;
+    }
+    @media all and (max-width: 768px){
+      padding: 30px 20px;
+    }
+    &.text{
+      margin-bottom: 0;
+    }
+  }
+}
