@@ -32,14 +32,22 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: -20px;
+        margin-right: -20px;
         width: calc(100% + 20px);
+      }
+      @media all and (max-width: 800px){
+        width: 100%;
+        margin-right: 0;
       }
       li{
         margin-bottom: 30px;
         @media all and (max-width: 1350px){
           width: calc(50% - 20px);
           margin-bottom: 20px;
+        }
+        @media all and (max-width: 800px){
+          width: 100%;
+          margin-right: 0;
         }
         &:hover, &.current-cat{
           a{
@@ -85,6 +93,10 @@
     justify-content: space-between;
     margin-bottom: 20px;
     cursor: pointer;
+    @media all and (max-width: 500px){
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
     svg{
       transition: $transition;
     }
@@ -127,6 +139,10 @@
     &-img{
       width: 200px;
       position: relative;
+      @media all and (max-width: 500px){
+        width: 100%;
+        margin-bottom: 20px;
+      }
       svg{
         position: absolute;
         top: calc(50% - 23px);
@@ -144,6 +160,9 @@
       width: calc(100% - 246px);
       @media all and (max-width: 1600px){
         width: calc(100% - 230px);
+      }
+      @media all and (max-width: 500px){
+        width: 100%;
       }
     }
     &-time{

@@ -1,0 +1,48 @@
+section.single-blog{
+  padding-top: 63px;
+}
+.single-blog{
+  padding-bottom: 187px;
+  @media all and (max-width: 768px){
+    padding-bottom: 150px;
+  }
+  @media all and (max-width: 500px){
+    padding-bottom: 60px;
+  }
+  &__title{
+    text-align: left;
+    margin-top: 40px;
+  }
+  &__date{
+    margin-bottom: 12px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139.9%;
+    color: #A0BCC8;
+    display: block;
+    margin-top: 42px;
+    @media all and (max-width: 1024px){
+      font-size: 17px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 16px;
+    }
+  }
+  &__img{
+    width: 100%;
+    margin-bottom: 44px;
+    @media all and (max-width: 768px){
+      margin-bottom: 30px;
+    }
+    @media all and (max-width: 500px){
+      margin-bottom: 20px;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+

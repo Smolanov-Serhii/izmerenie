@@ -1,0 +1,111 @@
+.blog-page{
+  padding-top: 63px;
+  padding-bottom: 187px;
+  @media all and (max-width: 768px){
+    padding-bottom: 150px;
+  }
+  @media all and (max-width: 500px){
+    padding-bottom: 60px;
+  }
+  &__title{
+    text-align: left;
+    margin-top: 40px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -32px;
+    width: calc(100% + 32px);
+    @media all and (max-width: 768px){
+      margin-right: -20px;
+      width: calc(100% + 20px);
+    }
+    @media all and (max-width: 500px){
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  &__item{
+    width: calc(33.333% - 32px);
+    margin-right: 32px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    @media all and (max-width: 768px){
+      width: calc(50% - 20px);
+      margin-right: 20px;
+    }
+    @media all and (max-width: 500px){
+      width: 100%;
+      margin-right: 0;
+    }
+    &:hover{
+      .blog-page__item-title{
+        color: #EC1C24;
+      }
+      .blog-page__item-img{
+        img{
+          transform: scale(1.5);
+        }
+      }
+    }
+    &-img{
+      margin-bottom: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+      @media all and (max-width: 500px){
+        margin-bottom: 10px;
+      }
+      img{
+        transition: 3s ease-in-out;
+      }
+    }
+    &-title{
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      color: #213540;
+      transition: $transition;
+      @media all and (max-width: 1024px){
+        font-size: 18px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 17px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 16px;
+      }
+    }
+    &-exerpt{
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 139.9%;
+      color: #213540;
+      @media all and (max-width: 1024px){
+        font-size: 15px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
+    }
+    &-date{
+      margin-bottom: 8px;
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 139.9%;
+      color: #A0BCC8;
+      display: block;
+      @media all and (max-width: 1024px){
+        font-size: 15px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
+    }
+  }
+}
