@@ -224,26 +224,57 @@ $post_id = get_the_ID();
             <div class="programs__container main-container">
                 <div class="programs__list">
                     <?php
-                    $page_children = new WP_Query(array(
-                            'post_type' => 'page',
-                            'post_parent' => 78 // из основного цикла
+                    $terms = get_terms(
+                        array(
+                            'taxonomy'   => 'programs-category',
+                            'hide_empty' => true,
+                            'hierarchical' => false,
+                            'orderby' => 'name',
+                            'order' => 'ASC',
                         )
                     );
 
-                    if($page_children->have_posts()) :
-                        while($page_children->have_posts()): $page_children->the_post();
-                            ?>
-                            <a href="<?php the_permalink();?>" class="programs__list-item">
-                                    <span class="programs__list-bg">
-                                        <?php the_post_thumbnail(); ?>
-                                    </span>
-                                <h3><?php the_title(); ?></h3>
-                            </a>
+                    foreach ( $terms as $term ) { ?>
                         <?php
-                        endwhile;
-                    endif;
-                    wp_reset_query(); //обнуляем запрос
-                    ?>
+                        $queried_object = get_queried_object();
+                        $taxonomy = 'programs-category';
+                        $image = get_field('zobrazhennya_taksonomiyi', $term->taxonomy . '_' . $term->term_id);
+                        ?>
+                        <div class="programs__list-item">
+                                    <span class="programs__list-bg">
+                                        <img src="<?php echo $image; ?>" alt="<?php echo $term->name; ?>">
+                                    </span>
+                            <h3><?php echo $term->name; ?></h3>
+                            <ul class='programs__list-chield'>
+                                <?php
+                                $args = array(
+                                    'post_type' => 'programs',
+                                    'post_status' => 'publish',
+                                    'posts_per_page' => 0,
+                                    'orderby' => 'date',
+                                    'order' => 'DESC',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'programs-category',
+                                            'field' => 'name',
+                                            'terms' => $term->name
+                                        )
+                                    )
+                                );
+                                $partnersList = new WP_Query( $args );
+                                if($partnersList->have_posts()) {
+                                    while($partnersList->have_posts()) {
+                                        $partnersList->the_post();
+                                        ?>
+                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                        <?php
+                                    }
+                                }
+                                wp_reset_postdata();
+                                ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
