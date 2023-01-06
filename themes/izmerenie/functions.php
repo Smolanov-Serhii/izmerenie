@@ -644,7 +644,7 @@ function remove_admin_menus(){
         __( 'Users' ),
 //        __( 'Settings' ),
         __( 'Comments' ),
-        __( 'Plugins' ),
+//        __( 'Plugins' ),
     ];
 
     end( $menu );

@@ -59,6 +59,10 @@
           height: auto;
         }
       }
+      @media all and (max-width: 1400px){
+        bottom: 20px;
+        left: 50px;
+      }
       @media all and (max-width: 1200px){
         bottom: 20px;
         left: 50px;
@@ -99,7 +103,7 @@
       position: relative;
       min-height: 210px;
       width: calc(50% - 18px);
-      padding: 45px;
+      padding: 37px;
       border-radius: 18px;
       margin-bottom: 30px;
       text-decoration: none;
@@ -201,8 +205,9 @@
         display: block;
         width: 100%;
         padding-right: 20px;
-        @media all and (max-width: 1400px){
-          margin: 20px 0;
+        @media all and (max-width: 1600px){
+          margin: 0 0 20px 0;
+          font-size: 23px;
         }
         @media all and (max-width: 1400px){
         }

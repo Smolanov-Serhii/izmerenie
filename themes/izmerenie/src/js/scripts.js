@@ -15,10 +15,10 @@ $(document).ready(function () {
 
     AOS.init({
         // Global settings:
-        disable: function() {
-            var minWidth = 1024;
-            return window.innerWidth > minWidth;
-        },
+        // disable: function() {
+        //     var minWidth = 1024;
+        //     return window.innerWidth > minWidth;
+        // },
         startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
         initClassName: 'aos-init', // class applied after initialization
         animatedClassName: 'aos-animate', // class applied on animation
@@ -28,7 +28,7 @@ $(document).ready(function () {
         throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
         // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
         offset: 80, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
+        delay: 500, // values from 0 to 3000, with step 50ms
         duration: 700, // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
         once: true, // whether animation should happen only once - while scrolling down
@@ -183,9 +183,13 @@ $(document).ready(function () {
             $('.main').onepage_scroll({
                 sectionContainer: ".scroll-section", // контейнер, к которому будет применяться скролл
                 easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
-                animationTime: 1000, // время анимации
+                animationTime: 500, // время анимации
                 pagination: true, // скрыть или отобразить пагинатор
                 updateURL: false, // обновлять URL или нет
+                beforeMove: function(index) {
+                    console.log('move');
+                    $('section.active').find('.aos-init').addClass('aos-animate');
+                },
                 loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                 keyboard: false,                  // You can activate the keyboard controls
                 responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
