@@ -14,7 +14,10 @@ $(document).ready(function () {
 //
     AOS.init({
         // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        disable: function() {
+            var minWidth = 1024;
+            return window.innerWidth > minWidth;
+        },
         startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
         initClassName: 'aos-init', // class applied after initialization
         animatedClassName: 'aos-animate', // class applied on animation

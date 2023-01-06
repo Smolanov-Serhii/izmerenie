@@ -151,7 +151,7 @@ $post_id = get_the_ID();
                 <img class="power__decoration-right" src="<?php echo get_template_directory_uri() . '/img/power/dec-right.svg'; ?>" alt="decoration">
             </div>
             <div class="power__wrapper">
-                <h2 class="power__title section-title main-container">
+                <h2 class="power__title section-title main-container" data-aos="fade-right">
                     4 силы
                 </h2>
                 <div class="power__container main-container tabs-elements">
