@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    // $('section.active').addClass('');
 
 //
 //     var $menu = $(".header");
@@ -12,6 +12,7 @@ $(document).ready(function () {
 //     });
 //
 //
+
     AOS.init({
         // Global settings:
         disable: function() {
@@ -36,6 +37,12 @@ $(document).ready(function () {
 
     });
 
+    $(".programs__list-show").click(function () {
+        $(this).closest('.programs__list-item').find('.programs__list-chield').toggleClass('show');
+        $(this).closest('.programs__list-item').toggleClass('show');
+        $(this).toggleClass('showed');
+    });
+
     if (window.innerWidth <= 1024) {
         $(".noclick.menu-item").click(function () {
             $(this).find('.sub-menu').fadeToggle(300);
@@ -56,6 +63,8 @@ $(document).ready(function () {
             spaceBetween: 40,
             effect: 'fade',
             loop: true,
+            noSwiping: true,
+            allowTouchMove: false,
             loopFillGroupWithBlank: true,
             fadeEffect: {
                 crossFade: true

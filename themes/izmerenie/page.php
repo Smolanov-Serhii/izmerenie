@@ -244,7 +244,14 @@ $post_id = get_the_ID();
                                     <span class="programs__list-bg">
                                         <img src="<?php echo $image; ?>" alt="<?php echo $term->name; ?>">
                                     </span>
-                            <h3><?php echo $term->name; ?></h3>
+                            <h3><?php echo $term->name; ?>
+                                <div class="programs__list-show">
+                                    <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.707156 2.12139C0.316632 1.73086 0.316632 1.0977 0.707156 0.707174C1.09768 0.31665 1.73084 0.31665 2.12137 0.707174L9.19244 7.77824C9.58296 8.16877 9.58296 8.80193 9.19243 9.19246C8.80191 9.58298 8.16875 9.58298 7.77822 9.19246L0.707156 2.12139Z" fill="#FFFFFF"/>
+                                        <path d="M9.19243 9.19246C8.80191 9.58298 8.16875 9.58298 7.77822 9.19246C7.3877 8.80193 7.3877 8.16877 7.77822 7.77824L14.8493 0.707175C15.2398 0.316651 15.873 0.316651 16.2635 0.707175C16.654 1.0977 16.654 1.73087 16.2635 2.12139L9.19243 9.19246Z" fill="#FFFFFF"/>
+                                    </svg>
+                                </div>
+                            </h3>
                             <ul class='programs__list-chield'>
                                 <?php
                                 $args = array(

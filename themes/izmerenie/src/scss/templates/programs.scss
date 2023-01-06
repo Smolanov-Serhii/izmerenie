@@ -27,6 +27,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    &-show{
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+      @media all and (max-width: 1024px){
+        display: block;
+      }
+      &.showed{
+        transform: rotate(180deg);
+      }
+    }
     &-chield{
       position: absolute;
       bottom: 35px;
@@ -39,8 +52,28 @@
       transition: $transition;
       transform: translateY(120%);
       opacity: 0;
+      &.show{
+        transform: translateY(0);
+        opacity: 1;
+        @media all and (max-width: 768px){
+          height: auto;
+        }
+      }
+      @media all and (max-width: 1200px){
+        bottom: 20px;
+        left: 50px;
+      }
+      @media all and (max-width: 768px){
+        position: static;
+        padding-left: 26px;
+        height: 0;
+        margin-top: 0;
+      }
       li{
         margin-bottom: 9px;
+        @media all and (max-width: 1024px){
+          margin-bottom: 6px;
+        }
       }
       a{
         font-family: 'Nunito Sans';
@@ -51,11 +84,18 @@
         text-decoration-line: underline;
         color: #FFFFFF;
         margin-bottom: 9px;
+        @media all and (max-width: 1200px){
+          font-size: 18px;
+        }
+        @media all and (max-width: 1024px){
+          font-size: 16px;
+          margin-bottom: 0;
+        }
       }
     }
     &-item{
       position: relative;
-      min-height: 230px;
+      min-height: 264px;
       width: calc(50% - 18px);
       padding: 45px;
       border-radius: 18px;
@@ -83,10 +123,12 @@
       @media all and (max-width: 1400px){
         min-height: 160px;
       }
+      @media all and (max-width: 1200px){
+        min-height: 218px;
+      }
       @media all and (max-width: 1024px){
         font-size: 28px;
         padding: 42px 42px;
-        min-height: 130px;
       }
       @media all and (max-width: 768px){
         font-size: 24px;
@@ -98,11 +140,14 @@
       @media all and (max-width: 500px){
         font-size: 20px;
         min-height: auto;
-        padding: 28px 126px 28px 30px;
+        padding: 28px 30px 28px 30px;
       }
-      &:hover{
+      &.show{
         h3{
           margin: 0;
+          @media all and (max-width: 768px){
+            margin-bottom: 30px;
+          }
         }
         .programs__list-chield{
           transform: translateY(0);
@@ -119,22 +164,52 @@
         img{
           filter: grayscale(0%);
         }
-        padding-top: 39px;
+      }
+      @media all and (min-width: 1025px){
+        &:hover{
+          h3{
+            margin: 0;
+          }
+          .programs__list-chield{
+            transform: translateY(0);
+            opacity: 1;
+          }
+          &:after{
+            transform: translateY(0);
+          }
+          .programs__list-bg{
+            &:before{
+              opacity: 0;
+            }
+          }
+          img{
+            filter: grayscale(0%);
+          }
+          padding-top: 39px;
+        }
       }
       h3{
         font-weight: 700;
-        font-size: 36px;
+        font-size: 34px;
         line-height: 101.9%;
         position: relative;
         z-index: 3;
         margin: 50px 0;
         transition: $transition;
-        @media all and (max-width: 1024px){
+        display: block;
+        width: 100%;
+        padding-right: 20px;
+        @media all and (max-width: 1200px){
           font-size: 28px;
         }
-        @media all and (max-width: 768px){
+        @media all and (max-width: 1024px){
           font-size: 24px;
+        }
+        @media all and (max-width: 768px){
+          font-size: 22px;
           width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
         }
         @media all and (max-width: 500px){
           font-size: 20px;
