@@ -628,3 +628,34 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
 }
+
+add_action( 'admin_menu', 'remove_admin_menus' );
+function remove_admin_menus(){
+    global $menu;
+
+    $unset_titles = [
+        __( 'Dashboard' ),
+        __( 'Posts' ),
+        __( 'Media' ),
+//        __( 'Links' ),
+//        __( 'Pages' ),
+        __( 'Appearance' ),
+        __( 'Tools' ),
+        __( 'Users' ),
+//        __( 'Settings' ),
+        __( 'Comments' ),
+        __( 'Plugins' ),
+    ];
+
+    end( $menu );
+    while( prev( $menu ) ){
+
+        $value = explode( ' ', $menu[ key( $menu ) ][0] );
+        $title = $value[0] ?: '';
+
+        if( in_array( $title, $unset_titles, true ) ){
+            unset( $menu[ key( $menu ) ] );
+        }
+    }
+
+}
