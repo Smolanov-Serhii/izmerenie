@@ -229,7 +229,7 @@ $post_id = get_the_ID();
                             'taxonomy'   => 'programs-category',
                             'hide_empty' => true,
                             'hierarchical' => false,
-                            'orderby' => 'name',
+                            'orderby' => 'ASC',
                             'order' => 'ASC',
                         )
                     );

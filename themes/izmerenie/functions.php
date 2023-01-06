@@ -176,14 +176,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_filter('use_block_editor_for_post', '__return_false', 108);
-function wpschool_enable_gutenberg_post_ids( $can_edit, $post ) {
-    if ( empty( $post->ID ) ) return $can_edit;
-    if ( 108 === $post->ID ) return true;
-    return $can_edit;
-}
-add_filter( 'use_block_editor_for_post', 'wpschool_enable_gutenberg_post_ids', 108, 2 );
-
 register_post_type('programs', [
     'label' => null,
     'labels' => [
