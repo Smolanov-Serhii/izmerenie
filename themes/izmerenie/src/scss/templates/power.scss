@@ -54,11 +54,26 @@
   &__title{
     width: 100%;
     color: #213540;
+    display: flex;
+    align-items: center;
     @media all and (max-width: 768px){
       margin-bottom: 20px;
     }
     @media all and (max-width: 500px){
 
+    }
+    .default-power{
+      display: none;
+      margin-left: 30px;
+      margin-bottom: 4px;
+      @media all and (max-width: 1400px){
+        height: 30px;
+        width: auto;
+      }
+      @media all and (max-width: 768px){
+        height: 22px;
+        margin-left: 14px;
+      }
     }
   }
   &__nav{
@@ -81,6 +96,9 @@
     }
     @media all and (max-width: 500px){
 
+    }
+    &-else{
+      display: none;
     }
     &-item{
       border: 1px solid #BFD9EB;

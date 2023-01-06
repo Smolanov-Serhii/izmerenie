@@ -271,6 +271,15 @@ $(document).ready(function () {
                 .fadeIn();
         }).eq(0).addClass("active");
         $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
+
+        $(".default-power").click(function() {
+            $(this).fadeOut(300);
+            $('.tabs-nav-item:eq(0)').click();
+        })
+
+        $(".tabs-nav-item:not(.power__nav-else)").click(function() {
+            $(".default-power").fadeIn(300);
+        })
     }
 });
 
