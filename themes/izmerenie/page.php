@@ -83,7 +83,7 @@ $post_id = get_the_ID();
                             ?>
                         </div>
                         <div class="banner__bottom" data-aos="fade-up" data-aos-delay="600">
-                            скрольте вниз
+                            <?php echo the_field("napys_skrolte_vnyz", $post_id); ?>
                         </div>
                         <div class="swiper-pagination">
                             <div class="prev">
