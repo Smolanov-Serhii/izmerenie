@@ -63,9 +63,15 @@
         <div class="header__branding header__container">
             <?php
             if(!is_front_page()){
-                ?>
-                <a href="<?php echo get_home_url(); ?>"><img class="header__mobile-logo" src="<?php echo get_template_directory_uri() . '/img/header/logo-mobile.svg'; ?>" alt="logo-mobile"></a>
-                <?php
+                if (get_locale() == 'uk') {
+                    ?>
+                    <a href="<?php echo get_home_url(); ?>"><img class="header__logo" src="<?php echo the_field("logotyp_ukr", 'options'); ?>" alt="logo"></a>
+                    <?php
+                } else if (get_locale() == 'ru_RU') {
+                    ?>
+                    <a href="<?php echo get_home_url(); ?>"><img class="header__logo" src="<?php echo the_field("logotyp_rus", 'options'); ?>" alt="logo"></a>
+                    <?php
+                }
             } else {
                 if (get_locale() == 'uk') {
                     ?>
