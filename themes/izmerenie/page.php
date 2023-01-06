@@ -38,13 +38,13 @@ $post_id = get_the_ID();
                                         ?>
                                         <div class="banner__slide swiper-slide <?php if($counter == 1){echo 'first-slide';};?>" data-img="<?php echo $sub_image; ?>">
                                             <div class="banner__block">
-                                                <h2 class="banner__title">
+                                                <h2 class="banner__title" data-aos="fade-right" data-aos-delay="300">
                                                     <?php echo $sub_title; ?>
                                                 </h2>
                                                 <?php
                                                 if( have_rows('logotypy', $post_id) ):
                                                     ?>
-                                                    <div class="banner__logos">
+                                                    <div class="banner__logos" data-aos="fade-up" data-aos-delay="500">
                                                     <?php
                                                     while( have_rows('logotypy', $post_id) ) : the_row();
                                                         $subin_title = get_sub_field('opys_logotypu');
@@ -74,7 +74,7 @@ $post_id = get_the_ID();
                                                 endif;
                                                 ?>
                                             </div>
-                                            <a class="button red-button banner__button" href="<?php echo $sub_lnk; ?>"><span>Больше</span></a>
+                                            <a class="button red-button banner__button" href="<?php echo $sub_lnk; ?>" data-aos="fade-right" data-aos-delay="800"><span>Больше</span></a>
                                         </div>
                                         <?php
                                         $counter ++;
@@ -82,7 +82,7 @@ $post_id = get_the_ID();
                                 endif;
                             ?>
                         </div>
-                        <div class="banner__bottom">
+                        <div class="banner__bottom" data-aos="fade-up" data-aos-delay="600">
                             скрольте вниз
                         </div>
                         <div class="swiper-pagination">
@@ -122,13 +122,13 @@ $post_id = get_the_ID();
                     <img src="<?php echo get_template_directory_uri() . '/img/select/bg.jpg'; ?>" alt="bg">
                 </div>
                 <div class="select__left padding-left padding-right">
-                    <h2 class="select__title section-title">
+                    <h2 class="select__title section-title" data-aos="fade-right" data-aos-delay="300">
                         <?php echo the_field("zagolovok_bloku_vybir_sylnyh", $post_id); ?>
                     </h2>
-                    <div class="select__content">
+                    <div class="select__content" data-aos="fade-up" data-aos-delay="500">
                         <?php echo the_field("opys_bloku_vybir_sylnyh", $post_id); ?>
                     </div>
-                    <a class="button red-button select__button" href="<?php the_field("posylannya_na_knopku_vybir_sylnh", $post_id); ?>"><span>Подробнее</span></a>
+                    <a class="button red-button select__button" href="<?php the_field("posylannya_na_knopku_vybir_sylnh", $post_id); ?>" data-aos="fade-up"><span>Подробнее</span></a>
                 </div>
                 <?php
                     $video = get_field("posilannya_na_video", $post_id);
@@ -151,7 +151,7 @@ $post_id = get_the_ID();
                 <img class="power__decoration-right" src="<?php echo get_template_directory_uri() . '/img/power/dec-right.svg'; ?>" alt="decoration">
             </div>
             <div class="power__wrapper">
-                <h2 class="power__title section-title main-container" data-aos="fade-right">
+                <h2 class="power__title section-title main-container" data-aos="fade-right" data-aos-delay="200">
                     <?php echo the_field("zagolovok_bloku_4_syly", $post_id); ?>
                     <svg class="default-power" width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M37 18.547C37.0115 8.3552 28.7527 0.0246201 18.6012 5.4644e-05C8.36433 -0.0245108 0.0202651 8.23671 3.70334e-05 18.4169C-0.020191 28.6492 8.24874 36.9841 18.435 37C28.6632 37.0144 36.9884 28.7388 37 18.547Z" fill="white"/>
@@ -162,10 +162,11 @@ $post_id = get_the_ID();
                 </h2>
                 <div class="power__container main-container tabs-elements">
                     <div class="power__nav">
-                        <div class="power__nav-item power__nav-else tabs-nav-item">
+                        <div class="power__nav-item power__nav-else tabs-nav-item" data-aos="fade-right" data-aos-delay="100">
 
                         </div>
                         <?php
+                        $counter = 200;
                         $page_children = new WP_Query(array(
                                 'post_type' => 'page',
                                 'post_parent' => 140 // из основного цикла
@@ -175,7 +176,7 @@ $post_id = get_the_ID();
                         if($page_children->have_posts()) :
                             while($page_children->have_posts()): $page_children->the_post();
                                 ?>
-                                <div class="power__nav-item tabs-nav-item">
+                                <div class="power__nav-item tabs-nav-item" data-aos="fade-right" data-aos-delay="<?php echo $counter;?>">
                                     <?php the_title(); ?>
                                     <span class="arrow"></span>
                                     <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,12 +184,13 @@ $post_id = get_the_ID();
                                     </svg>
                                 </div>
                             <?php
+                                $counter = $counter + 100;
                             endwhile;
                         endif;
                         wp_reset_query(); //обнуляем запрос
                         ?>
                     </div>
-                    <div class="power__content">
+                    <div class="power__content" data-aos="fade-up" data-aos-delay="500">
                         <div class="power__content-item tabs-content-item">
                             <?php echo the_field("opys_bloku_4_syly"); ?>
                             <a class="button red-button power__button" href="<?php echo the_field("posilannya_na_storinku_bloku_4_syly"); ?>"><span>Больше</span></a>
@@ -233,14 +235,14 @@ $post_id = get_the_ID();
                             'order' => 'ASC',
                         )
                     );
-
+                    $counter = 100;
                     foreach ( $terms as $term ) { ?>
                         <?php
                         $queried_object = get_queried_object();
                         $taxonomy = 'programs-category';
                         $image = get_field('zobrazhennya_taksonomiyi', $term->taxonomy . '_' . $term->term_id);
                         ?>
-                        <div class="programs__list-item">
+                        <div class="programs__list-item" data-aos="fade-right" data-aos-delay="<?php echo $counter;?>">
                                     <span class="programs__list-bg">
                                         <img src="<?php echo $image; ?>" alt="<?php echo $term->name; ?>">
                                     </span>
@@ -281,12 +283,14 @@ $post_id = get_the_ID();
                                 ?>
                             </ul>
                         </div>
-                    <?php } ?>
+                    <?php
+                        $counter = $counter + 200;
+                    } ?>
                 </div>
             </div>
         </section>
         <section class="person height-section vertical-center scroll-section">
-            <h2 class="person__container-title main-container section-title">
+            <h2 class="person__container-title main-container section-title" data-aos="fade-right" data-aos-delay="200">
                 Команда
             </h2>
             <div class="person__decoration">
@@ -295,10 +299,10 @@ $post_id = get_the_ID();
             </div>
             <div class="person__container main-container">
                 <div class="person__text">
-                    <h3 class="person__title section-title">
+                    <h3 class="person__title section-title" data-aos="fade-right" data-aos-delay="500">
                         Виктория журавлева
                     </h3>
-                    <div class="person__content text">
+                    <div class="person__content text" data-aos="fade-right" data-aos-delay="700">
                         <ul>
                             <li>Основатель и управляющий партнер компании с 2001 года</li>
                             <li>Консультант по управлению и организационному развитию</li>
@@ -308,7 +312,7 @@ $post_id = get_the_ID();
                         </ul>
                     </div>
                 </div>
-                <div class="person__image">
+                <div class="person__image" data-aos="fade-left" data-aos-delay="300">
                     <img src="<?php echo get_template_directory_uri() . '/img/person/img.png'; ?>" alt="Виктория журавлева">
                 </div>
             </div>

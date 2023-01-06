@@ -27,9 +27,9 @@ $(document).ready(function () {
         debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
         throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
         // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 120, // offset (in px) from the original trigger point
+        offset: 80, // offset (in px) from the original trigger point
         delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 800, // values from 0 to 3000, with step 50ms
+        duration: 700, // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
         once: true, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
@@ -69,6 +69,22 @@ $(document).ready(function () {
             fadeEffect: {
                 crossFade: true
             },
+            on: {
+                slideChangeTransitionStart: function () {
+                    $('.banner__title').hide(0);
+                    $('.banner__title').removeClass('aos-init').removeClass('aos-animate');
+                    $('.banner__button').hide(0);
+                    $('.banner__button').removeClass('aos-init').removeClass('aos-animate');
+                    $('.banner__logos').hide(0);
+                    $('.banner__logos').removeClass('aos-init').removeClass('aos-animate');
+                },
+                slideChangeTransitionEnd: function () {
+                    $('.banner__title').show(0);
+                    $('.banner__button').show(0);
+                    $('.banner__logos').show(0);
+                    AOS.init();
+                },
+            }
         });
         let RotateCorner = 120;
         let ImageCorner = 120;

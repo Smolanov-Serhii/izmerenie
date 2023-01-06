@@ -42,7 +42,7 @@
     }
     &-chield{
       position: absolute;
-      bottom: 35px;
+      bottom: 30px;
       left: 67px;
       z-index: 3;
       margin-top: 34px;
@@ -79,13 +79,15 @@
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 200;
-        font-size: 22px;
+        font-size: 18px;
         line-height: 100%;
         text-decoration-line: underline;
+        border-bottom: 1px solid white;
         color: #FFFFFF;
         margin-bottom: 9px;
+        text-decoration: none;
         @media all and (max-width: 1200px){
-          font-size: 18px;
+          font-size: 17px;
         }
         @media all and (max-width: 1024px){
           font-size: 16px;
@@ -95,7 +97,7 @@
     }
     &-item{
       position: relative;
-      min-height: 264px;
+      min-height: 210px;
       width: calc(50% - 18px);
       padding: 45px;
       border-radius: 18px;
@@ -194,11 +196,16 @@
         line-height: 101.9%;
         position: relative;
         z-index: 3;
-        margin: 50px 0;
+        margin: 40px 0;
         transition: $transition;
         display: block;
         width: 100%;
         padding-right: 20px;
+        @media all and (max-width: 1400px){
+          margin: 20px 0;
+        }
+        @media all and (max-width: 1400px){
+        }
         @media all and (max-width: 1200px){
           font-size: 28px;
         }
