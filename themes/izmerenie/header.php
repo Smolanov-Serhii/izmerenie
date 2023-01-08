@@ -31,7 +31,7 @@
 
     }
 </script>
-<?php if ( is_page( array( '45', '47', '122', '124', '126', '128', '50', '52', '56', '58' ) ) || get_post_type() == 'blog' || get_post_type() == 'publications' || get_post_type() == 'programs') { $class='non-scroll'; } else  { $class=''; }?>
+<?php if ( is_page( array( '45', '47', '122', '124', '126', '128', '50', '52', '56', '58', '140' ) ) || get_post_type() == 'blog' || get_post_type() == 'publications' || get_post_type() == 'programs') { $class='non-scroll'; } else  { $class=''; }?>
 <body <?php body_class($class); ?> >
 <div class="preloader">
     <div class="preloader__row">

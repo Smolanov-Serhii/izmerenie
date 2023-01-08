@@ -64,18 +64,14 @@ $post_id = get_the_ID();
                     echo '<ul>';
                     wp_list_categories( $args );
                     echo '</ul>';
+                    wp_reset_postdata();
                     ?>
                 </div>
                 <div class="page-videos__list">
                     <?php
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = array(
-                        'posts_per_page' => 0,
-                        'order' 	 => 'DESC',
-                        'post_type' 	 => 'videos',
-                        'paged'	         => $paged
+                        'post_type' 	 => 'videos'
                     );
-
                     $MY_QUERY = new WP_Query( $args );
                     if ( $MY_QUERY->have_posts() ) :
                         while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>

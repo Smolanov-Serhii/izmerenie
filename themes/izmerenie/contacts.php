@@ -21,10 +21,10 @@ get_header();
         <div class="footer__container main-container">
             <div class="footer__form">
                 <h2 class="footer__title section-title">
-                    Контакты
+                    <?php the_title();?>
                 </h2>
                 <div class="footer__desc">
-                    <p>Вы можете связаться с нами любым удобным для вас способом или оставить свои контактные данные и мы свяжемся с вами самостоятельно</p>
+                    <?php the_content();?>
                 </div>
                 <div class="footer__socials">
                     <a href="#">

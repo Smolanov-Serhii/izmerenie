@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Внедрение изменений
+Template name: Оценка персонала
 Template post type: programs
 */
 
@@ -74,45 +74,82 @@ $post_id = get_the_ID();
     <section class="programs-page__block-1 block-1 main-container template-content">
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
             <div class="block-1__content text">
-                <?php echo the_field("kontent_pervogo_bloka", $post_id); ?>
+                <?php echo the_field("opisanie_pervogo_bloka", $post_id); ?>
+                <div class="table-ocenka">
+                    <div class="table-ocenka__title color-block text">
+                        <?php echo the_field("zagolovok_bloka_oczenki", $post_id); ?>
+                    </div>
+                    <div class="table-ocenka__wrapper">
+                        <div class="table-ocenka__decorate">
+                            <?php
+                            if( have_rows('punkty_oczenki', $post_id) ):
+                                    while( have_rows('punkty_oczenki', $post_id) ) : the_row();
+                                        $title = get_sub_field('opisanie_punkta_oczenki');
+                                        ?>
+                                        <div class="table-ocenka__decorate-item"></div>
+                                    <?php
+                                    endwhile;
+                            endif;
+                            ?>
+                        </div>
+                        <div class="table-ocenka__content">
+                            <?php
+                            if( have_rows('punkty_oczenki', $post_id) ):
+                                ?>
+                                <div class="table-ocenka__steps">
+                                    <?php
+                                    while( have_rows('punkty_oczenki', $post_id) ) : the_row();
+                                        $title = get_sub_field('opisanie_punkta_oczenki');
+                                        ?>
+                                        <div class="table-ocenka__step">
+                                            <p class="table-ocenka__desc">
+                                                <?php echo $title;?>
+                                            </p>
+                                        </div>
+                                    <?php
+                                    endwhile;
+                                    ?>
+                                </div>
+                            <?php
+                            endif;
+                            ?>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <?php
-            if( have_rows('shagi', $post_id) ):
-                $counter = 1;
-                ?>
-                    <div class="block-1__steps">
-                <?php
-                while( have_rows('shagi', $post_id) ) : the_row();
-                    $title = get_sub_field('zagolovok_shaga');
-                    $image = get_sub_field('izobrazhenie_shaga');
-                    ?>
-                    <div class="block-1__step">
-                        <div class="block-1__bg">
-                            <img src="<?php echo $image;?>" alt="<?php echo $title;?>">
-                        </div>
-                        <div class="block-1__desc">
-                            <?php echo $title;?>
-                        </div>
-                    </div>
-                    <svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 11.5L0.249999 22.3253L0.25 0.674682L19 11.5Z" fill="#C1272D"/>
-                    </svg>
-                    <?php
-                    ?>
-                <?php
-                    $counter ++;
-                endwhile;
-                ?>
-                    </div>
-                <?php
-            endif;
-            ?>
         </div>
     </section>
-    <section class="programs-page__block-3 block-3 main-container template-content">
+    <section class="programs-page__block-1 block-1 main-container template-content">
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
             <div class="block-1__content text">
-                <?php echo the_field("kontent_vtorogo_bloka", $post_id); ?>
+                <?php echo the_field("vtoroj_blok_shapka", $post_id); ?>
+            </div>
+            <div class="block-1__content content-center">
+                <img src="<?php the_field("kartinka_na_vtoroj_blok", $post_id); ?>" alt="">
+            </div>
+            <div class="block-1__content text">
+                <?php echo the_field("vtoroj_blok_niz", $post_id); ?>
+            </div>
+        </div>
+    </section>
+    <section class="programs-page__block-1 block-1 main-container template-content">
+        <div class="programs-page__container programs-page__light-bg programs-page__padding">
+            <div class="block-1__content text">
+                <?php echo the_field("opisanie_tretego_bloka", $post_id); ?>
+            </div>
+        </div>
+    </section>
+    <section class="programs-page__block-1 block-1 main-container template-content">
+        <div class="programs-page__container programs-page__light-bg programs-page__padding">
+            <div class="block-1__content text">
+                <?php echo the_field("opisanie_chetvyortogo_bloka", $post_id); ?>
+            </div>
+        </div>
+    </section>
+    <section class="programs-page__block-1 block-1 main-container template-content">
+        <div class="programs-page__container programs-page__light-bg programs-page__padding">
+            <div class="block-1__content text">
+                <?php echo the_field("opisanie_pyatogotvyortogo_bloka", $post_id); ?>
             </div>
         </div>
         <div class="programs-page__modal-btn">
