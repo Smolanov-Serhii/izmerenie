@@ -112,6 +112,12 @@
     @media all and (max-width: 1024px){
       padding-right: 0;
     }
+    ul{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     li{
       margin-right: 10px;
       &:last-child{
@@ -123,8 +129,9 @@
         line-height: 103.4%;
         color: #A0BCC8;
         text-decoration: none;
+        text-transform: uppercase;
       }
-      &.current-lang{
+      &.active{
         a{
           font-weight: 700;
           color: #213540;

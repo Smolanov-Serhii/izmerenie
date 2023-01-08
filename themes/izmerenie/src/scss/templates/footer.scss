@@ -260,6 +260,153 @@
       }
     }
   }
+  &__success{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+      position: relative;
+      max-width: 300px;
+      width: calc(100% - 40px);
+      height: auto;
+      background-color: #FFFFFF;
+      border: 2px solid #BFD9EB;
+      box-shadow: 0px 69px 85px -77px rgba(193, 219, 237, 0.25);
+      border-radius: 30px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      p{
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container{
+      position: relative;
+      max-width: 560px;
+      width: calc(100% - 40px);
+      height: auto;
+      background-color: #FFFFFF;
+      border: 2px solid #BFD9EB;
+      box-shadow: 0px 69px 85px -77px rgba(193, 219, 237, 0.25);
+      border-radius: 30px;
+      padding: 60px 70px 0 70px;
+      @media all and (max-width: 768px){
+        padding: 40px 40px 0 40px;
+      }
+      @media all and (max-width: 500px){
+        padding: 40px 20px 0 20px;
+      }
+      form{
+        br{
+          display: none;
+        }
+        p{
+          margin-bottom: 15px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .wpcf7-spinner{
+            margin-top: 20px;
+          }
+        }
+        .wpcf7-response-output{
+          font-size: 14px;
+        }
+        .wpcf7-submit{
+          margin-top: 25px;
+          @media all and (max-width: 500px){
+            width: 100%;
+          }
+        }
+        label{
+          font-family: 'Nunito Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 139.9%;
+          color: #A0BCC8;
+          width: 100%;
+          text-align: left;
+          display: block;
+          input, textarea{
+            background: #FFFFFF;
+            border: 1px solid #A0BCC8;
+            border-radius: 5px;
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 139.9%;
+            letter-spacing: 0.04em;
+            color: #213540;
+            width: 100%;
+            padding: 11px 25px;
+          }
+          textarea{
+            height: 74px;
+          }
+        }
+      }
+    }
+    &-close{
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      svg{
+        circle, rect{
+          transition: $transition;
+        }
+      }
+      &:hover{
+        svg{
+          circle{
+            opacity: 1;
+            fill: #ec1c24;
+          }
+          rect{
+            fill: white;
+          }
+        }
+      }
+    }
+    &__socials{
+      margin-left: -18px;
+      a{
+        margin-right: -14px;
+        text-decoration: none;
+      }
+    }
+    &-title{
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 19px;
+      text-align: left;
+    }
+  }
 }
 .to-up{
   position: fixed;

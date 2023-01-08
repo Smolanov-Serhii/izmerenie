@@ -45,11 +45,11 @@
         <?php
             if(!is_front_page()){
                 ?>
-                    <a href="<?php echo get_home_url(); ?>"><img class="header__mobile-logo" src="<?php echo get_template_directory_uri() . '/img/header/logo-mobile.svg'; ?>" alt="logo-mobile"></a>
+                    <a href="<?php echo get_home_url(); ?>"><img class="header__mobile-logo" src="<?php echo the_field("logotip_dlya_mobajla", 'options'); ?>" alt="logo-mobile"></a>
                 <?php
             } else {
                 ?>
-                    <img class="header__mobile-logo" src="<?php echo get_template_directory_uri() . '/img/header/logo-mobile.svg'; ?>" alt="logo-mobile">
+                    <img class="header__mobile-logo" src="<?php echo the_field("logotip_dlya_mobajla", 'options'); ?>" alt="logo-mobile">
                 <?php
             }
         ?>
@@ -63,31 +63,19 @@
         <div class="header__branding header__container">
             <?php
             if(!is_front_page()){
-                if (get_locale() == 'uk') {
-                    ?>
-                    <a href="<?php echo get_home_url(); ?>"><img class="header__logo" src="<?php echo the_field("logotyp_ukr", 'options'); ?>" alt="logo"></a>
-                    <?php
-                } else if (get_locale() == 'ru_RU') {
-                    ?>
-                    <a href="<?php echo get_home_url(); ?>"><img class="header__logo" src="<?php echo the_field("logotyp_rus", 'options'); ?>" alt="logo"></a>
-                    <?php
-                }
+                ?>
+                    <a href="<?php echo get_home_url(); ?>"><img class="header__logo" src="<?php echo the_field("logotyp", 'options'); ?>" alt="logo"></a>
+                <?php
             } else {
-                if (get_locale() == 'uk') {
-                    ?>
-                    <img class="header__logo" src="<?php echo the_field("logotyp_ukr", 'options'); ?>" alt="logo">
-                    <?php
-                } else if (get_locale() == 'ru_RU') {
-                    ?>
-                    <img class="header__logo" src="<?php echo the_field("logotyp_rus", 'options'); ?>" alt="logo">
-                    <?php
-                }
+                ?>
+                    <img class="header__logo" src="<?php echo the_field("logotyp", 'options'); ?>" alt="logo">
+                <?php
             }
             ?>
         </div>
         <ul class="header__language header__container">
             <?php
-            pll_the_languages();
+            qtranxf_generateLanguageSelectCode('short');
             ?>
         </ul>
         <nav id="header__nav" class="header__nav">

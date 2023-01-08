@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Корпоративная культура
+Template name: Внедрение изменений
 Template post type: programs
 */
 
@@ -74,7 +74,7 @@ $post_id = get_the_ID();
     <section class="programs-page__block-1 block-1 main-container template-content">
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
             <div class="block-1__content">
-                <?php echo the_field("kontent_bloka_1", $post_id); ?>
+                <?php echo the_field("kontent_pervogo_bloka", $post_id); ?>
             </div>
             <?php
             if( have_rows('shagi', $post_id) ):
@@ -83,16 +83,12 @@ $post_id = get_the_ID();
                     <div class="block-1__steps">
                 <?php
                 while( have_rows('shagi', $post_id) ) : the_row();
-                    $title = get_sub_field('opisanie_shaga');
+                    $title = get_sub_field('zagolovok_shaga');
                     $image = get_sub_field('izobrazhenie_shaga');
                     ?>
                     <div class="block-1__step">
                         <div class="block-1__bg">
                             <img src="<?php echo $image;?>" alt="<?php echo $title;?>">
-                        </div>
-                        <div class="block-1__digit">
-                            <?php echo $counter;?>
-                            <span><?php echo the_field("slovo_etap", 'options'); ?></span>
                         </div>
                         <div class="block-1__desc">
                             <?php echo $title;?>
@@ -113,19 +109,11 @@ $post_id = get_the_ID();
             ?>
         </div>
     </section>
-    <section class="programs-page__block-2 block-2 main-container template-content">
-        <div class="programs-page__container programs-page__light-bg programs-page__padding">
-            <div class="block-1__content text">
-                <?php echo the_field("opisanie_vtoroj_sekczii", $post_id); ?>
-                <img src="<?php the_field("izobrazhenie_vtoroj_sekczii", $post_id); ?>" alt="">
-            </div>
-        </div>
-    </section>
     <section class="programs-page__block-3 block-3 main-container template-content">
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
             <div class="block-1__content text">
-                <?php echo the_field("opisanie_tretej_sekczii", $post_id); ?>
-                            </div>
+                <?php echo the_field("kontent_vtorogo_bloka", $post_id); ?>
+            </div>
         </div>
         <div class="programs-page__modal-btn">
             <div class="button red-button js-modal" data-aos="fade-up" data-aos-delay="800"><span>Связаться с нами</span></div>
