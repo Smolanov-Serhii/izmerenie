@@ -113,7 +113,7 @@ $post_id = get_the_ID();
             ?>
         </div>
     </section>
-    <section class="programs-page__block-2 block-2 main-container template-content">
+    <section class="programs-page__block-2 block-1 block-2 main-container template-content">
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
             <div class="block-1__content text">
                 <?php echo the_field("opisanie_vtoroj_sekczii", $post_id); ?>
