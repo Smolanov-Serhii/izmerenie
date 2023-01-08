@@ -241,12 +241,13 @@ $post_id = get_the_ID();
                         $queried_object = get_queried_object();
                         $taxonomy = 'programs-category';
                         $image = get_field('zobrazhennya_taksonomiyi', $term->taxonomy . '_' . $term->term_id);
+                        $title = get_field('perevody_kategorii', $term->taxonomy . '_' . $term->term_id);
                         ?>
                         <div class="programs__list-item" data-aos="fade-right" data-aos-delay="<?php echo $counter;?>">
                                     <span class="programs__list-bg">
                                         <img src="<?php echo $image; ?>" alt="<?php echo $term->name; ?>">
                                     </span>
-                            <h3><?php echo $term->name; ?>
+                            <h3><?php echo $title; ?>
                                 <div class="programs__list-show">
                                     <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.707156 2.12139C0.316632 1.73086 0.316632 1.0977 0.707156 0.707174C1.09768 0.31665 1.73084 0.31665 2.12137 0.707174L9.19244 7.77824C9.58296 8.16877 9.58296 8.80193 9.19243 9.19246C8.80191 9.58298 8.16875 9.58298 7.77822 9.19246L0.707156 2.12139Z" fill="#FFFFFF"/>
