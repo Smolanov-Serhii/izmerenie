@@ -133,6 +133,9 @@
           padding: 11px 25px;
         }
         textarea{
+          @media all and (max-width: 1600px){
+            height: 160px;
+          }
           @media all and (max-width: 500px){
             height: 130px;
           }

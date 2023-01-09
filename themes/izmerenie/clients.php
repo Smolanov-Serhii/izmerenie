@@ -69,38 +69,46 @@ get_header();
                 </h2>
                 <div class="reviews__swiper swiper-container">
                     <div class="reviews__wrapper swiper-wrapper">
-                        <div class="reviews__slide swiper-slide">
-                            <div class="reviews__slide-header">
-                                <div class="reviews__slide-img">
-                                    <img src="<?php echo get_template_directory_uri() . '/img/reviews/ecosoft.png'; ?>" alt="Ecosoft Corporation">
+                        <?php
+                        $args = array(
+                            'post_type' => 'reviews',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 0,
+                            'orderby' => 'date',
+                            'order' => 'DESC'
+                        );
+                        $partnersList = new WP_Query( $args );
+                        if($partnersList->have_posts()) {
+                            while($partnersList->have_posts()) {
+                                $partnersList->the_post();
+                                ?>
+                                <div class="reviews__slide swiper-slide">
+                                    <div class="reviews__slide-header">
+                                        <div class="reviews__slide-img">
+                                            <img src="<?php echo the_field("logotip_kompanii"); ?>" alt="<?php echo the_field("nazvanie_kompanii"); ?>">
+                                        </div>
+                                        <h2 class="reviews__slide-name">
+                                            <div class="fio">
+                                                <?php echo the_field("fio"); ?>
+                                            </div>
+                                            <div class="work">
+                                                <?php echo the_field("dolzhnost"); ?>
+                                            </div>
+
+                                        </h2>
+                                    </div>
+                                    <div class="reviews__slide-desc">
+                                        <svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.2" d="M37.3144 0.00019455L37.3144 10.2504C37.3144 14.0268 36.6251 17.4735 35.2464 20.5905C33.8677 23.7076 31.5299 26.9445 28.2331 30.3013L22.1189 25.5358C25.3558 22.2989 27.3639 19.2418 28.1431 16.3646L20.6803 16.3646L20.6803 0.000193095L37.3144 0.00019455ZM16.6341 0.000192742L16.6341 10.2504C16.6341 14.0268 15.9448 17.4735 14.5661 20.5905C13.1874 23.7076 10.8497 26.9445 7.55281 30.3013L1.43864 25.5358C4.67556 22.2989 6.68364 19.2418 7.46289 16.3646L2.02919e-05 16.3646L2.17225e-05 0.000191287L16.6341 0.000192742Z" fill="#A0BCC8"/>
+                                        </svg>
+                                        <?php echo the_field("otzyv"); ?>
+                                    </div>
                                 </div>
-                                <h2 class="reviews__slide-name">
-                                    Ecosoft Corporation
-                                </h2>
-                            </div>
-                            <div class="reviews__slide-desc">
-                                <svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.2" d="M37.3144 0.00019455L37.3144 10.2504C37.3144 14.0268 36.6251 17.4735 35.2464 20.5905C33.8677 23.7076 31.5299 26.9445 28.2331 30.3013L22.1189 25.5358C25.3558 22.2989 27.3639 19.2418 28.1431 16.3646L20.6803 16.3646L20.6803 0.000193095L37.3144 0.00019455ZM16.6341 0.000192742L16.6341 10.2504C16.6341 14.0268 15.9448 17.4735 14.5661 20.5905C13.1874 23.7076 10.8497 26.9445 7.55281 30.3013L1.43864 25.5358C4.67556 22.2989 6.68364 19.2418 7.46289 16.3646L2.02919e-05 16.3646L2.17225e-05 0.000191287L16.6341 0.000192742Z" fill="#A0BCC8"/>
-                                </svg>
-                                In consectetur odio egestas tortor dolor cursus vel odio. Integer non quam senectus justo mauris tempus. Posuere fames dolor sit augue scelerisque etiam sed augue. Diam, sapien, mollis ac pellentesque magna vulputate. Neque sed bibendum accumsan mattis.
-                            </div>
-                        </div>
-                        <div class="reviews__slide swiper-slide">
-                            <div class="reviews__slide-header">
-                                <div class="reviews__slide-img">
-                                    <img src="<?php echo get_template_directory_uri() . '/img/reviews/mandel.png'; ?>" alt="Ecosoft Corporation">
-                                </div>
-                                <h2 class="reviews__slide-name">
-                                    Ecosoft Corporation
-                                </h2>
-                            </div>
-                            <div class="reviews__slide-desc">
-                                <svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.2" d="M37.3144 0.00019455L37.3144 10.2504C37.3144 14.0268 36.6251 17.4735 35.2464 20.5905C33.8677 23.7076 31.5299 26.9445 28.2331 30.3013L22.1189 25.5358C25.3558 22.2989 27.3639 19.2418 28.1431 16.3646L20.6803 16.3646L20.6803 0.000193095L37.3144 0.00019455ZM16.6341 0.000192742L16.6341 10.2504C16.6341 14.0268 15.9448 17.4735 14.5661 20.5905C13.1874 23.7076 10.8497 26.9445 7.55281 30.3013L1.43864 25.5358C4.67556 22.2989 6.68364 19.2418 7.46289 16.3646L2.02919e-05 16.3646L2.17225e-05 0.000191287L16.6341 0.000192742Z" fill="#A0BCC8"/>
-                                </svg>
-                                In consectetur odio egestas tortor dolor cursus vel odio. Integer non quam senectus justo mauris tempus. Posuere fames dolor sit augue scelerisque etiam sed augue. Diam, sapien, mollis ac pellentesque magna vulputate. Neque sed bibendum accumsan mattis.
-                            </div>
-                        </div>
+                                <?php
+                            }
+                        }
+                        wp_reset_postdata();
+                        ?>
                     </div>
                     <div class="swiper-pagination">
                         <div class="prev">

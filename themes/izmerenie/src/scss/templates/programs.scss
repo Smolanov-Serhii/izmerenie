@@ -43,7 +43,7 @@
     &-chield{
       position: absolute;
       bottom: 30px;
-      left: 67px;
+      left: 50px;
       z-index: 3;
       margin-top: 34px;
       display: flex;
@@ -206,7 +206,7 @@
         width: 100%;
         padding-right: 20px;
         @media all and (max-width: 1600px){
-          margin: 0 0 20px 0;
+          margin: 14% 0 20px 0;
           font-size: 23px;
         }
         @media all and (max-width: 1400px){
