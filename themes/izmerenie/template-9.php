@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Обучение руководителей
+Template name: Лидерские конференции
 Template post type: programs
 */
 
@@ -89,6 +89,13 @@ $post_id = get_the_ID();
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
             <div class="block-1__content text">
                 <?php echo the_field("opisanie_tretego_bloka", $post_id); ?>
+            </div>
+        </div>
+    </section>
+    <section class="programs-page__block-1 block-1 main-container template-content">
+        <div class="programs-page__container programs-page__light-bg programs-page__padding">
+            <div class="block-1__content text">
+                <?php echo the_field("opisanie_chetvyortogo_bloka", $post_id); ?>
             </div>
         </div>
         <div class="programs-page__modal-btn">
