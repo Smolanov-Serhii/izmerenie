@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Функциональные команды
+Template name: Командные воркшопы
 Template post type: programs
 */
 

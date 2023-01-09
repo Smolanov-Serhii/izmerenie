@@ -422,6 +422,22 @@
     }
   }
 }
+.line-pad-block{
+  background: #BFD9EB;
+  border-radius: 15px;
+  padding: 29px 32px;
+  display: inline-block;
+  margin-bottom: -14px;
+  @media all and (max-width: 1024px){
+    padding: 29px 30px;
+  }
+  @media all and (max-width: 768px){
+    padding: 26px 30px;
+  }
+  @media all and (max-width: 500px){
+    padding: 20px;
+  }
+}
 .table-ocenka{
   &__title{
     font-family: 'Rubik';
@@ -546,5 +562,51 @@
   }
   @media all and (max-width: 500px){
     margin-bottom: 20px;
+  }
+}
+.two-parts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &-item{
+    width: calc(50% - 7px);
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
+  }
+  h4{
+    font-size: 24px;
+    padding: 24px 24px;
+    @media all and (max-width: 1024px){
+      padding: 22px 22px;
+    }
+    @media all and (max-width: 768px){
+      padding: 20px 20px;
+      font-size: 20px;
+    }
+    @media all and (max-width: 500px){
+      padding: 20px;
+      font-size: 18px;
+    }
+  }
+  p{
+    background-color: #bfd9eb;
+    padding: 24px 24px;
+    display: block;
+    border-radius: 15px;
+    margin-bottom: 16px;
+    text-align: center;
+    @media all and (max-width: 1024px){
+      padding: 22px 22px;
+    }
+    @media all and (max-width: 768px){
+      padding: 20px 20px;
+    }
+    @media all and (max-width: 500px){
+      padding: 20px;
+    }
+    &:last-child{
+      margin-top: 0!important;
+    }
   }
 }
