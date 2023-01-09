@@ -76,6 +76,7 @@ $post_id = get_the_ID();
             <div class="block-1__content text">
                 <?php echo the_field("opisanie_pervogo_bloka", $post_id); ?>
             </div>
+            <img src="<?php echo the_field("izobrazhenie_pervogo_bloka", $post_id); ?>">
         </div>
     </section>
     <section class="programs-page__block-1 block-1 main-container template-content">
@@ -87,16 +88,55 @@ $post_id = get_the_ID();
     </section>
     <section class="programs-page__block-1 block-1 main-container template-content">
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
+            <img class="margin-bottom-small" src="<?php echo the_field("izobrazhenie_tretego_bloka", $post_id); ?>">
             <div class="block-1__content text">
                 <?php echo the_field("opisanie_tretego_bloka", $post_id); ?>
             </div>
-        </div>
-    </section>
-    <section class="programs-page__block-1 block-1 main-container template-content">
-        <div class="programs-page__container programs-page__light-bg programs-page__padding">
-            <div class="block-1__content text">
-                <?php echo the_field("opisanie_chetvyortogo_bloka", $post_id); ?>
-            </div>
+            <?php
+            if( have_rows('otzivi', $post_id) ):
+                ?>
+                <div class="programs-page__revs">
+                    <?php
+                    while( have_rows('otzivi', $post_id) ) : the_row();
+                        $fio = get_sub_field('fio');
+                        $work = get_sub_field('dolzhnost');
+                        $desc = get_sub_field('opisanie');
+                        $image = get_sub_field('izobrazhenie');
+                        $alt = get_sub_field('opisanie_pod_foto');
+                        ?>
+                        <div class="programs-page__rev">
+                            <div class="programs-page__rev-top">
+                                <div class="programs-page__rev-fio">
+                                    <?php echo $fio;?>
+                                </div>
+                                <div class="programs-page__rev-work">
+                                    <?php echo $work;?>
+                                </div>
+                            </div>
+                            <div class="programs-page__rev-bottom">
+                                <svg width="98" height="79" viewBox="0 0 98 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.2" d="M5.52734 78.4336L0.271485 71.0215C8.08789 65.1816 13.8828 59.4316 17.6563 53.7715C21.3398 48.1113 23.1816 42.3613 23.1816 36.5215L23.1816 34.6348C21.9238 34.8144 20.7559 34.9492 19.6777 35.0391C18.5098 35.2187 17.3867 35.3086 16.3086 35.3086C11.457 35.3086 7.54883 33.7363 4.58399 30.5918C1.5293 27.5371 0.00195792 23.6289 0.00195833 18.8672C0.00195884 13.1172 1.61915 8.53515 4.85352 5.12109C8.0879 1.70702 12.4453 -7.43025e-06 17.9258 -6.95114e-06C24.125 -6.40918e-06 29.291 2.38085 33.4238 7.14257C37.4668 11.9043 39.4883 18.0137 39.4883 25.4707C39.4883 35.4434 36.6582 44.8769 30.998 53.7715C25.248 62.7559 16.7578 70.9766 5.52734 78.4336ZM63.7461 78.4336L58.4902 71.0215C66.3066 65.1816 72.1016 59.4316 75.875 53.7715C79.5586 48.1113 81.4004 42.3613 81.4004 36.5215L81.4004 34.6348C80.0527 34.8145 78.8398 34.9492 77.7617 35.0391C76.5938 35.2187 75.5156 35.3086 74.5273 35.3086C69.7656 35.3086 65.8125 33.7363 62.668 30.5918C59.5234 27.4473 57.9512 23.5391 57.9512 18.8672C57.9512 13.1172 59.6133 8.53515 62.9375 5.12109C66.2617 1.70703 70.6641 -2.34061e-06 76.1445 -1.86149e-06C82.3438 -1.31954e-06 87.4649 2.38086 91.5078 7.14258C95.4609 11.9043 97.4375 18.0137 97.4375 25.4707C97.4375 35.7129 94.6074 45.2812 88.9473 54.1758C83.2871 63.0703 74.8867 71.1562 63.7461 78.4336Z" fill="#A0BCC8"/>
+                                </svg>
+                                <div class="programs-page__rev-desc">
+                                    <?php echo $desc;?>
+                                </div>
+                                <?php if($image){
+                                    ?>
+                                    <div class="programs-page__rev-img">
+                                        <img src="<?php echo $image;?>" alt="<?php echo $alt;?>">
+                                        <p><?php echo $alt;?></p>
+                                    </div>
+                                    <?php
+                                }?>
+                            </div>
+                        </div>
+                        <?php
+                    endwhile;
+                    ?>
+                </div>
+            <?php
+            endif;
+            ?>
         </div>
         <div class="programs-page__modal-btn">
             <div class="button red-button js-modal" data-aos="fade-up" data-aos-delay="800"><span>Связаться с нами</span></div>
