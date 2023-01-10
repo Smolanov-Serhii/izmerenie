@@ -27,8 +27,9 @@ $post_id = get_the_ID();
                 </svg>
             </div>
             <h1 class="page-videos__title page-title">
+                Видео
                 <?php
-                single_term_title();
+//                single_term_title();
                 ?>
             </h1>
             <div class="page-videos__wrapper">
