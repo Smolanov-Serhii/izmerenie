@@ -273,6 +273,10 @@ main{
   }
   .reviews__slide{
     min-width: 600px;
+    cursor: auto!important;
+    &:hover{
+      border: 2px solid transparent!important;
+    }
     @media all and (max-width: 768px){
       min-width: auto;
       padding: 60px 36px 36px 36px;

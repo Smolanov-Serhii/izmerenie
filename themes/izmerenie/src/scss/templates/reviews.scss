@@ -48,6 +48,12 @@
     overflow: hidden;
     height: auto;
     position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: $transition;
+    &:hover{
+      border: 2px solid #ec1c24;
+    }
     &:after{
       content: "";
       display: block;
