@@ -287,6 +287,8 @@ $(document).ready(function () {
             slidesPerView: 2,
             spaceBetween: 48,
             loop: true,
+            noSwiping: true,
+            allowTouchMove: false,
             navigation: {
                 nextEl: "section.reviews .next",
                 prevEl: "section.reviews .prev",

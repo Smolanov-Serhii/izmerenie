@@ -142,6 +142,17 @@ get_header();
         </div>
     </footer>
 </main>
+<div class="modal-rev" style="display: none">
+    <div class="modal-rev__container">
+        <div class="modal-rev__close">
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.2" cx="21" cy="21" r="21" fill="#BFD9EB"/>
+                <rect x="25.6055" y="14.8794" width="2" height="15.1702" rx="1" transform="rotate(45 25.6055 14.8794)" fill="#A0BCC8"/>
+                <rect x="14.9121" y="16.3276" width="2" height="15.0751" rx="1" transform="rotate(-45 14.9121 16.3276)" fill="#A0BCC8"/>
+            </svg>
+        </div>
+    </div>
+</div>
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri() . '/dist/js/main.js'; ?>"></script>
 </body>
