@@ -13,7 +13,7 @@
   &__image{
     position: absolute;
     //top: 106px;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
     right: 40px;
     border-radius: 50%;
@@ -29,10 +29,12 @@
 
     }
     @media all and (max-width: 768px){
-      position: static;
-      width: 90%;
+      position: absolute;
+      width: 100%;
       height: 40vh;
       flex: 1;
+      top: 30vh;
+      right: 0;
     }
     @media all and (max-width: 500px){
 
@@ -41,6 +43,7 @@
   &__block{
     //min-height: 324px;
     max-width: 50%;
+    padding-top: 20vh;
     @media all and (max-width: 1024px){
       display: flex;
       flex-direction: column;
@@ -55,6 +58,10 @@
     flex-wrap: wrap;
     max-width: 100%;
     margin-top: 35px;
+    @media all and (max-width: 500px){
+      margin-top: 20px;
+      margin-bottom: -20px;
+    }
   }
   &__logo{
     width: calc(33.333% - 12px);
@@ -142,6 +149,9 @@
   }
   &__content{
     height: 100%;
+    @media all and (max-width: 768px){
+      padding-top: 48vh;
+    }
   }
   .swiper-container{
     height: 100%;
@@ -190,8 +200,8 @@
     }
   }
   &__button{
-    //margin-top: 16vh;
-    margin-top: 40px;
+    margin-top: 14vh;
+    //margin-top: 40px;
     @media all and (max-width: 1024px){
       margin-top: 40px;
     }
