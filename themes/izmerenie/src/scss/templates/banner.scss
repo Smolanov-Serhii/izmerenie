@@ -168,6 +168,11 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    &.last-slide{
+      .banner__block{
+        padding-top: 0;
+      }
+    }
   }
   &__title{
     font-weight: 900;

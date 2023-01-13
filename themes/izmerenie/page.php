@@ -29,6 +29,12 @@ $post_id = get_the_ID();
                         <div class="banner__wrapper swiper-wrapper">
                             <?php
                             $counter = 1;
+                            $last =0;
+                            if( have_rows('slajder', $post_id) ):
+                                while( have_rows('slajder', $post_id) ) : the_row();
+                                    $last ++;
+                                endwhile;
+                            endif;
                                 if( have_rows('slajder', $post_id) ):
                                     while( have_rows('slajder', $post_id) ) : the_row();
                                         $sub_title = get_sub_field('zagolovok_slajdu');
@@ -38,7 +44,7 @@ $post_id = get_the_ID();
                                         $sub_btn = get_sub_field('nadpis_na_knopke');
                                         $sub_color = get_sub_field('czvet_teni');
                                         ?>
-                                        <div class="banner__slide swiper-slide <?php if($counter == 1){echo 'first-slide';};?>" data-img="<?php echo $sub_image; ?>" data-color="<?php echo $sub_color ?>" data-count="<?php echo get_template_directory_uri() . '/img/banner/left' . $counter . '.png' ?>" data-up="<?php echo get_template_directory_uri() . '/img/banner/top' . $counter . '.png' ?>" data-right="<?php echo get_template_directory_uri() . '/img/banner/right' . $counter . '.png' ?>">
+                                        <div class="banner__slide swiper-slide <?php if($counter == $last){echo 'last-slide';};?> <?php if($counter == 1){echo 'first-slide';};?>" data-img="<?php echo $sub_image; ?>" data-color="<?php echo $sub_color ?>" data-count="<?php echo get_template_directory_uri() . '/img/banner/left' . $counter . '.png' ?>" data-up="<?php echo get_template_directory_uri() . '/img/banner/top' . $counter . '.png' ?>" data-right="<?php echo get_template_directory_uri() . '/img/banner/right' . $counter . '.png' ?>">
                                             <div class="banner__block">
                                                 <h2 class="banner__title" data-aos="fade-right" data-aos-delay="300">
                                                     <?php echo $sub_title; ?>
