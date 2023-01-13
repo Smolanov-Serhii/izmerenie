@@ -92,6 +92,9 @@ $(document).ready(function () {
         let nextclick = 1;
         $( ".banner .prev" ).on( "click", function() {
             banner.slidePrev();
+            var $PosData = $('.banner .swiper-slide-active').data('position');
+            $('.banner__decoration').removeClass('position1').removeClass('position2').removeClass('position3');
+            $('.banner__decoration').addClass('position' + $PosData);
             var $coundData = $('.banner .swiper-slide-active').data('count');
             var $UpData = $('.banner .swiper-slide-active').data('up');
             var  $RightData = $('.banner .swiper-slide-active').data('right');
@@ -187,8 +190,9 @@ $(document).ready(function () {
             }
         });
         if (window.innerWidth < 1025) {
-            event.preventDefault();
-            $.scrollTo($('#reviews'), 1000);
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#reviews").offset().top
+            }, 1000);
         } else {
             $(".banner  .first-slide .banner__button ").click(function() {
                 event.preventDefault();
@@ -226,7 +230,7 @@ $(document).ready(function () {
 
     if($('.to-up').length){
         $(".to-up").click(function() {
-            $(".main").moveUp(1);
+            $(".main").moveTo(1);
         })
     }
 
