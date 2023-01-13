@@ -1,9 +1,38 @@
 .page-template-team{
   .person{
+    position: relative;
+    svg{
+      position: absolute;
+      z-index: -1;
+    }
     .person__content{
       margin-bottom: 0;
       p:last-child{
         margin-bottom: 0;
+      }
+    }
+    &:nth-child(2){
+      svg{
+        top: 0;
+        right: 0;
+      }
+    }
+    &:nth-child(3){
+      svg{
+        left: -270px;
+        top: -5vh;
+      }
+    }
+    &:nth-child(4){
+      svg{
+        top: -18vh;
+        right: 0;
+      }
+    }
+    &:nth-child(5){
+      svg{
+        top: 0;
+        left: -270px;
       }
     }
   }
@@ -12,6 +41,14 @@
   }
   .team-page{
     position: relative;
+    background-color: #FFFFFF;
+    &__decoration{
+      svg{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
     @media all and (max-width: 1024px){
       padding-top: 63px;
       padding-bottom: 220px;
@@ -27,7 +64,7 @@
     }
     .back-button{
       position: absolute;
-      top: 63px;
+      top: 40px;
       @media all and (max-width: 1024px){
         position: static;
       }

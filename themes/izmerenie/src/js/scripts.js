@@ -92,6 +92,12 @@ $(document).ready(function () {
         let nextclick = 1;
         $( ".banner .prev" ).on( "click", function() {
             banner.slidePrev();
+            var $coundData = $('.banner .swiper-slide-active').data('count');
+            var $UpData = $('.banner .swiper-slide-active').data('up');
+            var  $RightData = $('.banner .swiper-slide-active').data('right');
+            $( ".banner__decoration .left" ).attr("src",$coundData);
+            $( ".banner__decoration .top" ).attr("src",$UpData);
+            $( ".banner__decoration .right" ).attr("src",$RightData);
             click ++;
             nextclick ++;
             if (click == 1){
@@ -134,6 +140,12 @@ $(document).ready(function () {
         });
         $( ".banner .next" ).on( "click", function() {
             banner.slideNext();
+            var $coundData = $('.banner .swiper-slide-active').data('count');
+            var $UpData = $('.banner .swiper-slide-active').data('up');
+            var  $RightData = $('.banner .swiper-slide-active').data('right');
+            $( ".banner__decoration .left" ).attr("src",$coundData);
+            $( ".banner__decoration .top" ).attr("src",$UpData);
+            $( ".banner__decoration .right" ).attr("src",$RightData);
             click ++;
             nextclick ++;
             if (click == 1){
@@ -174,6 +186,16 @@ $(document).ready(function () {
                 click = 0;
             }
         });
+        if (window.innerWidth < 1025) {
+            event.preventDefault();
+            $.scrollTo($('#reviews'), 1000);
+        } else {
+            $(".banner  .first-slide .banner__button ").click(function() {
+                event.preventDefault();
+                $(".main").moveTo(7);
+            })
+        }
+
     }
 
     if (window.innerWidth > 1024) {
@@ -184,7 +206,7 @@ $(document).ready(function () {
                 sectionContainer: ".scroll-section", // контейнер, к которому будет применяться скролл
                 easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
                 animationTime: 700, // время анимации
-                pagination: true, // скрыть или отобразить пагинатор
+                pagination: false, // скрыть или отобразить пагинатор
                 updateURL: false, // обновлять URL или нет
                 beforeMove: function(index) {
                     setTimeout(function() {

@@ -19,9 +19,9 @@ $post_id = get_the_ID();
     <main id="main" class="main">
         <section class="banner height-section scroll-section">
             <div class="banner__decoration">
-                <img class="left" src="<?php echo get_template_directory_uri(); ?>/img/banner/left.svg" alt="decoration">
-                <img class="top" src="<?php echo get_template_directory_uri(); ?>/img/banner/top.svg" alt="decoration">
-                <img class="right" src="<?php echo get_template_directory_uri(); ?>/img/banner/right.svg" alt="decoration">
+                <img class="left" src="<?php echo get_template_directory_uri(); ?>/img/banner/left1.png" alt="decoration">
+                <img class="top" src="<?php echo get_template_directory_uri(); ?>/img/banner/top1.png" alt="decoration">
+                <img class="right" src="<?php echo get_template_directory_uri(); ?>/img/banner/right1.png" alt="decoration">
             </div>
             <div class="banner__container main-container">
                 <div class="banner__content">
@@ -35,8 +35,10 @@ $post_id = get_the_ID();
                                         $sub_image = get_sub_field('zobrazhennya_slajdu');
                                         $sub_lnk = get_sub_field('posylannya_na_knopku');
                                         $sub_repeater = get_sub_field('logotypy');
+                                        $sub_btn = get_sub_field('nadpis_na_knopke');
+                                        $sub_color = get_sub_field('czvet_teni');
                                         ?>
-                                        <div class="banner__slide swiper-slide <?php if($counter == 1){echo 'first-slide';};?>" data-img="<?php echo $sub_image; ?>">
+                                        <div class="banner__slide swiper-slide <?php if($counter == 1){echo 'first-slide';};?>" data-img="<?php echo $sub_image; ?>" data-color="<?php echo $sub_color ?>" data-count="<?php echo get_template_directory_uri() . '/img/banner/left' . $counter . '.png' ?>" data-up="<?php echo get_template_directory_uri() . '/img/banner/top' . $counter . '.png' ?>" data-right="<?php echo get_template_directory_uri() . '/img/banner/right' . $counter . '.png' ?>">
                                             <div class="banner__block">
                                                 <h2 class="banner__title" data-aos="fade-right" data-aos-delay="300">
                                                     <?php echo $sub_title; ?>
@@ -74,7 +76,7 @@ $post_id = get_the_ID();
                                                 endif;
                                                 ?>
                                             </div>
-                                            <a class="button red-button banner__button" href="<?php echo $sub_lnk; ?>" data-aos="fade-right" data-aos-delay="800"><span>Больше</span></a>
+                                            <a class="button red-button banner__button" href="<?php echo $sub_lnk; ?>" data-aos="fade-right" data-aos-delay="800"><span><?php echo $sub_btn; ?></span></a>
                                         </div>
                                         <?php
                                         $counter ++;
@@ -82,9 +84,9 @@ $post_id = get_the_ID();
                                 endif;
                             ?>
                         </div>
-                        <div class="banner__bottom" data-aos="fade-up" data-aos-delay="600">
-                            <?php echo the_field("napys_skrolte_vnyz", $post_id); ?>
-                        </div>
+<!--                        <div class="banner__bottom" data-aos="fade-up" data-aos-delay="600">-->
+<!--                            --><?php //echo the_field("napys_skrolte_vnyz", $post_id); ?>
+<!--                        </div>-->
                         <div class="swiper-pagination">
                             <div class="prev">
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -369,7 +371,7 @@ $post_id = get_the_ID();
                 </div>
             </div>
         </section>
-        <section class="reviews height-section vertical-center scroll-section">
+        <section class="reviews height-section vertical-center scroll-section" id="reviews">
             <div class="reviews__decoration">
                 <img class="reviews__decoration-left" src="<?php echo get_template_directory_uri() . '/img/reviews/dec-left.svg'; ?>" alt="decoration">
                 <img class="reviews__decoration-right" src="<?php echo get_template_directory_uri() . '/img/reviews/dec-right.svg'; ?>" alt="decoration">

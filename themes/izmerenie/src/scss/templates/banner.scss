@@ -126,17 +126,18 @@
   &__decoration{
     img{
       position: absolute;
+      transition: $transition;
     }
     .left{
-      top: 0;
-      left: -131px;
+      top: -44px;
+      left: -265px;
     }
     .top{
-      top: 0;
+      top: -346px;
       left: 466px;
     }
     .right{
-      right: 30px;
+      right: -343px;
       bottom: 173px;
     }
   }
@@ -200,8 +201,11 @@
     }
   }
   &__button{
-    margin-top: 14vh;
+    margin-top: 7vh;
     //margin-top: 40px;
+    @media all and (max-width: 1800px){
+      min-width: 200px;
+    }
     @media all and (max-width: 1024px){
       margin-top: 40px;
     }

@@ -47,7 +47,7 @@ $post_id = get_the_ID();
                         <div class="blog-page__item-img">
                             <img src="<?php echo the_field("zobrazhennya_zapysu"); ?>" alt="<?php echo the_field("zagolovok_zapysu"); ?>">
                         </div>
-                        <span class="blog-page__item-date"><?php echo get_the_date(); ?></span>
+                        <span class="blog-page__item-date"><?php echo get_the_date('d.M.Y'); ?></span>
                         <div class="blog-page__item-content">
                             <h2 class="blog-page__item-title"><?php echo the_field("zagolovok_zapysu"); ?></h2>
                             <h3 class="blog-page__item-excerpt">

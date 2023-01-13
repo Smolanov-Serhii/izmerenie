@@ -89,9 +89,9 @@
             ?>
         </nav>
         <div class="header__soc header__container">
-            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/fb.svg" width="24" height="24" alt="facebook"> </a>
-            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/youtube.svg" width="24" height="24" alt="youtube"> </a>
-            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/li.svg" width="24" height="24" alt="linkedin"> </a>
+            <a href="<?php echo the_field("facebook", 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header/fb.svg" width="24" height="24" alt="facebook"> </a>
+            <a href="<?php echo the_field("youtube", 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header/youtube.svg" width="24" height="24" alt="youtube"> </a>
+            <a href="<?php echo the_field("linkedin", 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header/li.svg" width="24" height="24" alt="linkedin"> </a>
         </div>
     </div>
 </header>

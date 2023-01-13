@@ -102,13 +102,6 @@ $post_id = get_the_ID();
     <section class="programs-page__block-1 block-1 main-container template-content">
         <div class="programs-page__container programs-page__light-bg programs-page__padding">
             <div class="block-1__content text">
-                <?php echo the_field("opisanie_pervogo_bloka", $post_id); ?>
-            </div>
-        </div>
-    </section>
-    <section class="programs-page__block-1 block-1 main-container template-content">
-        <div class="programs-page__container programs-page__light-bg programs-page__padding">
-            <div class="block-1__content text">
                 <?php echo the_field("opisane_pyatogo_bloka", $post_id); ?>
             </div>
         </div>
