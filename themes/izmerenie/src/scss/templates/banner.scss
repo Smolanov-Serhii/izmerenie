@@ -1,55 +1,215 @@
 .banner{
   position: relative;
+  @media all and (max-width: 768px){
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 4vh;
+    align-items: center;
+    height: 100vh;
+  }
+  @media all and (max-width: 500px){
+
+  }
+  .position1{
+    .left{
+      top: -140px;
+      left: -265px;
+    }
+    .top{
+      top: -346px;
+      left: 466px;
+    }
+    .right{
+      right: -343px;
+      bottom: 173px;
+    }
+  }
+  .position2{
+    .left{
+      left: -100px;
+      top: 40vh;
+    }
+    .top{
+      left: 24vw;
+      top: -100px;
+    }
+    .right{
+      right: 100px;
+      bottom: 0;
+    }
+  }
+  .position3{
+    .left{
+      left: 1vw;
+      top: 40vh;
+      width: 20vw;
+    }
+    .top{
+      left: 300px;
+      top: -100px;
+      width: 20vw;
+    }
+    .right{
+      right: 20vw;
+      bottom: -20vh;
+    }
+  }
+  .swiper-slide-2{
+
+  }
+  .swiper-slide-3{
+
+  }
   &__image{
     position: absolute;
-    top: 106px;
+    //top: 106px;
+    top: 47%;
+    transform: translateY(-50%);
     right: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    @media all and (max-width: 1720px){
+      width: 47vw;
+      height: 47vw;
+    }
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+      position: absolute;
+      width: 100%;
+      height: 40vh;
+      flex: 1;
+      top: 30vh;
+      right: 0;
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
   &__block{
-    min-height: 324px;
+    //min-height: 324px;
+    max-width: 50%;
+    padding-top: 20vh;
+    @media all and (max-width: 1024px){
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: auto;
+      max-width: none;
+      width: 100%;
+    }
+  }
+  &__logos{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 35px;
+    @media all and (max-width: 500px){
+      margin-top: 20px;
+      margin-bottom: -20px;
+    }
+  }
+  &__logo{
+    width: calc(33.333% - 12px);
+    margin-right: 12px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.72px 37.76px rgba(193, 219, 237, 0.15);
+    border-radius: 5.9px;
   }
   &__mask{
-    transition: 1s ease-in-out;
-    -webkit-mask-image: url(../../img/banner/mask.png);
-    mask-image: url(../../img/banner/mask.png);
-    -webkit-mask-position: right top;
+    transition: 0.7s ease-in-out;
+    -webkit-mask-image: url(../../img/banner/mask-new.png);
+    mask-image: url(../../img/banner/mask-new.png);
+    -webkit-mask-position: center center;
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
-    mask-position: right top;
+    mask-position: center center;
     width: 876px;
     height: 876px;
     position: relative;
+    @media all and (max-width: 1720px){
+      width: 100%;
+      height: 100%;
+    }
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+      -webkit-mask-position: center;
+      mask-position: center;
+      left: 0;
+    }
+    @media all and (max-width: 500px){
+      left: 0;
+    }
     img{
       position: absolute;
-      top: 0;
-      right: 0;
-      width: auto;
-      transition: 1s ease-in-out;
+      transition: 0.7s ease-in-out;
       height: 100%;
+      object-fit: cover;
+      width: 100%;
+      @media all and (max-width: 1400px){
+
+      }
+      @media all and (max-width: 1024px){
+
+      }
+      @media all and (max-width: 768px){
+
+      }
+      @media all and (max-width: 500px){
+
+      }
     }
   }
   &__decoration{
     img{
       position: absolute;
+      transition: 2s ease-in-out;
+      width: auto;
+      height: auto;
     }
     .left{
-      top: 0;
-      left: -131px;
+      top: -44px;
+      left: -265px;
+      width: 441px;
+      height: auto;
     }
     .top{
-      top: 0;
+      top: -346px;
       left: 466px;
+      width: 523px;
+      height: auto;
     }
     .right{
-      right: 30px;
+      right: -343px;
       bottom: 173px;
+      width: 625px;
+      height: auto;
     }
   }
   &__container{
     height: 100vh;
+    @media all and (max-width: 768px){
+      height: auto;
+      flex: 1;
+    }
   }
   &__content{
     height: 100%;
+    @media all and (max-width: 768px){
+      padding-top: 48vh;
+    }
   }
   .swiper-container{
     height: 100%;
@@ -65,24 +225,70 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    &.last-slide{
+      .banner__block{
+        padding-top: 0;
+      }
+    }
   }
   &__title{
     font-weight: 900;
-    font-size: 60px;
+    font-size: 6rem;
     line-height: 101.9%;
     text-transform: uppercase;
     color: #213540;
     margin-bottom: 0;
-    max-width: 770px;
+    max-width: 100%;
+    @media all and (max-width: 1800px){
+      font-size: 5rem;
+    }
+    @media all and (max-width: 1500px){
+      font-size: 4rem;
+    }
+    @media all and (max-width: 1400px){
+      font-size: 46px;
+    }
+    @media all and (max-width: 1024px){
+      font-size: 40px;
+    }
+    @media all and (max-width: 768px){
+      font-size: 30px;
+      max-width: none;
+    }
+    @media all and (max-width: 500px){
+      font-size: 24px;
+      br{
+        display: none;
+      }
+    }
   }
   &__button{
-    margin-top: 166px;
+    margin-top: 7vh;
+    //margin-top: 40px;
+    @media all and (max-width: 1800px){
+      min-width: 200px;
+    }
+    @media all and (max-width: 1024px){
+      margin-top: 40px;
+    }
+    @media all and (max-width: 500px){
+      width: 100%;
+      margin-top: 6vh;
+      margin-bottom: 14vh;
+    }
   }
   .swiper-pagination{
     position: absolute;
     left: 0;
-    bottom: 16vh;
+    bottom: 7vh;
     display: flex;
+    @media all and (max-width: 1024px){
+      bottom: 3vh;
+    }
+    @media all and (max-width: 768px){
+      width: 100%;
+      justify-content: center;
+    }
     > div{
       margin-right: 22px;
       cursor: pointer;
@@ -98,5 +304,8 @@
     font-size: 14px;
     line-height: 19px;
     color: #6F8C9E;
+    @media all and (max-width: 768px){
+      display: none;
+    }
   }
 }

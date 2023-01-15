@@ -11,6 +11,18 @@
     display: flex;
     mix-blend-mode: overlay;
     pointer-events: none;
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+      height: auto;
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+
+    }
     img{
       height: 100%;
       width: auto;
@@ -24,6 +36,12 @@
     display: flex;
     align-items: center;
     z-index: 2;
+    @media all and (max-width: 1204px){
+      height: auto;
+    }
+    @media all and (max-width: 768px){
+      flex-direction: column;
+    }
   }
   &__bg{
     position: absolute;
@@ -31,6 +49,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    @media all and (max-width: 768px){
+      position: static;
+      height: 500px;
+    }
+    @media all and (max-width: 500px){
+      height: 60vh;
+    }
     img{
       object-fit: cover;
       width: 100%;
@@ -39,9 +64,22 @@
   }
   &__left{
     width: 53%;
-    padding-top: 115px;
-    padding-bottom: 103px;
+    padding-top: 9vh;
+    padding-bottom: 9vh;
     position: relative;
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
+    @media all and (max-width: 500px){
+      padding-top: 58px;
+      padding-bottom: 66px;
+    }
     &:before{
       content: "";
       display: block;
@@ -60,15 +98,16 @@
     }
   }
   &__title{
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 112.4%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #FFFFFF;
+
   }
   &__button{
     z-index: 2;
+    @media all and (max-width: 500px){
+      width: 100%;
+    }
+  }
+  &__content{
+    margin-bottom: 35px;
   }
   &__video{
     position: absolute;
@@ -76,6 +115,23 @@
     left: calc(53% + 196px);
     cursor: pointer;
     transition: $transition;
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      top: calc(250px - 80px);
+      left: calc(50% - 80px);
+    }
+    @media all and (max-width: 500px){
+      height: 60vh;
+      top: 0;
+      left: calc(50% - 80px);
+    }
+
     &:hover{
       transform: scale(1.2);
     }

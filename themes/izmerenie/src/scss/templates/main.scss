@@ -2,4 +2,23 @@
   padding-left: 200px;
   background-color: #F5F5F5;
   flex: 1;
+  @media all and (max-width: 1720px){
+
+  }
+  @media all and (max-width: 1400px){
+
+  }
+  @media all and (max-width: 1024px){
+    padding-left: 0;
+  }
+  @media all and (max-width: 768px){
+
+  }
+  @media all and (max-width: 500px){
+
+  }
+}
+.back-button{
+  display: inline-block;
+  cursor: pointer;
 }

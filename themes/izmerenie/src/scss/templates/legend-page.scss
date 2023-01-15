@@ -1,0 +1,59 @@
+.legend-page{
+  padding-top: 63px;
+  padding-bottom: 220px;
+  @media all and (max-width: 768px){
+    padding-bottom: 150px;
+  }
+  @media all and (max-width: 500px){
+    padding-bottom: 60px;
+  }
+  &__container{
+
+  }
+  &__title{
+    text-align: left;
+    margin-top: 40px;
+  }
+  &__content{
+    h2{
+      font-family: 'Century';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 57px;
+      line-height: 125.9%;
+      color: #A0BCC8;
+      @media all and (max-width: 1600px){
+        font-size: 54px;
+      }
+      @media all and (max-width: 1400px){
+        font-size: 40px;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 34px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 30px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 24px;
+      }
+    }
+  }
+  &__lnk{
+    position: relative;
+  }
+  &__cover{
+    width: 100%;
+    height: auto;
+  }
+  &__btn{
+    position: absolute;
+    top: calc(50% - 80px);
+    left: calc(50% - 80px);
+    cursor: pointer;
+    transition: $transition;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}

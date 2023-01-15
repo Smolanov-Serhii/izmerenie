@@ -17,14 +17,31 @@ $px: 0.0520833333333333;
 }
 html{
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 400;
+  @media all and (max-width: 1400px){
+    font-size: 90%;
+  }
+  @media all and (max-width: 1024px){
+    font-size: 80%;
+  }
+  @media all and (max-width: 768px){
+
+  }
+  @media all and (max-width: 500px){
+
+  }
 }
 body{
   background-color: #F5F5F5;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  @media all and (max-width: 768px){
+    height: auto;
+  }
 }
 .locked{
   overflow: hidden;
@@ -34,23 +51,47 @@ img{
 }
 main{
   flex: 1;
-  overflow: hidden;
 }
 .padding-right{
   padding-right: 136px;
+  @media all and (max-width: 1400px){
+    padding-right: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-right: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-right: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-right: 20px;
+  }
 }
 .padding-left{
   padding-left: 136px;
+  @media all and (max-width: 1400px){
+    padding-left: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-left: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-left: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+  }
 }
 .main-container{
   max-width: 1920px;
   margin: auto;
+  width: 100%;
   @extend .padding-left;
   @extend .padding-right;
 }
 .vertical-center{
-  //display: flex;
-  //align-items: center;
+  display: flex;
+  align-items: center;
 }
 .middle-container{
   max-width: 1700px;
@@ -72,7 +113,7 @@ main{
   align-items: center;
   background-color: #EC1C24;
   border-radius: 5px;
-  padding: 16px;
+  padding: 12px;
   text-decoration: none;
   position: relative;
   transition: $transition;
@@ -83,6 +124,21 @@ main{
   text-transform: uppercase;
   color: #FFFFFF;
   border: none;
+  @media all and (max-width: 1720px){
+
+  }
+  @media all and (max-width: 1400px){
+
+  }
+  @media all and (max-width: 1024px){
+
+  }
+  @media all and (max-width: 768px){
+    padding: 14px;
+  }
+  @media all and (max-width: 500px){
+    width: 100%;
+  }
   &:hover{
     background-color: #C1272D;
   }
@@ -110,25 +166,73 @@ main{
 }
 .height-section{
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  @media all and (max-width: 1024px){
+    height: auto;
+  }
+}
+.page-title{
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 101.9%;
+  text-transform: uppercase;
+  color: #213540;
+  @media all and (max-width: 1400px){
+    font-size: 50px;
+  }
+  @media all and (max-width: 1024px){
+    font-size: 40px;
+  }
+  @media all and (max-width: 768px){
+    font-size: 35px;
+  }
+  @media all and (max-width: 500px){
+    font-size: 30px;
+  }
 }
 .section-title{
   font-weight: 800;
-  font-size: 48px;
+  font-size: 4.8rem;
   line-height: 107%;
   text-transform: uppercase;
-  color: #093A84;
+  color: #213540;
   margin-bottom: 30px;
   @media all and (max-width: 1400px){
-    font-size: 45px;
+    font-size: 40px;
   }
   @media all and (max-width: 1024px){
-    font-size: 42px;
+    font-size: 36px;
   }
   @media all and (max-width: 768px){
-    font-size: 39px;
+    font-size: 28px;
   }
   @media all and (max-width: 500px){
+    font-weight: 900;
+    font-size: 24px;
+  }
+}
+.post-title{
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 101.9%;
+  color: #213540;
+  @media all and (max-width: 1400px){
     font-size: 36px;
+  }
+  @media all and (max-width: 1024px){
+    font-size: 32px;
+  }
+  @media all and (max-width: 768px){
+    font-size: 28px;
+  }
+  @media all and (max-width: 500px){
+    font-weight: 900;
+    font-size: 24px;
   }
 }
 .section-subtitle{
@@ -147,6 +251,63 @@ main{
     font-size: 14px;
   }
 }
+.modal-rev{
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  .reviews__slide-header{
+    @media all and (max-width: 500px){
+      flex-direction: column;
+    }
+  }
+  .reviews__slide-name{
+    @media all and (max-width: 500px){
+      text-align: center;
+    }
+  }
+  .reviews__slide{
+    min-width: 600px;
+    cursor: auto!important;
+    &:hover{
+      border: 2px solid transparent!important;
+    }
+    @media all and (max-width: 768px){
+      min-width: auto;
+      padding: 60px 36px 36px 36px;
+      width: auto;
+      max-width: calc(100vw - 80px);
+      margin-right: 0!important;
+    }
+  }
+  &__container{
+    max-width: calc(100vw - 40px);
+    width: auto;
+    height: auto;
+    padding: 40px;
+    border-radius: 18px;
+    position: relative;
+    @media all and (max-width: 768px){
+      padding: 0;
+    }
+  }
+  &__close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .reviews__slide{
+    max-height: none!important;
+  }
+}
+@import "templates/onepage-scroll";
 @import "templates/header";
 @import "templates/preloader";
 @import "templates/banner";
@@ -156,6 +317,17 @@ main{
 @import "templates/person";
 @import "templates/team";
 @import "templates/reviews";
+@import "templates/legend-page";
+@import "templates/page-clients";
+@import "templates/page-sila";
+@import "templates/page-podcasts";
+@import "templates/pagination";
+@import "templates/page-videos";
+@import "templates/page-blog";
+@import "templates/single-blog";
+@import "templates/book-page";
+@import "templates/publications-page";
+@import "templates/programs-page";
 
 @import "templates/main";
 

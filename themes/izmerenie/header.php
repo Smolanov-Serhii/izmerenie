@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:wght@300&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 <script>
@@ -30,7 +31,8 @@
 
     }
 </script>
-<body <?php body_class(); ?>>
+<?php if ( is_page( array( '45', '47', '122', '124', '126', '128', '50', '52', '56', '58', '140', '332' ) ) || get_post_type() == 'blog' || get_post_type() == 'publications' || get_post_type() == 'programs') { $class='non-scroll'; } else  { $class=''; }?>
+<body <?php body_class($class); ?> >
 <div class="preloader">
     <div class="preloader__row">
         <div class="preloader__item"></div>
@@ -39,29 +41,57 @@
 </div>
 <?php wp_body_open(); ?>
 <header id="header" class="header">
-    <div class="header__branding">
+    <div class="header__mobile main-container">
         <?php
-        the_custom_logo();
+            if(!is_front_page()){
+                ?>
+                    <a href="<?php echo get_home_url(); ?>"><img class="header__mobile-logo" src="<?php echo the_field("logotip_dlya_mobajla", 'options'); ?>" alt="logo-mobile"></a>
+                <?php
+            } else {
+                ?>
+                    <img class="header__mobile-logo" src="<?php echo the_field("logotip_dlya_mobajla", 'options'); ?>" alt="logo-mobile">
+                <?php
+            }
         ?>
+        <div class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-    <ul class="header__language">
-        <?php
-        pll_the_languages();
-        ?>
-    </ul>
-    <nav id="header__nav" class="header__nav">
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'Aside-menu',
-                'menu_id'        => 'primary-menu',
-            )
-        );
-        ?>
-    </nav>
-    <div class="header__soc">
-        <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/fb.svg" width="24" height="24" alt="facebook"> </a>
-        <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/youtube.svg" width="24" height="24" alt="youtube"> </a>
-        <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/header/li.svg" width="24" height="24" alt="linkedin"> </a>
+    <div class="header__wrapper">
+        <div class="header__branding header__container">
+            <?php
+            if(!is_front_page()){
+                ?>
+                    <a href="<?php echo get_home_url(); ?>"><img class="header__logo" src="<?php echo the_field("logotyp", 'options'); ?>" alt="logo"></a>
+                <?php
+            } else {
+                ?>
+                    <img class="header__logo" src="<?php echo the_field("logotyp", 'options'); ?>" alt="logo">
+                <?php
+            }
+            ?>
+        </div>
+        <ul class="header__language header__container">
+            <?php
+            qtranxf_generateLanguageSelectCode('short');
+            ?>
+        </ul>
+        <nav id="header__nav" class="header__nav">
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'Aside-menu',
+                    'menu_id'        => 'primary-menu',
+                )
+            );
+            ?>
+        </nav>
+        <div class="header__soc header__container">
+            <a href="<?php echo the_field("facebook", 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header/fb.svg" width="24" height="24" alt="facebook"> </a>
+            <a href="<?php echo the_field("youtube", 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header/youtube.svg" width="24" height="24" alt="youtube"> </a>
+            <a href="<?php echo the_field("linkedin", 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header/li.svg" width="24" height="24" alt="linkedin"> </a>
+        </div>
     </div>
 </header>

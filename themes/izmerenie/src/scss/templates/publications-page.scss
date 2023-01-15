@@ -1,0 +1,55 @@
+.publications-page{
+  padding-bottom: 187px;
+  padding-top: 63px;
+  @media all and (max-width: 768px){
+    padding-bottom: 150px;
+  }
+  @media all and (max-width: 500px){
+    padding-bottom: 60px;
+  }
+  &__title{
+    text-align: left;
+    margin-top: 40px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item{
+    width: calc(50% - 50px);
+    margin-bottom: 41px;
+    text-decoration: none;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
+    &-title{
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      color: #213540;
+      margin-bottom: 11px;
+      @media all and (max-width: 768px){
+        font-size: 18px;
+      }
+    }
+    &-excerpt{
+      p{
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 139.9%;
+        color: #A0BCC8;
+        @media all and (max-width: 768px){
+          font-size: 16px;
+        }
+        @media all and (max-width: 500px){
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

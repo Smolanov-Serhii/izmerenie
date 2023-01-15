@@ -1,0 +1,36 @@
+.pagination{
+  width: 100%;
+  margin-top: 52px;
+  @media all and (max-width: 1024px){
+    margin-top: 30px;
+  }
+  .pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .page-numbers{
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 101.9%;
+      color: #A0BCC8;
+      margin: 0 14px;
+      text-decoration: none;
+      @media all and (max-width: 768px){
+        font-size: 16px;
+        margin: 0 10px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 15px;
+        margin: 0 8px;
+      }
+      &.current{
+        color: #213540;
+      }
+      .next{
+
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.page-podcasts{
+  padding-top: 63px;
+  padding-bottom: 140px;
+  @media all and (max-width: 768px){
+    padding-bottom: 100px;
+  }
+  @media all and (max-width: 500px){
+    padding-bottom: 60px;
+  }
+  &__container{
+
+  }
+  &__title{
+    text-align: left;
+    margin-top: 40px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -33px;
+    @media all and (max-width: 1400px){
+      margin-right: -20px;
+    }
+  }
+  &__item{
+    cursor: pointer;
+    width: calc(20% - 33px);
+    margin-right: 33px;
+    @media all and (max-width: 1700px){
+      width: calc(25% - 33px);
+    }
+    @media all and (max-width: 1400px){
+      width: calc(25% - 20px);
+      margin-right: 20px;
+    }
+    @media all and (max-width: 900px){
+      width: calc(33.333% - 20px);
+      margin-right: 20px;
+    }
+    @media all and (max-width: 640px){
+      width: calc(50% - 20px);
+      margin-right: 20px;
+    }
+    &:hover{
+      svg{
+        transform: scale(1.2);
+      }
+    }
+    &-time{
+      position: absolute;
+      bottom: 23px;
+      left: 0;
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 125.9%;
+      color: #FFFFFF;
+      background: #EC1C24;
+      padding: 10px 22px;
+      @media all and (max-width: 1200px){
+        font-size: 14px;
+      }
+      @media all and (max-width: 1024px){
+        padding: 8px 18px;
+      }
+      @media all and (max-width: 500px){
+        padding: 6px 14px;
+      }
+    }
+    &-title{
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 125.9%;
+      color: #213540;
+      margin-top: 19px;
+      margin-bottom: 30px;
+      @media all and (max-width: 1200px){
+        font-size: 17px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 16px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
+    }
+    &-img{
+      position: relative;
+      img{
+        background: linear-gradient(90deg, #678597 0%, rgba(103, 133, 151, 0) 97.01%), url(.jpg);
+        background-blend-mode: multiply, normal;
+        border-radius: 15px;
+      }
+      svg{
+        transition: $transition;
+        position: absolute;
+        top: calc(50% - 23px);
+        left: calc(50% - 23px);
+      }
+    }
+  }
+}

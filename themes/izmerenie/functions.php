@@ -176,3 +176,524 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+register_post_type('programs', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Программы', // основное название для типа записи
+        'singular_name' => 'Программа', // название для одной записи этого типа
+        'add_new' => 'Добавить програму', // для добавления новой записи
+        'add_new_item' => 'Добавить новую', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редактировать програму', // для редактирования типа записи
+        'new_item' => 'Новая програма', // текст новой записи
+        'view_item' => 'Просмотреть програму', // для просмотра записи этого типа.
+        'search_items' => 'Искать програму', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Программы', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'product-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-products',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+register_post_type('podcasts', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Подкасты', // основное название для типа записи
+        'singular_name' => 'Подкаст', // название для одной записи этого типа
+        'add_new' => 'Добавить подккаст', // для добавления новой записи
+        'add_new_item' => 'Добавить новый', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редактировать подкаст', // для редактирования типа записи
+        'new_item' => 'Новый подкаст', // текст новой записи
+        'view_item' => 'Просмотреть подкаст', // для просмотра записи этого типа.
+        'search_items' => 'Искать подкаст', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Подкасты', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'podcasts-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-images-alt',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+add_action( 'init', 'mayak_taxonomy_register' );
+function mayak_taxonomy_register(){
+    $labels = array(
+        'name'                     => 'Категории программ', // основное название во множественном числе
+        'singular_name'            => 'Категория программы', // название единичного элемента таксономии
+        'menu_name'                => 'Категории программ', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Все ккатегории',
+        'edit_item'                => 'Изменить категорию',
+        'view_item'                => 'Просмотреть категорию', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Обносить категорию',
+        'add_new_item'             => 'Добавить категорию',
+        'new_item_name'            => 'Название новой категории',
+        'parent_item'              => 'Родительская категория', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Родительская категория:',
+        'search_items'             => 'Искать категорию',
+        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категории программ',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('programs-category', array('programs'), $args);
+}
+
+add_action( 'init', 'mayak_taxonomy_register1' );
+function mayak_taxonomy_register1(){
+    $labels = array(
+        'name'                     => 'Категории подкастов', // основное название во множественном числе
+        'singular_name'            => 'Категория подкаста', // название единичного элемента таксономии
+        'menu_name'                => 'Категории подкастов', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Все ккатегории',
+        'edit_item'                => 'Изменить категорию',
+        'view_item'                => 'Просмотреть категорию', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Обносить категорию',
+        'add_new_item'             => 'Добавить категорию',
+        'new_item_name'            => 'Название новой категории',
+        'parent_item'              => 'Родительская категория', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Родительская категория:',
+        'search_items'             => 'Искать категорию',
+        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категории подкастов',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('podcasts-category', array('podcasts'), $args);
+}
+
+register_post_type('videos', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Відео', // основное название для типа записи
+        'singular_name' => 'Відео', // название для одной записи этого типа
+        'add_new' => 'Додати відео', // для добавления новой записи
+        'add_new_item' => 'Додати відео', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редагувати відео', // для редактирования типа записи
+        'new_item' => 'Нове відео', // текст новой записи
+        'view_item' => 'Дивитися відео', // для просмотра записи этого типа.
+        'search_items' => 'Шукати відео', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Відео', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'videos-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-format-video',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+register_post_type('reviews', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Отзывы', // основное название для типа записи
+        'singular_name' => 'Отзыв', // название для одной записи этого типа
+        'add_new' => 'Добавить отзыв', // для добавления новой записи
+        'add_new_item' => 'Добавить новый отзыв', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редактировать отзыв', // для редактирования типа записи
+        'new_item' => 'Новый отзыв', // текст новой записи
+        'view_item' => 'Смотреть отзыв', // для просмотра записи этого типа.
+        'search_items' => 'Искать отзыв', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Отзывы', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => '',
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-format-video',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+add_action( 'init', 'mayak_taxonomy_register2' );
+function mayak_taxonomy_register2(){
+    $labels = array(
+        'name'                     => 'Категории видео', // основное название во множественном числе
+        'singular_name'            => 'Категория видео', // название единичного элемента таксономии
+        'menu_name'                => 'Категории видео', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Все ккатегории',
+        'edit_item'                => 'Изменить категорию',
+        'view_item'                => 'Просмотреть категорию', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Обносить категорию',
+        'add_new_item'             => 'Добавить категорию',
+        'new_item_name'            => 'Название новой категории',
+        'parent_item'              => 'Родительская категория', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Родительская категория:',
+        'search_items'             => 'Искать категорию',
+        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категории видео',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('videos-category', array('videos'), $args);
+}
+register_post_type('blog', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Блог', // основное название для типа записи
+        'singular_name' => 'Запис', // название для одной записи этого типа
+        'add_new' => 'Додати запис', // для добавления новой записи
+        'add_new_item' => 'Додати запис', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редагувати запис', // для редактирования типа записи
+        'new_item' => 'Новий запис', // текст новой записи
+        'view_item' => 'Дивитися запис', // для просмотра записи этого типа.
+        'search_items' => 'Шукати відео', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Блог', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'blog-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-welcome-write-blog',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+add_action( 'init', 'mayak_taxonomy_register3' );
+function mayak_taxonomy_register3(){
+    $labels = array(
+        'name'                     => 'Категории блога', // основное название во множественном числе
+        'singular_name'            => 'Категория блога', // название единичного элемента таксономии
+        'menu_name'                => 'Категории блога', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Все ккатегории',
+        'edit_item'                => 'Изменить категорию',
+        'view_item'                => 'Просмотреть категорию', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Обносить категорию',
+        'add_new_item'             => 'Добавить категорию',
+        'new_item_name'            => 'Название новой категории',
+        'parent_item'              => 'Родительская категория', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Родительская категория:',
+        'search_items'             => 'Искать категорию',
+        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категории блога',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('blog-category', array('blog'), $args);
+}
+
+register_post_type('publications', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Публикації', // основное название для типа записи
+        'singular_name' => 'Публикація', // название для одной записи этого типа
+        'add_new' => 'Додати публікацію', // для добавления новой записи
+        'add_new_item' => 'Додати публікацію', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редагувати публікацію', // для редактирования типа записи
+        'new_item' => 'Нова публикація', // текст новой записи
+        'view_item' => 'Дивитися публікацію', // для просмотра записи этого типа.
+        'search_items' => 'Шукати публікацію', // для поиска по этим типам записи
+        'not_found' => 'не знайдено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Публикації', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'publications-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-admin-post',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+add_action( 'init', 'mayak_taxonomy_register4' );
+function mayak_taxonomy_register4(){
+    $labels = array(
+        'name'                     => 'Категории публикаций', // основное название во множественном числе
+        'singular_name'            => 'Категория публикации', // название единичного элемента таксономии
+        'menu_name'                => 'Категории публикаций', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Все ккатегории',
+        'edit_item'                => 'Изменить категорию',
+        'view_item'                => 'Просмотреть категорию', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Обносить категорию',
+        'add_new_item'             => 'Добавить категорию',
+        'new_item_name'            => 'Название новой категории',
+        'parent_item'              => 'Родительская категория', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Родительская категория:',
+        'search_items'             => 'Искать категорию',
+        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категории публикаций',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('publications-category', array('publications'), $args);
+}
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title'    => 'Насторйки темы',
+        'menu_title'    => 'Насторйки темы',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Насторйки хедера',
+        'menu_title'    => 'Хедер',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Насторйки футера',
+        'menu_title'    => 'Футер',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+
+}
+
+add_action( 'admin_menu', 'remove_admin_menus' );
+function remove_admin_menus(){
+    global $menu;
+
+    $unset_titles = [
+//        __( 'Dashboard' ),
+//        __( 'Posts' ),
+//        __( 'Media' ),
+//        __( 'Links' ),
+//        __( 'Pages' ),
+//        __( 'Appearance' ),
+//        __( 'Tools' ),
+//        __( 'Users' ),
+//        __( 'Settings' ),
+//        __( 'Comments' ),
+//        __( 'Plugins' ),
+    ];
+
+    end( $menu );
+    while( prev( $menu ) ){
+
+        $value = explode( ' ', $menu[ key( $menu ) ][0] );
+        $title = $value[0] ?: '';
+
+        if( in_array( $title, $unset_titles, true ) ){
+            unset( $menu[ key( $menu ) ] );
+        }
+    }
+
+}

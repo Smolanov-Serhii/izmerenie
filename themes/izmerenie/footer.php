@@ -11,20 +11,20 @@
 
 ?>
 
-	<footer id="footer" class="footer height-section vertical-center swiper-slide">
+	<footer id="footer" class="footer height-section vertical-center scroll-section">
         <div class="footer__container main-container">
             <div class="footer__form">
                 <h2 class="footer__title section-title">
                     Как связаться
                 </h2>
                 <div class="footer__socials">
-                    <a href="#">
+                    <a href="<?php echo the_field("telegram", 'options'); ?>">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/telegram.svg'; ?>" alt="telegram">
                     </a>
-                    <a href="#">
+                    <a href="<?php echo the_field("whatsup", 'options'); ?>">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/whatsup.svg'; ?>" alt="whatsup">
                     </a>
-                    <a href="#">
+                    <a href="<?php echo the_field("viber", 'options'); ?>">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/viber.svg'; ?>" alt="viber">
                     </a>
                 </div>
@@ -35,11 +35,12 @@
             </div>
             <div class="footer__bottom main-container">
                 <div class="footer__copyright">
-                    © 2022. Четвертое измерение. Все права защищены.
+                    <?php echo the_field("tekst_2022_chetvertoe_izmerenie_vse_prava_zashhishheny", 'options'); ?>
                 </div>
-                <a class="footer__phone" href="tel:+38(063)000-00-00">+38(063)000-00-00</a>
-                <a class="footer__mail" href="mailto:4izmerenie@4izmerenie.com">4izmerenie@4izmerenie.com</a>
+                <a class="footer__phone" href="tel:<?php echo the_field("tulufon_na_sajt", 'options'); ?>"><?php echo the_field("tulufon_na_sajt", 'options'); ?></a>
+                <a class="footer__mail" href="mailto:<?php echo the_field("pochta_na_sajt", 'options'); ?>"><?php echo the_field("pochta_na_sajt", 'options'); ?></a>
             </div>
         </div>
 	</footer>
+
 

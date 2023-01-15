@@ -1,0 +1,191 @@
+.page-videos{
+  padding-top: 63px;
+  padding-bottom: 140px;
+  @media all and (max-width: 768px){
+    padding-bottom: 100px;
+  }
+  @media all and (max-width: 500px){
+    padding-bottom: 60px;
+  }
+  &__container{
+
+  }
+  &__title{
+    text-align: left;
+    margin-top: 40px;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    @media all and (max-width: 1350px){
+      flex-wrap: wrap;
+    }
+  }
+  &__rubrik{
+    width: 400px;
+    @media all and (max-width: 1350px){
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    ul{
+      @media all and (max-width: 1350px){
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-right: -20px;
+        width: calc(100% + 20px);
+      }
+      @media all and (max-width: 800px){
+        width: 100%;
+        margin-right: 0;
+      }
+      li{
+        margin-bottom: 30px;
+        @media all and (max-width: 1350px){
+          width: calc(50% - 20px);
+          margin-bottom: 20px;
+        }
+        @media all and (max-width: 800px){
+          width: 100%;
+          margin-right: 0;
+        }
+        &:hover, &.current-cat{
+          a{
+            background: #BFD9EB;
+          }
+        }
+        a{
+          transition: $transition;
+          display: block;
+          font-family: 'Nunito Sans';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 25px;
+          color: #213540;
+          text-decoration: none;
+          padding: 13px 30px;
+          background: #FFFFFF;
+          border: 1px solid #BFD9EB;
+          box-shadow: 0px 0px 53px rgba(191, 217, 235, 0.35);
+          border-radius: 5px;
+          @media all and (max-width: 1600px){
+            font-size: 16px;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+  &__list{
+    width: calc(100% - 500px);
+    @media all and (max-width: 1600px){
+      width: calc(100% - 450px);
+    }
+    @media all and (max-width: 1350px){
+      width: 100%;
+    }
+  }
+  &__item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @media all and (max-width: 500px){
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    svg{
+      transition: $transition;
+    }
+    &:hover{
+      svg{
+        transform: scale(1.2);
+      }
+      .page-videos__item-title{
+        color: #ec1c24;
+      }
+      .page-videos__item-name{
+        border-bottom: 1px solid #213540;
+      }
+    }
+    &-title{
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: #213540;
+      margin-bottom: 10px;
+      transition: $transition;
+      @media all and (max-width: 1440px){
+        font-size: 18px;
+      }
+    }
+    &-name{
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 139.9%;
+      color: #213540;
+      margin-bottom: 0;
+      transition: $transition;
+      border-bottom: 1px solid transparent;
+      display: inline-block;
+    }
+    &-img{
+      width: 200px;
+      position: relative;
+      @media all and (max-width: 500px){
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      svg{
+        position: absolute;
+        top: calc(50% - 23px);
+        left: calc(50% - 23px);
+      }
+      img{
+        width: 100%;
+        height: auto;
+        background: linear-gradient(90deg, #678597 0%, rgba(103, 133, 151, 0) 97.01%), url(image.png);
+        background-blend-mode: multiply, normal;
+        border-radius: 15px;
+      }
+    }
+    &-content{
+      width: calc(100% - 246px);
+      @media all and (max-width: 1600px){
+        width: calc(100% - 230px);
+      }
+      @media all and (max-width: 500px){
+        width: 100%;
+      }
+    }
+    &-time{
+      position: absolute;
+      right: 0;
+      bottom: 15px;
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 125.9%;
+      color: #FFFFFF;
+      background: #EC1C24;
+      padding: 6px 16px;
+      @media all and (max-width: 1200px){
+        font-size: 13px;
+      }
+      @media all and (max-width: 1024px){
+        padding: 5px 15px;
+      }
+      @media all and (max-width: 500px){
+        padding: 4px 14px;
+      }
+    }
+  }
+}
