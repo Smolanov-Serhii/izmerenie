@@ -27,13 +27,13 @@ get_header();
                     <?php the_content();?>
                 </div>
                 <div class="footer__socials">
-                    <a href="#">
+                    <a href="https://t.me/+380507519143">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/telegram.svg'; ?>" alt="telegram">
                     </a>
-                    <a href="#">
+                    <a href="https://api.whatsapp.com/send/?phone=380507519143">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/whatsup.svg'; ?>" alt="whatsup">
                     </a>
-                    <a href="#">
+                    <a href="viber://chat?number=+380507519143">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/viber.svg'; ?>" alt="viber">
                     </a>
                 </div>
@@ -57,13 +57,13 @@ get_header();
             <div class="footer__img">
                 <img src="<?php echo get_template_directory_uri() . '/img/footer/img.png'; ?>" alt="bg">
             </div>
-            <div class="footer__bottom main-container">
-                <div class="footer__copyright">
-                    <?php echo the_field("tekst_2022_chetvertoe_izmerenie_vse_prava_zashhishheny", 'options'); ?>
-                </div>
-                <a class="footer__phone" href="tel:<?php echo the_field("tulufon_na_sajt", 'options'); ?>"><?php echo the_field("tulufon_na_sajt", 'options'); ?></a>
-                <a class="footer__mail" href="mailto:<?php echo the_field("pochta_na_sajt", 'options'); ?>"><?php echo the_field("pochta_na_sajt", 'options'); ?></a>
-            </div>
+<!--            <div class="footer__bottom main-container">-->
+<!--                <div class="footer__copyright">-->
+<!--                    --><?php //echo the_field("tekst_2022_chetvertoe_izmerenie_vse_prava_zashhishheny", 'options'); ?>
+<!--                </div>-->
+<!--                <a class="footer__phone" href="tel:--><?php //echo the_field("tulufon_na_sajt", 'options'); ?><!--">--><?php //echo the_field("tulufon_na_sajt", 'options'); ?><!--</a>-->
+<!--                <a class="footer__mail" href="mailto:--><?php //echo the_field("pochta_na_sajt", 'options'); ?><!--">--><?php //echo the_field("pochta_na_sajt", 'options'); ?><!--</a>-->
+<!--            </div>-->
         </div>
     </footer>
 </main>

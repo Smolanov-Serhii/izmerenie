@@ -143,6 +143,9 @@ $(document).ready(function () {
         });
         $( ".banner .next" ).on( "click", function() {
             banner.slideNext();
+            var $PosData = $('.banner .swiper-slide-active').data('position');
+            $('.banner__decoration').removeClass('position1').removeClass('position2').removeClass('position3');
+            $('.banner__decoration').addClass('position' + $PosData);
             var $coundData = $('.banner .swiper-slide-active').data('count');
             var $UpData = $('.banner .swiper-slide-active').data('up');
             var  $RightData = $('.banner .swiper-slide-active').data('right');
