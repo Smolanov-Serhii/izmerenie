@@ -18,13 +18,14 @@
                     Как связаться
                 </h2>
                 <div class="footer__socials">
-                    <a href="<?php echo the_field("telegram", 'options'); ?>">
+
+                    <a href="https://t.me/+380507519143">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/telegram.svg'; ?>" alt="telegram">
                     </a>
-                    <a href="<?php echo the_field("whatsup", 'options'); ?>">
+                    <a href="https://api.whatsapp.com/send/?phone=380507519143">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/whatsup.svg'; ?>" alt="whatsup">
                     </a>
-                    <a href="<?php echo the_field("viber", 'options'); ?>">
+                    <a href="viber://chat?number=+380507519143">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/viber.svg'; ?>" alt="viber">
                     </a>
                 </div>
