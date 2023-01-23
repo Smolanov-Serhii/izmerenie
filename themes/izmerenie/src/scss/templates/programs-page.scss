@@ -2,6 +2,7 @@
   background-color: #FFFFFF;
   .main{
     background-color: #FFFFFF;
+    position: relative;
   }
 }
 .programs-page{
@@ -12,6 +13,19 @@
   }
   @media all and (max-width: 500px){
     padding-bottom: 60px;
+  }
+  &__decoration{
+    img{
+      position: absolute;
+    }
+    &-right{
+      top: 0;
+      right: 0;
+    }
+    &-left{
+      bottom: 10%;
+      left: 0;
+    }
   }
   &__rev{
     &-fio{

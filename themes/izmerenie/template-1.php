@@ -10,6 +10,11 @@ $post_id = get_the_ID();
 ?>
 <main id="main" class="main">
     <section class="programs-page">
+        <div class="programs-page__decoration">
+            <img class="programs-page__decoration-left" src="<?php echo get_template_directory_uri() . '/img/programs/left.svg'; ?>" alt="decoration">
+<!--            <img class="programs-page__decoration-center" src="--><?php //echo get_template_directory_uri() . '/img/programs/center.svg'; ?><!--" alt="decoration">-->
+            <img class="programs-page__decoration-right" src="<?php echo get_template_directory_uri() . '/img/programs/right.svg'; ?>" alt="decoration">
+        </div>
         <div class="programs-page__container main-container">
             <div class="back-button" onclick="window.history.back()">
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
