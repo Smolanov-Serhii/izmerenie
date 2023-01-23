@@ -17,6 +17,7 @@
   &__decoration{
     img{
       position: absolute;
+      pointer-events: none;
     }
     &-right{
       top: 0;
