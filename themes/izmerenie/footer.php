@@ -19,13 +19,13 @@
                 </h2>
                 <div class="footer__socials">
 
-                    <a href="https://t.me/+380507519143">
+                    <a href="https://t.me/+380507519143" target="_blank">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/telegram.svg'; ?>" alt="telegram">
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone=380507519143">
+                    <a href="https://api.whatsapp.com/send/?phone=380507519143" target="_blank">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/whatsup.svg'; ?>" alt="whatsup">
                     </a>
-                    <a href="viber://chat?number=+380507519143">
+                    <a href="viber://chat?number=+380507519143" target="_blank">
                         <img src="<?php echo get_template_directory_uri() . '/img/footer/viber.svg'; ?>" alt="viber">
                     </a>
                 </div>
