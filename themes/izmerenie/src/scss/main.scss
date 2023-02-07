@@ -83,7 +83,7 @@ main{
   }
 }
 .main-container{
-  max-width: 1920px;
+  max-width: 1920vw * $px;
   margin: auto;
   width: 100%;
   @extend .padding-left;
@@ -94,13 +94,13 @@ main{
   align-items: center;
 }
 .middle-container{
-  max-width: 1700px;
+  max-width: 1700vw * $px;
   margin: auto;
   @extend .padding-left;
   @extend .padding-right;
 }
 .small-container{
-  max-width: 1475px;
+  max-width: 1475vw * $px;
   margin: auto;
   @extend .padding-left;
   @extend .padding-right;
@@ -206,9 +206,10 @@ main{
   line-height: 107%;
   text-transform: uppercase;
   color: #213540;
-  margin-bottom: 30px;
+  margin-bottom: 30vw * $px;
   @media all and (max-width: 1400px){
     font-size: 40px;
+    margin-bottom: 30px;
   }
   @media all and (max-width: 1024px){
     font-size: 36px;
@@ -249,10 +250,12 @@ main{
   color: #000000;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 30px;
-  max-width: 776px;
+  margin-bottom: 30vw * $px;
+  max-width: 776vw * $px;
   @media all and (max-width: 1400px){
     font-size: 16px;
+    max-width: 776px;
+    margin-bottom: 30px;
   }
   @media all and (max-width: 1024px){
     font-size: 15px;
@@ -271,6 +274,9 @@ main{
   width: 100%;
   height: 100%;
   z-index: 999;
+  .reviews__slide-more, .reviews__slide:after{
+    display: none;
+  }
   .reviews__slide-header{
     @media all and (max-width: 500px){
       flex-direction: column;

@@ -1,5 +1,6 @@
 .team{
   position: relative;
+  background-color: #FFFFFF;
   &__decoration{
     img{
       position: absolute;
@@ -51,7 +52,10 @@
       }
     }
     &-img{
-      margin-bottom: 36px;
+      margin-bottom: 36vw * $px;
+      @media all and (max-width: 1400px){
+        margin-bottom: 36px;
+      }
       @media all and (max-width: 1024px){
         text-align: center;
         margin-bottom: 15px;
@@ -60,11 +64,14 @@
   }
   &__name{
     font-weight: 700;
-    font-size: 30px;
+    font-size: 30vw * $px;
     line-height: 139.9%;
     letter-spacing: 0.04em;
     color: #213540;
     margin-bottom: 0;
+    @media all and (max-width: 1400px){
+      font-size: 30px;
+    }
     @media all and (max-width: 1024px){
       text-align: center;
       font-weight: 700;
@@ -81,8 +88,11 @@
   }
   &__work{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 16vw * $px;
     line-height: 101.9%;
     color: #6F8C9E;
+    @media all and (max-width: 1400px){
+      font-size: 16px;
+    }
   }
 }

@@ -423,6 +423,7 @@ $post_id = get_the_ID();
                                             </svg>
                                             <?php echo the_field("otzyv"); ?>
                                         </div>
+                                        <div class="reviews__slide-more">Читать полностью</div>
                                     </div>
                                     <?php
                                 }

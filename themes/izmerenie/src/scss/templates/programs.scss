@@ -1,5 +1,7 @@
+$px: 0.0520833333333333;
 .programs{
   position: relative;
+  background-color: #FFFFFF;
   &__decoration{
     img{
       position: absolute;
@@ -7,11 +9,17 @@
     }
     &-left{
       top: 38vh;
-      left: -220px;
+      left: -220vw * $px;
+      @media all and (max-width: 1400px){
+        left: -220px;
+      }
     }
     &-right{
       top: 39vh;
-      right: -70px;
+      right: -70vw * $px;
+      @media all and (max-width: 1400px){
+        right: -70px;
+      }
     }
   }
   &__container{
@@ -42,10 +50,10 @@
     }
     &-chield{
       position: absolute;
-      bottom: 30px;
-      left: 50px;
+      bottom: 30vw * $px;
+      left: 50vw * $px;
       z-index: 3;
-      margin-top: 34px;
+      margin-top: 34vw * $px;
       display: flex;
       flex-direction: column;
       list-style: disc;
@@ -62,6 +70,7 @@
       @media all and (max-width: 1400px){
         bottom: 20px;
         left: 50px;
+        margin-top: 34px;
       }
       @media all and (max-width: 1200px){
         bottom: 20px;
@@ -74,7 +83,10 @@
         margin-top: 0;
       }
       li{
-        margin-bottom: 9px;
+        margin-bottom: 9vw * $px;
+        @media all and (max-width: 1400px){
+          margin-bottom: 9px;
+        }
         @media all and (max-width: 1024px){
           margin-bottom: 6px;
         }
@@ -83,13 +95,16 @@
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 200;
-        font-size: 18px;
+        font-size: 18vw * $px;
         line-height: 100%;
         text-decoration-line: underline;
         border-bottom: 1px solid white;
         color: #FFFFFF;
         margin-bottom: 9px;
         text-decoration: none;
+        @media all and (max-width: 1400px){
+          font-size: 18px;
+        }
         @media all and (max-width: 1200px){
           font-size: 17px;
         }
@@ -101,11 +116,11 @@
     }
     &-item{
       position: relative;
-      min-height: 210px;
-      width: calc(50% - 18px);
-      padding: 37px;
-      border-radius: 18px;
-      margin-bottom: 30px;
+      min-height: 230vw * $px;
+      width: calc(50% - (18vw * $px));
+      padding: 37vw * $px;
+      border-radius: 18vw * $px;
+      margin-bottom: 30vw * $px;
       text-decoration: none;
       display: flex;
       flex-direction: column;
@@ -127,6 +142,10 @@
         transition: $transition;
       }
       @media all and (max-width: 1400px){
+        width: calc(50% - 18px);
+        padding: 37px;
+        border-radius: 18px;
+        margin-bottom: 30px;
         min-height: 160px;
       }
       @media all and (max-width: 1200px){
@@ -171,6 +190,14 @@
           filter: grayscale(0%);
         }
       }
+      &:hover{
+        padding-top: 39vw * $px;
+      }
+      @media all and (max-width: 1400px){
+        &:hover{
+          padding-top: 39px;
+        }
+      }
       @media all and (min-width: 1025px){
         &:hover{
           h3{
@@ -191,25 +218,23 @@
           img{
             filter: grayscale(0%);
           }
-          padding-top: 39px;
         }
       }
       h3{
         font-weight: 700;
-        font-size: 34px;
+        font-size: 34vw * $px;
         line-height: 101.9%;
         position: relative;
         z-index: 3;
-        margin: 40px 0;
+        margin: auto 0;
         transition: $transition;
         display: block;
         width: 100%;
-        padding-right: 20px;
-        @media all and (max-width: 1600px){
-          margin: 14% 0 20px 0;
-          font-size: 23px;
-        }
+        padding-right: 20vw * $px;
         @media all and (max-width: 1400px){
+          font-size: 34px;
+          margin: 40px 0;
+          padding-right: 20px;
         }
         @media all and (max-width: 1200px){
           font-size: 28px;

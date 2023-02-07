@@ -71,12 +71,14 @@
     }
     .default-power{
       display: none!important;
-      margin-left: 30px;
-      margin-bottom: 4px;
+      margin-left: 30vw * $px;
+      margin-bottom: 4vw * $px;
       cursor: pointer;
       @media all and (max-width: 1400px){
         height: 30px;
         width: auto;
+        margin-left: 30px;
+        margin-bottom: 4px;
       }
       @media all and (max-width: 768px){
         height: 22px;
@@ -200,7 +202,7 @@
     }
   }
   &__content{
-    width: calc(100% - 442px);
+    width: calc(100% - (442vw * $px));
     @media all and (max-width: 1400px){
       width: calc(100% - 340px);
     }

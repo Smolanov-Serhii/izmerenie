@@ -1,3 +1,4 @@
+$px: 0.0520833333333333;
 .page-template-team{
   background-color: #FFFFFF;
   .person{
@@ -20,8 +21,11 @@
     }
     &:nth-child(3){
       svg{
-        left: -270px;
+        left: -270vw * $px;
         top: -5vh;
+        @media all and (max-width: 1400px){
+          left: -270px;
+        }
       }
     }
     &:nth-child(4){
@@ -33,7 +37,10 @@
     &:nth-child(5){
       svg{
         top: 0;
-        left: -270px;
+        left: -270vw * $px;
+        @media all and (max-width: 1400px){
+          left: -270px;
+        }
       }
     }
   }
@@ -94,6 +101,7 @@
 }
 .person{
   position: relative;
+  background-color: #FFFFFF;
   @media all and (max-width: 1024px){
     flex-direction: column;
     margin-bottom: 30px;
@@ -110,11 +118,17 @@
     }
     &-left{
       top: 56vh;
-      left: -294px;
+      left: -294vw * $px;
+      @media all and (max-width: 1400px){
+        left: -294px;
+      }
     }
     &-right{
       top: 41vh;
-      right: -10px;
+      right: -10vw * $px;
+      @media all and (max-width: 1400px){
+        right: -10px;
+      }
     }
   }
   &__container{
@@ -214,11 +228,14 @@
   }
   &__title{
     font-weight: 900;
-    font-size: 40px;
+    font-size: 40vw * $px;
     line-height: 101.9%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #213540;
+    @media all and (max-width: 1400px){
+      font-size: 40px;
+    }
     @media all and (max-width: 1024px){
       text-align: center;
       font-weight: 700;
@@ -244,8 +261,8 @@
       }
       ul{
         li{
-          margin-bottom: 16px;
-          @media all and (max-width: 1600px){
+          margin-bottom: 16vw * $px;
+          @media all and (max-width: 1400px){
             margin-bottom: 8px;
           }
           @media all and (max-width: 500px){
