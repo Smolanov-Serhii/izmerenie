@@ -123,7 +123,7 @@ $post_id = get_the_ID();
         </section>
         <section class="select height-section scroll-section">
             <div class="select__decoration">
-                <img src="<?php echo get_template_directory_uri() . '/img/select/dec.svg'; ?>" alt="decoration">
+                <img src="<?php echo get_template_directory_uri() . '/img/select/dec.png'; ?>" alt="decoration">
             </div>
             <div class="select__container">
                 <div class="select__bg">
