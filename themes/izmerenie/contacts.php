@@ -54,9 +54,9 @@ get_header();
                 </div>
                 <?php echo do_shortcode('[contact-form-7 id="145" title="contact form"]') ?>
             </div>
-            <div class="footer__img">
-                <img src="<?php echo get_template_directory_uri() . '/img/footer/img.png'; ?>" alt="bg">
-            </div>
+<!--            <div class="footer__img">-->
+<!--                <img src="--><?php //echo get_template_directory_uri() . '/img/footer/img.png'; ?><!--" alt="bg">-->
+<!--            </div>-->
 <!--            <div class="footer__bottom main-container">-->
 <!--                <div class="footer__copyright">-->
 <!--                    --><?php //echo the_field("tekst_2022_chetvertoe_izmerenie_vse_prava_zashhishheny", 'options'); ?>

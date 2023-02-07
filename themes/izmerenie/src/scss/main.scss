@@ -42,6 +42,9 @@ body{
     height: auto;
   }
 }
+.to-up{
+  display: none!important;
+}
 .locked{
   overflow: hidden;
 }
@@ -275,6 +278,12 @@ main{
   z-index: 999;
   .reviews__slide-more, .reviews__slide:after{
     display: none;
+  }
+  .reviews__slide-excerpt{
+    display: none;
+  }
+  .reviews__slide-full{
+    display: block;
   }
   .reviews__slide-header{
     @media all and (max-width: 500px){

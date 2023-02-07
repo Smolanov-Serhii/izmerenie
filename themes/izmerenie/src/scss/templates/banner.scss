@@ -122,14 +122,14 @@
   }
   &__mask{
     transition: 0.7s ease-in-out;
-    -webkit-mask-image: url(../../img/banner/mask-new.png);
-    mask-image: url(../../img/banner/mask-new.png);
+    -webkit-mask-image: url(../../img/banner/mask-new-1.png);
+    mask-image: url(../../img/banner/mask-new-1.png);
     -webkit-mask-position: center center;
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center center;
-    width: 1200vw * $px;
-    height: 1200vw * $px;
+    width: 1190vw * $px;
+    height: 1190vw * $px;
     position: relative;
     @media all and (max-width: 1400px){
       width: 100%;

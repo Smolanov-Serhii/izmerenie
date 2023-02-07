@@ -9,7 +9,7 @@
       z-index: 0;
     }
     &-left{
-      top: -4;
+      top: -4vw;
       right: 560vw * $px;
       width: 344vw * $px;
       height: 388vw * $px;
@@ -51,8 +51,7 @@
   &__slide{
     background: #FFFFFF;
     border-radius: 18vw * $px;
-    padding: 20vw * $px 36vw * $px 36vw * $px 36vw * $px;
-    max-height: 300vw * $px;
+    padding: 20vw * $px 36vw * $px 60vw * $px 36vw * $px;
     overflow: hidden;
     height: auto;
     cursor: pointer;
@@ -63,8 +62,11 @@
     @media all and (max-width: 1400px){
       box-shadow: 0px 4px 32px rgba(193, 219, 237, 0.15);
       border-radius: 18px;
-      padding: 20px 36px 36px 36px;
+      padding: 20px 36px 60px 36px;
       max-height: 300px;
+    }
+    &-full{
+      display: none;
     }
     &-more{
       position: absolute;
@@ -91,7 +93,8 @@
     }
     &:after{
       content: "";
-      display: block;
+      display: none!important;
+      //display: block;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -140,13 +143,16 @@
       }
     }
     &-name{
-      font-weight: 400;
-      font-size: 18px;
+      font-weight: 200;
+      font-size: 18vw * $px;
       line-height: 139.9%;
       color: #6F8C9E;
       margin-bottom: 0;
+      @media all and (max-width: 1400px){
+        font-size: 18px;
+      }
       .fio{
-        font-weight: 800;
+        font-weight: 600;
         color: #213540;
       }
       .work{
@@ -168,6 +174,11 @@
       @media all and (max-width: 768px){
         margin-top: 53px;
         padding-left: 0;
+      }
+      p{
+        &:last-child{
+          margin-bottom: 0;
+        }
       }
       svg{
         position: absolute;

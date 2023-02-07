@@ -75,7 +75,7 @@
         </div>
         <ul class="header__language header__container">
             <?php
-            qtranxf_generateLanguageSelectCode('short');
+            qtranxf_generateLanguageSelectCode('text');
             ?>
         </ul>
         <nav id="header__nav" class="header__nav">

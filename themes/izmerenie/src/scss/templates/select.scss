@@ -65,13 +65,16 @@ $px: 0.0520833333333333;
     }
   }
   &__left{
-    width: 53%;
+    width: 916vw * $px;
     padding-top: 115vw * $px;
     padding-bottom: 103vw * $px;
     position: relative;
+    text-align: justify;
     @media all and (max-width: 1400px){
       padding-top: 9vh;
       padding-bottom: 9vh;
+      width: 53%;
+      text-align: left;
     }
     @media all and (max-width: 1024px){
 
@@ -98,6 +101,9 @@ $px: 0.0520833333333333;
       z-index: 2;
       position: relative;
       color: white;
+    }
+    p{
+      font-weight: 200;
     }
   }
   &__title{

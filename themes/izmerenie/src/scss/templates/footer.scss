@@ -67,8 +67,10 @@ $px: 0.0520833333333333;
   }
   &__socials{
     margin-bottom: 40vw * $px;
+    margin-left: -8vw * $px;
     @media all and (max-width: 1400px){
       margin-bottom: 40px;
+      margin-left: -8px;
     }
     @media all and (max-height: 900px){
       margin-bottom: 20px;
@@ -87,13 +89,27 @@ $px: 0.0520833333333333;
     }
   }
   &__form{
-    width: calc(50% - (60vw * $px));
+    //width: calc(50% - (60vw * $px));
+    width: 100%;
     @media all and (max-width: 1400px){
-      width: calc(50% - 60px);
+      //width: calc(50% - 60px);
     }
     @media all and (max-width: 1024px){
       width: 100%;
       order: 2;
+    }
+    form{
+      column-count: 2;
+      column-gap: 79vw * $px;
+      @media all and (max-width: 1400px){
+        column-gap: 79px;
+      }
+      @media all and (max-width: 1024px){
+        column-count: 1;
+      }
+      > p{
+
+      }
     }
     .wpcf7{
       width: 100%;
@@ -101,9 +117,9 @@ $px: 0.0520833333333333;
         display: none!important;
       }
       .wpcf7-submit{
-        margin-top: 50vw * $px;
+        margin-top: 18vw * $px;
         @media all and (max-width: 1400px){
-          margin-top: 50px;
+          margin-top: 18px;
         }
         @media all and (max-height: 900px){
           margin-top: 20px;
@@ -169,10 +185,22 @@ $px: 0.0520833333333333;
             padding: 11px 25px;
           }
         }
+        .intl-tel-input{
+          margin-top: 6vw * $px;
+          margin-bottom: 16vw * $px;
+          @media all and (max-width: 1400px){
+            margin-top: 6px;
+            margin-bottom: 16px;
+          }
+        }
         textarea{
           height: 140vw * $px;
+          margin-top: 6vw * $px;
+          margin-bottom: 10vw * $px;
           @media all and (max-width: 1400px){
             height: 120px;
+            margin-top: 6px;
+            margin-bottom: 10px;
           }
           @media all and (max-width: 500px){
             height: 100px;
@@ -431,9 +459,9 @@ $px: 0.0520833333333333;
           }
         }
         .wpcf7-submit{
-          margin-top: 25vw * $px;
+          margin-top: 16vw * $px;
           @media all and (max-width: 1400px){
-            margin-top: 25px;
+            margin-top: 16px;
           }
           @media all and (max-width: 500px){
             width: 100%;
