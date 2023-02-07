@@ -1,14 +1,18 @@
+$px: 0.0520833333333333;
 pre{
   white-space: break-spaces;
 }
 
 h1{
   font-weight: 600;
-  font-size: 40px;
+  font-size: 40vw * $px;
   line-height: 120%;
   color: #000B44;
   margin-bottom: 50px;
   text-align: center;
+  @media all and (max-width: 1400px) {
+    font-size: 40px;
+  }
   @media all and (max-width: 1200px) {
     font-size: 36px;
     margin-bottom: 42px;
@@ -34,10 +38,13 @@ em{
 }
 h2{
   font-weight: 600;
-  font-size: 24px;
+  font-size: 24vw * $px;
   line-height: 29px;
   color: #616BA0;
   margin-bottom: 1em;
+  @media all and (max-width: 1400px) {
+    font-size: 24px;
+  }
   @media all and (max-width: 1200px) {
     font-size: 22px;
   }
@@ -53,7 +60,10 @@ h2{
 }
 h3{
   font-weight: 600;
-  font-size: 3.6rem;
+  font-size: 36vw * $px;
+  @media all and (max-width: 1400px) {
+    font-size: 3.6rem;
+  }
   @media all and (max-width: 1200px) {
     font-size: 3.2rem;
   }
@@ -69,7 +79,10 @@ h3{
 }
 h4{
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 30vw * $px;
+  @media all and (max-width: 1400px) {
+    font-size: 3rem;
+  }
   @media all and (max-width: 1200px) {
     font-size: 2.6rem;
   }
@@ -158,12 +171,12 @@ table{
 }
 p{
   font-weight: 400;
-  font-size: 18px;
+  font-size: 18vw * $px;
   line-height: 138.52%;
   color: #213540;
   margin-bottom: 18px;
   @media all and (max-width: 1600px){
-    font-size: 16px;
+    //font-size: 16px;
   }
   @media all and (max-width: 1400px){
     font-size: 15px;
@@ -198,12 +211,12 @@ strong{
     li{
       margin-bottom: 1.2rem;
       font-weight: 300;
-      font-size: 18px;
+      font-size: 18vw * $px;
       line-height: 130%;
       color: #213540;
       position: relative;
       padding-left: 28px;
-      @media all and (max-width: 1440px){
+      @media all and (max-width: 1400px){
         font-size: 16px;
         margin-bottom: 22px;
       }

@@ -1,4 +1,5 @@
 .power{
+  background-color: #FFFFFF;
   &__decoration{
     position: absolute;
     img{
@@ -6,11 +7,17 @@
     }
     &-left{
       top: -3vh;
-      left: -364px;
+      left: -364vw * $px;
+      @media all and (max-width: 1400px){
+        left: -364px;
+      }
     }
     &-right{
       top: 51vh;
-      right: -425px;
+      right: -425vw * $px;
+      @media all and (max-width: 1400px){
+        right: -425px;
+      }
     }
   }
   &__wrapper{
@@ -37,9 +44,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 30vw * $px;
     @media all and (max-width: 1400px){
-
+      margin-top: 30px;
     }
     @media all and (max-width: 1024px){
       flex-direction: column;
@@ -78,11 +85,11 @@
     }
   }
   &__nav{
-    width: 248px;
+    width: 248vw * $px;
     display: flex;
     flex-direction: column;
     @media all and (max-width: 1400px){
-
+      width: 248px;
     }
     @media all and (max-width: 1024px){
       flex-direction: row;
@@ -105,20 +112,23 @@
       border: 1px solid #BFD9EB;
       box-shadow: 0px 0px 53px rgba(191, 217, 235, 0.35);
       border-radius: 5px;
-      padding: 13px 31px;
+      padding: 13vw * $px 31vw * $px;
       font-weight: 600;
-      font-size: 18px;
-      line-height: 25px;
+      font-size: 18vw * $px;
+      line-height: 25vw * $px;
       letter-spacing: 0.04em;
       color: #213540;
-      margin-bottom: 47px;
+      margin-bottom: 47vw * $px;
       transition: $transition;
       position: relative;
       margin-right: 0;
       width: 100%;
       cursor: pointer;
       @media all and (max-width: 1400px){
-
+        padding: 13px 31px;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 47px;
       }
       @media all and (max-width: 1000px){
         width: calc(50% - 10px);
@@ -133,9 +143,12 @@
       }
       svg{
         position: absolute;
-        right: 21px;
+        right: 21vw * $px;
         top: calc(50% - 5px);
         opacity: 0;
+        @media all and (max-width: 1400px){
+          right: 21px;
+        }
         @media all and (max-width: 1024px){
           display: none;
         }
@@ -147,18 +160,24 @@
         background-color: #213540;
         border-radius: 2px;
         position: absolute;
-        right: 21px;
+        right: 21vw * $px;
         top: calc(50% - 1px);
         transition: $transition;
+        @media all and (max-width: 1400px){
+          right: 21px;
+        }
         @media all and (max-width: 1024px){
           display: none;
         }
       }
       &.active{
         background: #BFD9EB;
-        margin-right: -45px;
+        margin-right: -45vw * $px;
         width: calc(100% + 45px);
         transition: $transition;
+        @media all and (max-width: 1400px){
+          margin-right: -45px;
+        }
         @media all and (max-width: 1024px){
           width: calc(50% - 10px);
           margin-right: 0;
@@ -206,7 +225,10 @@
     }
   }
   &__button{
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
     @media all and (max-width: 500px){
       margin-top: 30px;
     }

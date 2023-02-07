@@ -1,3 +1,4 @@
+$px: 0.0520833333333333;
 body{
   max-width: 100vw;
   @media all and (min-width: 1025px){
@@ -27,13 +28,13 @@ body, .onepage-wrapper, html {
 }
 
 .onepage-wrapper .section {
-  width: calc(100% - 200px);
+  width: calc(100% - (200vw * $px));
   height: 100%;
   @media all and (max-width: 1720px){
 
   }
   @media all and (max-width: 1400px){
-
+    width: calc(100% - 200px);
   }
   @media all and (max-width: 1024px){
     width: 100%;

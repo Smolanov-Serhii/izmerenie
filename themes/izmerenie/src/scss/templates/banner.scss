@@ -12,26 +12,26 @@
   }
   .position1{
     .left{
-      top: -140px;
-      left: -265px;
+      top: -140vw * $px;
+      left: -265vw * $px;
     }
     .top{
-      top: -346px;
-      left: 466px;
+      top: -346vw * $px;
+      left: 466vw * $px;
     }
     .right{
-      right: -343px;
-      bottom: 173px;
+      right: -343vw * $px;
+      bottom: 173vw * $px;
     }
   }
   .position2{
     .left{
-      left: -200px;
+      left: -200vw * $px;
       top: 5vh;
     }
     .top{
       left: 35vw;
-      top: -230px;
+      top: -230vw * $px;
     }
     .right{
       right: 100px;
@@ -45,8 +45,8 @@
       width: 20vw;
     }
     .top{
-      left: 300px;
-      top: -100px;
+      left: 300vw * $px;
+      top: -100vw * $px;
       width: 20vw;
     }
     .right{
@@ -65,15 +65,12 @@
     //top: 106px;
     top: 47%;
     transform: translateY(-50%);
-    right: 40px;
+    right: -170vw * $px;
     border-radius: 50%;
-    overflow: hidden;
-    @media all and (max-width: 1720px){
+    //overflow: hidden;
+    @media all and (max-width: 1400px){
       width: 47vw;
       height: 47vw;
-    }
-    @media all and (max-width: 1400px){
-
     }
     @media all and (max-width: 1024px){
 
@@ -93,7 +90,7 @@
   &__block{
     //min-height: 324px;
     max-width: 50%;
-    padding-top: 20vh;
+    //padding-top: 20vh;
     @media all and (max-width: 1024px){
       display: flex;
       flex-direction: column;
@@ -107,7 +104,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    margin-top: 35px;
+    margin-top: 35vw * $px;
     @media all and (max-width: 500px){
       margin-top: 20px;
       margin-bottom: -20px;
@@ -115,10 +112,10 @@
   }
   &__logo{
     width: calc(33.333% - 12px);
-    margin-right: 12px;
+    margin-right: 12vw * $px;
     display: block;
     text-decoration: none;
-    margin-bottom: 12px;
+    margin-bottom: 12vw * $px;
     background: #FFFFFF;
     box-shadow: 0px 4.72px 37.76px rgba(193, 219, 237, 0.15);
     border-radius: 5.9px;
@@ -131,15 +128,12 @@
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center center;
-    width: 876px;
-    height: 876px;
+    width: 1200vw * $px;
+    height: 1200vw * $px;
     position: relative;
-    @media all and (max-width: 1720px){
+    @media all and (max-width: 1400px){
       width: 100%;
       height: 100%;
-    }
-    @media all and (max-width: 1400px){
-
     }
     @media all and (max-width: 1024px){
 
@@ -180,21 +174,21 @@
       height: auto;
     }
     .left{
-      top: -44px;
-      left: -265px;
-      width: 441px;
+      top: -44vw * $px;
+      left: -265vw * $px;
+      width: 441vw * $px;
       height: auto;
     }
     .top{
-      top: -346px;
-      left: 466px;
-      width: 523px;
+      top: -346vw * $px;
+      left: 466vw * $px;
+      width: 523vw * $px;
       height: auto;
     }
     .right{
-      right: -343px;
-      bottom: 173px;
-      width: 625px;
+      right: -343vw * $px;
+      bottom: 173vw * $px;
+      width: 625vw * $px;
       height: auto;
     }
   }
@@ -225,6 +219,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    position: relative;
     &.last-slide{
       .banner__block{
         padding-top: 0;
@@ -233,18 +228,12 @@
   }
   &__title{
     font-weight: 900;
-    font-size: 6rem;
+    font-size: 60vw * $px;
     line-height: 101.9%;
     text-transform: uppercase;
     color: #213540;
     margin-bottom: 0;
     max-width: 100%;
-    @media all and (max-width: 1800px){
-      font-size: 5rem;
-    }
-    @media all and (max-width: 1500px){
-      font-size: 4rem;
-    }
     @media all and (max-width: 1400px){
       font-size: 46px;
     }
@@ -264,8 +253,10 @@
   }
   &__button{
     margin-top: 7vh;
+    position: absolute;
+    bottom: 15vh;
     //margin-top: 40px;
-    @media all and (max-width: 1800px){
+    @media all and (max-width: 1400px){
       min-width: 200px;
     }
     @media all and (max-width: 1024px){
@@ -280,7 +271,7 @@
   .swiper-pagination{
     position: absolute;
     left: 0;
-    bottom: 7vh;
+    bottom: 6vh;
     display: flex;
     @media all and (max-width: 1024px){
       bottom: 3vh;

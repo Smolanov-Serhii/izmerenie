@@ -53,7 +53,7 @@ main{
   flex: 1;
 }
 .padding-right{
-  padding-right: 136px;
+  padding-right: 136vw * $px;
   @media all and (max-width: 1400px){
     padding-right: 75px;
   }
@@ -68,7 +68,7 @@ main{
   }
 }
 .padding-left{
-  padding-left: 136px;
+  padding-left: 136vw * $px;
   @media all and (max-width: 1400px){
     padding-left: 75px;
   }
@@ -107,19 +107,19 @@ main{
 }
 .button, .wpcf7-submit{
   cursor: pointer;
-  min-width: 300px;
+  min-width: 300vw * $px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: #EC1C24;
   border-radius: 5px;
-  padding: 12px;
+  padding: 12vw * $px;
   text-decoration: none;
   position: relative;
   transition: $transition;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 16vw * $px;
+  line-height: 22vw * $px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -128,7 +128,10 @@ main{
 
   }
   @media all and (max-width: 1400px){
-
+    min-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 22px;
   }
   @media all and (max-width: 1024px){
 
@@ -157,11 +160,15 @@ main{
   }
   span{
     font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 16vw * $px;
+    line-height: 22vw * $px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #FFFFFF;
+    @media all and (max-width: 1400px){
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }
 .height-section{
@@ -176,7 +183,7 @@ main{
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 60vw * $px;
   line-height: 101.9%;
   text-transform: uppercase;
   color: #213540;
@@ -195,7 +202,7 @@ main{
 }
 .section-title{
   font-weight: 800;
-  font-size: 4.8rem;
+  font-size: 48vw * $px;
   line-height: 107%;
   text-transform: uppercase;
   color: #213540;
@@ -218,7 +225,7 @@ main{
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 40vw * $px;
   line-height: 101.9%;
   color: #213540;
   @media all and (max-width: 1400px){
@@ -237,13 +244,16 @@ main{
 }
 .section-subtitle{
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16vw * $px;
   line-height: 159%;
   color: #000000;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
   max-width: 776px;
+  @media all and (max-width: 1400px){
+    font-size: 16px;
+  }
   @media all and (max-width: 1024px){
     font-size: 15px;
   }
@@ -289,9 +299,12 @@ main{
     max-width: calc(100vw - 40px);
     width: auto;
     height: auto;
-    padding: 40px;
+    padding: 40vw * $px;
     border-radius: 18px;
     position: relative;
+    @media all and (max-width: 1400px){
+      padding: 40px;
+    }
     @media all and (max-width: 768px){
       padding: 0;
     }
