@@ -1,14 +1,15 @@
 .team{
   position: relative;
-  background-color: #FFFFFF;
   &__decoration{
     img{
       position: absolute;
-      z-index: -1;
+      z-index: 0;
     }
     &-left{
       top: 51vh;
       left: -277vw * $px;
+      width: 485vw * $px;
+      height: 546vw * $px;
       @media all and (max-width: 1400px){
         left: -277px;
       }
@@ -16,6 +17,8 @@
     &-right{
       top: -1vh;
       right: -255vw * $px;
+      width: 571vw * $px;
+      height: 647vw * $px;
       @media all and (max-width: 1400px){
         right: -255px;
       }

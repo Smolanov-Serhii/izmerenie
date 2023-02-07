@@ -6,15 +6,23 @@
   &__decoration{
     img{
       position: absolute;
-      z-index: -1;
+      z-index: 0;
     }
     &-left{
       top: -15vh;
-      left: -294px;
+      right: 560vw * $px;
+      width: 344vw * $px;
+      height: 388vw * $px;
+      @media all and (max-width: 1400px){
+        right: auto;
+        left: -294px;
+      }
     }
     &-right{
       top: 59vh;
-      right: 30vw;
+      right: 901vw * $px;
+      width: 421vw * $px;
+      height: 474vw * $px;
     }
   }
   &__block{
@@ -42,15 +50,22 @@
   }
   &__slide{
     background: #FFFFFF;
-    border-radius: 18px;
-    padding: 20px 36px 36px 36px;
-    max-height: 300px;
+    border-radius: 18vw * $px;
+    padding: 20vw * $px 36vw * $px 36vw * $px 36vw * $px;
+    max-height: 300vw * $px;
     overflow: hidden;
     height: auto;
     cursor: pointer;
     border: 2px solid transparent;
     transition: $transition;
     position: relative;
+    box-shadow: 0px 4vw * $px 32vw * $px rgba(193, 219, 237, 0.15);
+    @media all and (max-width: 1400px){
+      box-shadow: 0px 4px 32px rgba(193, 219, 237, 0.15);
+      border-radius: 18px;
+      padding: 20px 36px 36px 36px;
+      max-height: 300px;
+    }
     &-more{
       position: absolute;
       bottom: 25vw * $px;

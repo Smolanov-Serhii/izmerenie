@@ -154,11 +154,11 @@ $post_id = get_the_ID();
             </div>
         </section>
         <section class="power height-section vertical-center scroll-section">
-            <div class="power__decoration">
-                <img class="power__decoration-left" src="<?php echo get_template_directory_uri() . '/img/power/dec-left.svg'; ?>" alt="decoration">
-                <img class="power__decoration-right" src="<?php echo get_template_directory_uri() . '/img/power/dec-right.svg'; ?>" alt="decoration">
-            </div>
             <div class="power__wrapper">
+                <div class="power__decoration">
+                    <img class="power__decoration-left" src="<?php echo get_template_directory_uri() . '/img/power/dec-left.png'; ?>" alt="decoration">
+                    <img class="power__decoration-right" src="<?php echo get_template_directory_uri() . '/img/power/dec-right.svg'; ?>" alt="decoration">
+                </div>
                 <h2 class="power__title section-title main-container" data-aos="fade-right" data-aos-delay="200">
                     <?php echo the_field("zagolovok_bloku_4_syly", $post_id); ?>
                     <svg class="default-power" width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -227,11 +227,11 @@ $post_id = get_the_ID();
             </div>
         </section>
         <section class="programs height-section vertical-center scroll-section">
-            <div class="programs__decoration">
-                <img class="programs__decoration-left" src="<?php echo get_template_directory_uri() . '/img/programs/dec-left.svg'; ?>" alt="decoration">
-                <img class="programs__decoration-right" src="<?php echo get_template_directory_uri() . '/img/programs/dec-right.svg'; ?>" alt="decoration">
-            </div>
             <div class="programs__container main-container">
+                <div class="programs__decoration">
+                    <img class="programs__decoration-left" src="<?php echo get_template_directory_uri() . '/img/programs/dec-left.svg'; ?>" alt="decoration">
+                    <img class="programs__decoration-right" src="<?php echo get_template_directory_uri() . '/img/programs/dec-right.svg'; ?>" alt="decoration">
+                </div>
                 <div class="programs__list">
                     <?php
                     $terms = get_terms(

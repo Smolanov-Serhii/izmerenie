@@ -1,6 +1,5 @@
 $px: 0.0520833333333333;
 .page-template-team{
-  background-color: #FFFFFF;
   .person{
     position: relative;
     svg{
@@ -101,7 +100,6 @@ $px: 0.0520833333333333;
 }
 .person{
   position: relative;
-  background-color: #FFFFFF;
   @media all and (max-width: 1024px){
     flex-direction: column;
     margin-bottom: 30px;
@@ -114,18 +112,22 @@ $px: 0.0520833333333333;
   &__decoration{
     img{
       position: absolute;
-      z-index: -1;
+      z-index: 0;
     }
     &-left{
       top: 56vh;
-      left: -294vw * $px;
+      left: -150vw * $px;
+      width: 344vw * $px;
+      height: 388vw * $px;
       @media all and (max-width: 1400px){
         left: -294px;
       }
     }
     &-right{
-      top: 41vh;
+      bottom: 14vh;
       right: -10vw * $px;
+      width: 364vw * $px;
+      height: 408vw * $px;
       @media all and (max-width: 1400px){
         right: -10px;
       }

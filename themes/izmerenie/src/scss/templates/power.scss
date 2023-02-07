@@ -1,20 +1,22 @@
 .power{
-  background-color: #FFFFFF;
   &__decoration{
-    position: absolute;
     img{
       position: absolute;
     }
     &-left{
       top: -3vh;
       left: -364vw * $px;
+      width: 452vw * $px;
+      height: 512vw * $px;
       @media all and (max-width: 1400px){
         left: -364px;
       }
     }
     &-right{
       top: 51vh;
-      right: -425vw * $px;
+      right: -314vw * $px;
+      width: 512vw * $px;
+      height: 579vw * $px;
       @media all and (max-width: 1400px){
         right: -425px;
       }
@@ -25,6 +27,7 @@
     flex-wrap: wrap;
     align-items: center;
     height: 100vh;
+    position: relative;
     @media all and (max-width: 1024px){
       height: auto;
       padding-top: 120px;
