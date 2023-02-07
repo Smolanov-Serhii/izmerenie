@@ -193,9 +193,12 @@ $(document).ready(function () {
             }
         });
         if (window.innerWidth < 1025) {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#reviews").offset().top
-            }, 1000);
+            $(".banner  .first-slide .banner__button ").click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#reviews").offset().top
+                }, 1000);
+            })
+
         } else {
             $(".banner  .first-slide .banner__button ").click(function() {
                 event.preventDefault();
