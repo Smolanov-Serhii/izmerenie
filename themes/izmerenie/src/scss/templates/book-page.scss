@@ -1,6 +1,10 @@
 .book-page{
-  padding-top: 63px;
-  padding-bottom: 187px;
+  padding-top: 63vw * $px;
+  padding-bottom: 187vw * $px;
+  @media all and (max-width: 1400px){
+    padding-top: 63px;
+    padding-bottom: 187px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 150px;
   }
@@ -9,7 +13,10 @@
   }
   &__title{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
   }
   &__content{
     display: flex;
@@ -18,7 +25,7 @@
   }
   &__img{
     width: 48%;
-    @media all and (max-width: 1700px){
+    @media all and (max-width: 1400px){
       width: 35%;
     }
     @media all and (max-width: 768px){
@@ -31,8 +38,8 @@
     }
   }
   &__desc{
-    width: calc(52% - 44px);
-    @media all and (max-width: 1700px){
+    width: calc(52% - (44vw * $px));
+    @media all and (max-width: 1400px){
       width: calc(65% - 44px);
     }
     @media all and (max-width: 768px){
@@ -43,14 +50,15 @@
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 900;
-    font-size: 44px;
+    font-size: 44vw * $px;
     line-height: 101.9%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #213540;
-    margin-bottom: 40px;
-    @media all and (max-width: 1700px){
+    margin-bottom: 40vw * $px;
+    @media all and (max-width: 1400px){
       font-size: 34px;
+      margin-bottom: 40px;
     }
     @media all and (max-width: 1600px){
       font-size: 32px;
@@ -73,7 +81,10 @@
   }
   &__link{
     width: 100%;
-    margin-top: 29px;
+    margin-top: 29vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 29px;
+    }
     a{
       font-weight: 700;
       text-decoration-line: underline;
@@ -81,10 +92,12 @@
     }
   }
   &__about{
-    padding: 60px 45px;
+    padding: 60vw * $px 45vw * $px;
     background-color: rgba(160,188,200,0.1);
-    border-radius: 15px;
-    @media all and (max-width: 1700px){
+    border-radius: 15vw * $px;
+    @media all and (max-width: 1400px){
+      padding: 60px 45px;
+      border-radius: 15px;
       padding-bottom: 10px;
       padding-top: 20px;
     }
@@ -97,7 +110,7 @@
     &.text{
       margin-bottom: 0;
       p, li{
-        @media all and (max-width: 1700px){
+        @media all and (max-width: 1400px){
           font-size: 14px;
           margin-bottom: 0.8em;
           *:last-child{

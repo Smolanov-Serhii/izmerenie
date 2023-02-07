@@ -1,6 +1,10 @@
 .publications-page{
   padding-bottom: 187px;
   padding-top: 63px;
+  @media all and (max-width: 1400px){
+    padding-bottom: 187vw * $px;
+    padding-top: 63vw * $px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 150px;
   }
@@ -9,7 +13,10 @@
   }
   &__title{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
   }
   &__list{
     display: flex;
@@ -17,9 +24,13 @@
     justify-content: space-between;
   }
   &__item{
-    width: calc(50% - 50px);
-    margin-bottom: 41px;
+    width: calc(50% - (50vw * $px));
+    margin-bottom: 41vw * $px;
     text-decoration: none;
+    @media all and (max-width: 1400px){
+      width: calc(50% - 50px);
+      margin-bottom: 41px;
+    }
     @media all and (max-width: 768px){
       width: 100%;
     }
@@ -27,10 +38,15 @@
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 700;
-      font-size: 20px;
-      line-height: 27px;
+      font-size: 20vw * $px;
+      line-height: 27vw * $px;
       color: #213540;
-      margin-bottom: 11px;
+      margin-bottom: 11vw * $px;
+      @media all and (max-width: 1400px){
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 11px;
+      }
       @media all and (max-width: 768px){
         font-size: 18px;
       }
@@ -40,9 +56,12 @@
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 18vw * $px;
         line-height: 139.9%;
         color: #A0BCC8;
+        @media all and (max-width: 1400px){
+          font-size: 18px;
+        }
         @media all and (max-width: 768px){
           font-size: 16px;
         }

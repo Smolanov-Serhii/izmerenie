@@ -312,8 +312,19 @@
       padding-bottom: 80px;
     }
     a{
-      margin: 0 7px;
+      margin: 0 7vw * $px;
+      @media all and (max-width: 1400px){
+        margin: 0 7px;
+      }
       text-decoration: none;
+      img{
+        width: 24vw * $px;
+        height: 24vw * $px;
+        @media all and (max-width: 1400px){
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 }

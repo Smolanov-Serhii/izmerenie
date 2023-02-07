@@ -1,8 +1,14 @@
 section.single-blog{
-  padding-top: 63px;
+  padding-top: 63vw * $px;
+  @media all and (max-width: 1400px){
+    padding-top: 63px;
+  }
 }
 .single-blog{
-  padding-bottom: 187px;
+  padding-bottom: 187vw * $px;
+  @media all and (max-width: 1400px){
+    padding-bottom: 187px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 150px;
   }
@@ -11,18 +17,26 @@ section.single-blog{
   }
   &__title{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
   }
   &__date{
-    margin-bottom: 12px;
+    margin-bottom: 12vw * $px;
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 18vw * $px;
     line-height: 139.9%;
     color: #A0BCC8;
     display: block;
-    margin-top: 42px;
+    margin-top: 42vw * $px;
+    @media all and (max-width: 1400px){
+      margin-bottom: 12px;
+      margin-top: 42px;
+      font-size: 18px;
+    }
     @media all and (max-width: 1024px){
       font-size: 17px;
     }
@@ -32,7 +46,10 @@ section.single-blog{
   }
   &__img{
     width: 100%;
-    margin-bottom: 44px;
+    margin-bottom: 44vw * $px;
+    @media all and (max-width: 1400px){
+      margin-bottom: 44px;
+    }
     @media all and (max-width: 768px){
       margin-bottom: 30px;
     }

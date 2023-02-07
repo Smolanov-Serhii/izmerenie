@@ -1,3 +1,4 @@
+$px: 0.0520833333333333;
 .footer{
   position: relative;
   @media all and (max-width: 1024px){
@@ -10,7 +11,10 @@
     }
     .footer__bottom{
       position: static;
-      padding-bottom: 38px;
+      padding-bottom: 38vw * $px;
+      @media all and (max-width: 1400px){
+        padding-bottom: 38px;
+      }
     }
   }
   &.footer-page-contacts{
@@ -62,7 +66,10 @@
     justify-content: space-between;
   }
   &__socials{
-    margin-bottom: 40px;
+    margin-bottom: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-bottom: 40px;
+    }
     @media all and (max-height: 900px){
       margin-bottom: 20px;
     }
@@ -72,12 +79,18 @@
     a{
       text-decoration: none;
       img{
-        margin: -10px;
+        margin: -10vw * $px;
+        @media all and (max-width: 1400px){
+          margin: -10px;
+        }
       }
     }
   }
   &__form{
-    width: calc(50% - 60px);
+    width: calc(50% - (60vw * $px));
+    @media all and (max-width: 1400px){
+      width: calc(50% - 60px);
+    }
     @media all and (max-width: 1024px){
       width: 100%;
       order: 2;
@@ -88,28 +101,40 @@
         display: none!important;
       }
       .wpcf7-submit{
-        margin-top: 50px;
+        margin-top: 50vw * $px;
+        @media all and (max-width: 1400px){
+          margin-top: 50px;
+        }
         @media all and (max-height: 900px){
           margin-top: 20px;
         }
       }
       p{
-        margin-bottom: 16px;
+        margin-bottom: 16vw * $px;
+        @media all and (max-width: 1400px){
+          margin-bottom: 16px;
+        }
       }
       label{
         div{
           font-weight: 400;
-          font-size: 16px;
+          font-size: 16vw * $px;
           line-height: 139.9%;
           letter-spacing: 0.04em;
           color: #A0BCC8;
+          @media all and (max-width: 1400px){
+            font-size: 16px;
+          }
         }
         width: 100%;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 16vw * $px;
         line-height: 139.9%;
         letter-spacing: 0.04em;
         color: #A0BCC8;
+        @media all and (max-width: 1400px){
+          font-size: 16px;
+        }
         @media all and (max-width: 768px){
           font-size: 15px;
         }
@@ -125,22 +150,28 @@
         width: 100%;
         display: block;
         input, textarea{
-          margin-top: 6px;
+          margin-top: 6vw * $px;
           width: 100%;
           background: #FFFFFF;
           opacity: 0.5;
           border: 1px solid #A0BCC8;
-          border-radius: 5px;
+          border-radius: 5vw * $px;
           font-weight: 400;
-          font-size: 16px;
+          font-size: 16vw * $px;
           line-height: 139.9%;
           letter-spacing: 0.04em;
           color: #213540;
-          padding: 11px 25px;
+          padding: 11vw * $px 25vw * $px;
+          @media all and (max-width: 1400px){
+            margin-top: 6px;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 11px 25px;
+          }
         }
         textarea{
-          height: 140px;
-          @media all and (max-width: 1600px){
+          height: 140vw * $px;
+          @media all and (max-width: 1400px){
             height: 120px;
           }
           @media all and (max-width: 500px){
@@ -151,15 +182,21 @@
     }
   }
   &__img{
-    width: calc(50% - 60px);
+    width: calc(50% - (60vw * $px));
+    @media all and (max-width: 1400px){
+      width: calc(50% - 60px);
+    }
     @media all and (max-width: 1024px){
       display: none;
     }
   }
   &__map{
-    width: calc(50% - 60px);
+    width: calc(50% - (60vw * $px));
     height: 100%;
     transition: 1s ease-in-out;
+    @media all and (max-width: 1400px){
+      width: calc(50% - 60px);
+    }
     @media all and (min-width: 1025px){
       -webkit-mask-image: url(../../img/footer/map-mask.png);
       mask-image: url(../../img/footer/map-mask.png);
@@ -182,7 +219,10 @@
     //letter-spacing: 0.04em;
     //text-transform: uppercase;
     //color: #213540;
-    margin-bottom: 23px;
+    margin-bottom: 23vw * $px;
+    @media all and (max-width: 1400px){
+      margin-bottom: 23px;
+    }
   }
   &__bottom{
     display: flex;
@@ -190,8 +230,8 @@
     width: 100%;
     left: 0;
     align-items: center;
-    top: calc(100vh - 38px);
-    @media all and (max-width: 1600px){
+    top: calc(100vh - (38vw * $px));
+    @media all and (max-width: 1400px){
       top: auto;
       bottom: 15px;
     }
@@ -210,9 +250,12 @@
   &__copyright{
     flex: 1;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 16vw * $px;
     line-height: 139.9%;
     color: #A0BCC8;
+    @media all and (max-width: 1400px){
+      font-size: 16px;
+    }
     @media all and (max-width: 1024px){
       order: 3;
     }
@@ -226,11 +269,14 @@
   &__phone, &__mail{
     text-decoration: none;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 16vw * $px;
     line-height: 139.9%;
     letter-spacing: 0.04em;
     color: #213540;
     margin-left: 49px;
+    @media all and (max-width: 1400px){
+      font-size: 16px;
+    }
     @media all and (max-width: 1024px){
       margin-left: 0;
     }
@@ -253,7 +299,10 @@
   &__contacts{
     display: flex;
     flex-direction: column;
-    margin-bottom: 28px;
+    margin-bottom: 28vw * $px;
+    @media all and (max-width: 1400px){
+      margin-bottom: 28px;
+    }
     @media all and (max-height: 900px){
       margin-bottom: 8px;
     }
@@ -264,12 +313,19 @@
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 16vw * $px;
       line-height: 139.9%;
       color: #000000;
-      margin-bottom: 12px;
+      margin-bottom: 12vw * $px;
+      @media all and (max-width: 1400px){
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
       svg{
-        margin-right: 15px;
+        margin-right: 15vw * $px;
+        @media all and (max-width: 1400px){
+          margin-right: 15px;
+        }
       }
     }
   }
@@ -286,20 +342,30 @@
     align-items: center;
     &__container{
       position: relative;
-      max-width: 300px;
-      width: calc(100% - 40px);
+      max-width: 300vw * $px;
+      width: calc(100% - (40vw * $px));
       height: auto;
       background-color: #FFFFFF;
       border: 2px solid #BFD9EB;
-      box-shadow: 0px 69px 85px -77px rgba(193, 219, 237, 0.25);
-      border-radius: 30px;
-      padding: 30px;
+      box-shadow: 0px 69vw * $px 85vw * $px -77vw * $px rgba(193, 219, 237, 0.25);
+      border-radius: 30vw * $px;
+      padding: 30vw * $px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      @media all and (max-width: 1400px){
+        max-width: 300px;
+        width: calc(100% - 40px);
+        border-radius: 30px;
+        padding: 30px;
+        box-shadow: 0px 69px 85px -77px rgba(193, 219, 237, 0.25);
+      }
       p{
-        font-size: 24px;
+        font-size: 24vw * $px;
+        @media all and (max-width: 1400px){
+          font-size: 24px;
+        }
         margin-bottom: 0;
       }
     }
@@ -317,14 +383,21 @@
     align-items: center;
     &-container{
       position: relative;
-      max-width: 560px;
-      width: calc(100% - 40px);
+      max-width: 560vw * $px;
+      width: calc(100% - (40vw * $px));
       height: auto;
       background-color: #FFFFFF;
       border: 2px solid #BFD9EB;
-      box-shadow: 0px 69px 85px -77px rgba(193, 219, 237, 0.25);
-      border-radius: 30px;
-      padding: 60px 70px 0 70px;
+      box-shadow: 0px 69vw * $px 85vw * $px -77vw * $px rgba(193, 219, 237, 0.25);
+      border-radius: 30vw * $px;
+      padding: 60vw * $px 70vw * $px 0 70vw * $px;
+      @media all and (max-width: 1400px){
+        max-width: 560px;
+        width: calc(100% - 40px);
+        box-shadow: 0px 69px 85px -77px rgba(193, 219, 237, 0.25);
+        border-radius: 30px;
+        padding: 60px 70px 0 70px;
+      }
       @media all and (max-width: 768px){
         padding: 40px 40px 0 40px;
       }
@@ -336,20 +409,32 @@
           display: none;
         }
         p{
-          margin-bottom: 15px;
+          margin-bottom: 15vw * $px;
           text-align: center;
           display: flex;
           flex-direction: column;
           align-items: center;
+          @media all and (max-width: 1400px){
+            margin-bottom: 15px;
+          }
           .wpcf7-spinner{
-            margin-top: 20px;
+            margin-top: 20vw * $px;
+            @media all and (max-width: 1400px){
+              margin-top: 20px;
+            }
           }
         }
         .wpcf7-response-output{
-          font-size: 14px;
+          font-size: 14vw * $px;
+          @media all and (max-width: 1400px){
+            font-size: 14px;
+          }
         }
         .wpcf7-submit{
-          margin-top: 25px;
+          margin-top: 25vw * $px;
+          @media all and (max-width: 1400px){
+            margin-top: 25px;
+          }
           @media all and (max-width: 500px){
             width: 100%;
           }
@@ -358,37 +443,52 @@
           font-family: 'Nunito Sans';
           font-style: normal;
           font-weight: 400;
-          font-size: 14px;
+          font-size: 14vw * $px;
           line-height: 139.9%;
           color: #A0BCC8;
           width: 100%;
           text-align: left;
           display: block;
+          @media all and (max-width: 1400px){
+            font-size: 14px;
+          }
           input, textarea{
             background: #FFFFFF;
             border: 1px solid #A0BCC8;
-            border-radius: 5px;
+            border-radius: 5vw * $px;
             font-family: 'Nunito Sans';
             font-style: normal;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 18vw * $px;
             line-height: 139.9%;
             letter-spacing: 0.04em;
             color: #213540;
             width: 100%;
-            padding: 11px 25px;
+            padding: 11vw * $px 25vw * $px;
+            @media all and (max-width: 1400px){
+              border-radius: 5px;
+              font-size: 18px;
+              padding: 11px 25px;
+            }
           }
           textarea{
-            height: 74px;
+            height: 74vw * $px;
+            @media all and (max-width: 1400px){
+              height: 74px;
+            }
           }
         }
       }
     }
     &-close{
       position: absolute;
-      right: 20px;
-      top: 20px;
+      right: 20vw * $px;
+      top: 20vw * $px;
       cursor: pointer;
+      @media all and (max-width: 1400px){
+        right: 20px;
+        top: 20px;
+      }
       svg{
         circle, rect{
           transition: $transition;
@@ -407,30 +507,40 @@
       }
     }
     &__socials{
-      margin-left: -18px;
+      margin-left: -18vw * $px;
+      @media all and (max-width: 1400px){
+        margin-left: -18px;
+      }
       a{
-        margin-right: -14px;
+        margin-right: -14vw * $px;
         text-decoration: none;
+        @media all and (max-width: 1400px){
+          margin-right: -14px;
+        }
       }
     }
     &-title{
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 19px;
+      font-size: 36vw * $px;
+      margin-bottom: 19vw * $px;
       text-align: left;
+      @media all and (max-width: 1400px){
+        font-size: 36px;
+        margin-bottom: 19px;
+      }
     }
   }
 }
 .to-up{
   position: fixed;
-  bottom: 62px;
-  right: 62px;
+  bottom: 62vw * $px;
+  right: 62vw * $px;
   z-index: 50;
-  width: 106px;
+  width: 106vw * $px;
   height: auto;
   @media all and (max-width: 1400px){
     right: 75px;
     bottom: 75px;
+    width: 106px;
     svg{
       width: 100%;
       height: 100%;

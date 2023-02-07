@@ -8,11 +8,17 @@
     }
     &-left{
       top: 51vh;
-      left: -277px;
+      left: -277vw * $px;
+      @media all and (max-width: 1400px){
+        left: -277px;
+      }
     }
     &-right{
       top: -1vh;
-      right: -255px;
+      right: -255vw * $px;
+      @media all and (max-width: 1400px){
+        right: -255px;
+      }
     }
   }
   &__container{

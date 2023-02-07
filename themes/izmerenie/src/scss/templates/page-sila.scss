@@ -1,6 +1,10 @@
 .page-sila{
-  padding-top: 63px;
-  padding-bottom: 187px;
+  padding-top: 63vw * $px;
+  padding-bottom: 187vw * $px;
+  @media all and (max-width: 1400px){
+    padding-top: 63px;
+    padding-bottom: 187px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 150px;
   }
@@ -22,13 +26,21 @@
   }
   &__title{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
   }
   &__content{
-    padding: 80px 57px 47px 57px;
+    padding: 80vw * $px 57vw * $px 47vw * $px 57vw * $px;
     background: rgba(160,188,200,0.1);
-    border-radius: 15px;
-    margin-bottom: 31px;
+    border-radius: 15vw * $px;
+    margin-bottom: 31vw * $px;
+    @media all and (max-width: 1400px){
+      padding: 80px 57px 47px 57px;
+      border-radius: 15px;
+      margin-bottom: 31px;
+    }
     @media all and (max-width: 1024px){
 
     }
@@ -42,13 +54,10 @@
       font-family: 'Century';
       font-style: normal;
       font-weight: 400;
-      font-size: 57px;
+      font-size: 57vw * $px;
       line-height: 100.4%;
       color: #C1272D;
       margin-bottom: 40px;
-      @media all and (max-width: 1600px){
-        font-size: 46px;
-      }
       @media all and (max-width: 1400px){
         font-size: 32px;
       }
@@ -66,15 +75,13 @@
       font-family: 'Rubik';
       font-style: normal;
       font-weight: 300;
-      font-size: 20px;
+      font-size: 20vw * $px;
       line-height: 150%;
       color: #213540;
-      margin-bottom: 30px;
-      @media all and (max-width: 1600px){
-        font-size: 16px;
-      }
+      margin-bottom: 30vw * $px;
       @media all and (max-width: 1400px){
         font-size: 15px;
+        margin-bottom: 30px;
       }
       @media all and (max-width: 1024px){
 
@@ -91,12 +98,9 @@
     font-family: 'Century';
     font-style: normal;
     font-weight: 400;
-    font-size: 57px;
+    font-size: 57vw * $px;
     line-height: 125.9%;
     color: #A0BCC8;
-    @media all and (max-width: 1600px){
-      font-size: 46px;
-    }
     @media all and (max-width: 1400px){
       font-size: 32px;
     }
@@ -118,10 +122,16 @@
     span{
       display: inline-block;
       &:nth-child(2){
-        padding-left: 20px;
+        padding-left: 20vw * $px;
+        @media all and (max-width: 1400px){
+          padding-left: 20px;
+        }
       }
       &:nth-child(3){
-        padding-left: 250px;
+        padding-left: 250vw * $px;
+        @media all and (max-width: 1400px){
+          padding-left: 250px;
+        }
         @media all and (max-width: 768px){
           padding-left: 150px;
         }

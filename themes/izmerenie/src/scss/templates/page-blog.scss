@@ -1,6 +1,10 @@
 .blog-page{
-  padding-top: 63px;
-  padding-bottom: 187px;
+  padding-top: 63vw * $px;
+  padding-bottom: 187vw * $px;
+  @media all and (max-width: 1400px){
+    padding-top: 63px;
+    padding-bottom: 187px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 150px;
   }
@@ -10,12 +14,19 @@
   &__title{
     text-align: left;
     margin-top: 40px;
+    @media all and (max-width: 1400px){
+      margin-top: 40vw * $px;
+    }
   }
   &__list{
     display: flex;
     flex-wrap: wrap;
-    margin-right: -32px;
-    width: calc(100% + 32px);
+    margin-right: -32vw * $px;
+    width: calc(100% + (32vw * $px));
+    @media all and (max-width: 1400px){
+      margin-right: -32px;
+      width: calc(100% + 32px);
+    }
     @media all and (max-width: 768px){
       margin-right: -20px;
       width: calc(100% + 20px);
@@ -26,10 +37,15 @@
     }
   }
   &__item{
-    width: calc(33.333% - 32px);
-    margin-right: 32px;
-    margin-bottom: 40px;
+    width: calc(33.333% - (32vw * $px));
+    margin-right: 32vw * $px;
+    margin-bottom: 40vw * $px;
     text-decoration: none;
+    @media all and (max-width: 1400px){
+      width: calc(33.333% - 32px);
+      margin-right: 32px;
+      margin-bottom: 40px;
+    }
     @media all and (max-width: 768px){
       width: calc(50% - 20px);
       margin-right: 20px;
@@ -49,8 +65,12 @@
       }
     }
     &-img{
-      margin-bottom: 30px;
-      border-radius: 15px;
+      margin-bottom: 30vw * $px;
+      border-radius: 15vw * $px;
+      @media all and (max-width: 1400px){
+        margin-bottom: 30px;
+        border-radius: 15px;
+      }
       overflow: hidden;
       @media all and (max-width: 500px){
         margin-bottom: 10px;
@@ -63,10 +83,14 @@
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 700;
-      font-size: 20px;
-      line-height: 27px;
+      font-size: 20vw * $px;
+      line-height: 27vw * $px;
       color: #213540;
       transition: $transition;
+      @media all and (max-width: 1400px){
+        font-size: 20px;
+        line-height: 27px;
+      }
       @media all and (max-width: 1024px){
         font-size: 18px;
       }
@@ -81,9 +105,12 @@
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 16vw * $px;
       line-height: 139.9%;
       color: #213540;
+      @media all and (max-width: 1400px){
+        font-size: 16px;
+      }
       @media all and (max-width: 1024px){
         font-size: 15px;
       }
@@ -92,14 +119,18 @@
       }
     }
     &-date{
-      margin-bottom: 8px;
+      margin-bottom: 8vw * $px;
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 16vw * $px;
       line-height: 139.9%;
       color: #A0BCC8;
       display: block;
+      @media all and (max-width: 1400px){
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
       @media all and (max-width: 1024px){
         font-size: 15px;
       }

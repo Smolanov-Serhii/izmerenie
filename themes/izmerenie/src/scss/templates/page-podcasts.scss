@@ -1,6 +1,11 @@
+
 .page-podcasts{
-  padding-top: 63px;
-  padding-bottom: 140px;
+  padding-top: 63vw * $px;
+  padding-bottom: 140vw * $px;
+  @media all and (max-width: 1400px){
+    padding-top: 63px;
+    padding-bottom: 140px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 100px;
   }
@@ -12,23 +17,23 @@
   }
   &__title{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
   }
   &__list{
     display: flex;
     flex-wrap: wrap;
-    margin-right: -33px;
+    margin-right: -33vw * $px;
     @media all and (max-width: 1400px){
       margin-right: -20px;
     }
   }
   &__item{
     cursor: pointer;
-    width: calc(20% - 33px);
-    margin-right: 33px;
-    @media all and (max-width: 1700px){
-      width: calc(25% - 33px);
-    }
+    width: calc(20% - (33vw * $px));
+    margin-right: 33vw * $px;
     @media all and (max-width: 1400px){
       width: calc(25% - 20px);
       margin-right: 20px;
@@ -48,16 +53,21 @@
     }
     &-time{
       position: absolute;
-      bottom: 23px;
+      bottom: 23vw * $px;
       left: 0;
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 16vw * $px;
       line-height: 125.9%;
       color: #FFFFFF;
       background: #EC1C24;
-      padding: 10px 22px;
+      padding: 10vw * $px 22vw * $px;
+      @media all and (max-width: 1400px){
+        bottom: 23px;
+        font-size: 16px;
+        padding: 10px 22px;
+      }
       @media all and (max-width: 1200px){
         font-size: 14px;
       }
@@ -72,11 +82,16 @@
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 18vw * $px;
       line-height: 125.9%;
       color: #213540;
-      margin-top: 19px;
-      margin-bottom: 30px;
+      margin-top: 19vw * $px;
+      margin-bottom: 30vw * $px;
+      @media all and (max-width: 1400px){
+        font-size: 18px;
+        margin-top: 19px;
+        margin-bottom: 30px;
+      }
       @media all and (max-width: 1200px){
         font-size: 17px;
       }
@@ -92,13 +107,20 @@
       img{
         background: linear-gradient(90deg, #678597 0%, rgba(103, 133, 151, 0) 97.01%), url(.jpg);
         background-blend-mode: multiply, normal;
-        border-radius: 15px;
+        border-radius: 15vw * $px;
+        @media all and (max-width: 1400px){
+          border-radius: 15px;
+        }
       }
       svg{
         transition: $transition;
         position: absolute;
-        top: calc(50% - 23px);
-        left: calc(50% - 23px);
+        top: calc(50% - (23vw * $px));
+        left: calc(50% - (23vw * $px));
+        @media all and (max-width: 1400px){
+          top: calc(50% - 23px);
+          left: calc(50% - 23px);
+        }
       }
     }
   }

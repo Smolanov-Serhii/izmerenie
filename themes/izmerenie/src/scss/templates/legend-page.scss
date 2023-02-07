@@ -1,6 +1,10 @@
 .legend-page{
-  padding-top: 63px;
-  padding-bottom: 220px;
+  padding-top: 63vw * $px;
+  padding-bottom: 220vw * $px;
+  @media all and (max-width: 1400px){
+    padding-top: 63px;
+    padding-bottom: 220px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 150px;
   }
@@ -12,19 +16,19 @@
   }
   &__title{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
   }
   &__content{
     h2{
       font-family: 'Century';
       font-style: normal;
       font-weight: 400;
-      font-size: 57px;
+      font-size: 57vw * $px;
       line-height: 125.9%;
       color: #A0BCC8;
-      @media all and (max-width: 1600px){
-        font-size: 54px;
-      }
       @media all and (max-width: 1400px){
         font-size: 40px;
       }
@@ -48,10 +52,14 @@
   }
   &__btn{
     position: absolute;
-    top: calc(50% - 80px);
-    left: calc(50% - 80px);
+    top: calc(50% - (80vw * $px));
+    left: calc(50% - (80vw * $px));
     cursor: pointer;
     transition: $transition;
+    @media all and (max-width: 1400px){
+      top: calc(50% - 80px);
+      left: calc(50% - 80px);
+    }
     &:hover{
       transform: scale(1.2);
     }

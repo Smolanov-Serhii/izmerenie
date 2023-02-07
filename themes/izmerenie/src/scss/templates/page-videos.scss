@@ -1,6 +1,10 @@
 .page-videos{
-  padding-top: 63px;
-  padding-bottom: 140px;
+  padding-top: 63vw * $px;
+  padding-bottom: 140vw * $px;
+  @media all and (max-width: 1400px){
+    padding-top: 63px;
+    padding-bottom: 140px;
+  }
   @media all and (max-width: 768px){
     padding-bottom: 100px;
   }
@@ -12,7 +16,10 @@
   }
   &__title{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 40vw * $px;
+    @media all and (max-width: 1400px){
+      margin-top: 40px;
+    }
   }
   &__wrapper{
     display: flex;
@@ -22,7 +29,10 @@
     }
   }
   &__rubrik{
-    width: 400px;
+    width: 400vw * $px;
+    @media all and (max-width: 1400px){
+      width: 400px;
+    }
     @media all and (max-width: 1350px){
       width: 100%;
       margin-bottom: 40px;
@@ -40,7 +50,10 @@
         margin-right: 0;
       }
       li{
-        margin-bottom: 30px;
+        margin-bottom: 30vw * $px;
+        @media all and (max-width: 1400px){
+          margin-bottom: 30px;
+        }
         @media all and (max-width: 1350px){
           width: calc(50% - 20px);
           margin-bottom: 20px;
@@ -60,26 +73,29 @@
           font-family: 'Nunito Sans';
           font-style: normal;
           font-weight: 600;
-          font-size: 18px;
-          line-height: 25px;
+          font-size: 18vw * $px;
+          line-height: 25vw * $px;
           color: #213540;
           text-decoration: none;
-          padding: 13px 30px;
+          padding: 13vw * $px 30vw * $px;
           background: #FFFFFF;
           border: 1px solid #BFD9EB;
-          box-shadow: 0px 0px 53px rgba(191, 217, 235, 0.35);
-          border-radius: 5px;
-          @media all and (max-width: 1600px){
-            font-size: 16px;
-            padding: 10px 20px;
+          box-shadow: 0px 0px 53vw * $px rgba(191, 217, 235, 0.35);
+          border-radius: 5vw * $px;
+          @media all and (max-width: 1400px){
+            font-size: 18px;
+            line-height: 25px;
+            padding: 13px 30px;
+            box-shadow: 0px 0px 53px rgba(191, 217, 235, 0.35);
+            border-radius: 5px;
           }
         }
       }
     }
   }
   &__list{
-    width: calc(100% - 500px);
-    @media all and (max-width: 1600px){
+    width: calc(100% - (500vw * $px));
+    @media all and (max-width: 1400px){
       width: calc(100% - 450px);
     }
     @media all and (max-width: 1350px){
@@ -91,8 +107,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 20vw * $px;
     cursor: pointer;
+    @media all and (max-width: 1400px){
+      margin-bottom: 20px;
+    }
     @media all and (max-width: 500px){
       flex-wrap: wrap;
       margin-bottom: 30px;
@@ -115,50 +134,64 @@
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 20vw * $px;
       line-height: 120%;
       color: #213540;
-      margin-bottom: 10px;
+      margin-bottom: 10vw * $px;
       transition: $transition;
-      @media all and (max-width: 1440px){
+      @media all and (max-width: 1400px){
         font-size: 18px;
+        margin-bottom: 10px;
       }
     }
     &-name{
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 18vw * $px;
       line-height: 139.9%;
       color: #213540;
       margin-bottom: 0;
       transition: $transition;
       border-bottom: 1px solid transparent;
       display: inline-block;
+      @media all and (max-width: 1400px){
+        font-size: 18px;
+      }
     }
     &-img{
-      width: 200px;
+      width: 200vw * $px;
       position: relative;
+      @media all and (max-width: 1400px){
+        width: 200px;
+      }
       @media all and (max-width: 500px){
         width: 100%;
         margin-bottom: 20px;
       }
       svg{
         position: absolute;
-        top: calc(50% - 23px);
-        left: calc(50% - 23px);
+        top: calc(50% - (23vw * $px));
+        left: calc(50% - (23vw * $px));
+        @media all and (max-width: 1400px){
+          top: calc(50% - 23px);
+          left: calc(50% - 23px);
+        }
       }
       img{
         width: 100%;
         height: auto;
         background: linear-gradient(90deg, #678597 0%, rgba(103, 133, 151, 0) 97.01%), url(image.png);
         background-blend-mode: multiply, normal;
-        border-radius: 15px;
+        border-radius: 15vw * $px;
+        @media all and (max-width: 1400px){
+          border-radius: 15px;
+        }
       }
     }
     &-content{
-      width: calc(100% - 246px);
-      @media all and (max-width: 1600px){
+      width: calc(100% - (246vw * $px));
+      @media all and (max-width: 1400px){
         width: calc(100% - 230px);
       }
       @media all and (max-width: 500px){
@@ -168,15 +201,20 @@
     &-time{
       position: absolute;
       right: 0;
-      bottom: 15px;
+      bottom: 15vw * $px;
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 14vw * $px;
       line-height: 125.9%;
       color: #FFFFFF;
       background: #EC1C24;
-      padding: 6px 16px;
+      padding: 6vw * $px 16vw * $px;
+      @media all and (max-width: 1400px){
+        bottom: 15px;
+        font-size: 14px;
+        padding: 6px 16px;
+      }
       @media all and (max-width: 1200px){
         font-size: 13px;
       }
