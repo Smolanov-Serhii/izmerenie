@@ -262,6 +262,10 @@
     @media all and (max-width: 1024px){
       margin-top: 40px;
     }
+    @media all and (max-width: 768px){
+      position: static;
+      bottom: auto;
+    }
     @media all and (max-width: 500px){
       width: 100%;
       margin-top: 6vh;
