@@ -367,8 +367,8 @@ $(document).ready(function () {
         }).eq(0).addClass("active");
         $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
 
-        $(".default-power").click(function() {
-            $(this).fadeOut(300);
+        $(".default-power, .power__title").click(function() {
+            // $(this).fadeOut(300);
             $('.tabs-nav-item:eq(0)').click();
         })
 

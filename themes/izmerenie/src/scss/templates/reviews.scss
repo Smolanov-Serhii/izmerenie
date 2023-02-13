@@ -3,6 +3,9 @@
   @media all and (max-width: 1024px){
     margin-top: 30px;
   }
+  &__container{
+
+  }
   &__decoration{
     img{
       position: absolute;
@@ -196,6 +199,10 @@
   .swiper-pagination{
     display: flex;
     justify-content: flex-start;
+    @media all and (min-width: 1025px){
+      bottom: 3.3vh;
+      position: absolute;
+    }
     @media all and (max-width: 768px){
       justify-content: center;
       margin-top: 30px;

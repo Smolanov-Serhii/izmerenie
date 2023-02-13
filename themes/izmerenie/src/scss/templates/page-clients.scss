@@ -4,7 +4,8 @@
     padding-bottom: 38px;
   }
   .footer__static{
-    margin-top: 221px;
+    //margin-top: 221px;
+    margin-top: 10px;
     @media all and (max-width: 768px){
       margin-top: 150px;
     }
@@ -18,6 +19,11 @@
       height: auto;
     }
   }
+  .swiper-pagination{
+    position: static;
+    margin-top: 221px;
+  }
+
 }
 .page-clients{
   padding-top: 63vw * $px;

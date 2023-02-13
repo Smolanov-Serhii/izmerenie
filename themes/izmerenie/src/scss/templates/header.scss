@@ -134,7 +134,7 @@
       }
       a{
         font-weight: 400;
-        font-size: 14vw * $px;
+        font-size: 16vw * $px;
         line-height: 103.4%;
         color: #A0BCC8;
         text-decoration: none;
@@ -323,8 +323,8 @@
       }
       text-decoration: none;
       img{
-        width: 24vw * $px;
-        height: 24vw * $px;
+        width: 30vw * $px;
+        height: 30vw * $px;
         @media all and (max-width: 1400px){
           width: 24px;
           height: 24px;

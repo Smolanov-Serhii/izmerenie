@@ -117,12 +117,12 @@ $px: 0.0520833333333333;
         display: none!important;
       }
       .wpcf7-submit{
-        margin-top: 18vw * $px;
+        margin-top: 16vw * $px;
         @media all and (max-width: 1400px){
           margin-top: 18px;
         }
         @media all and (max-height: 900px){
-          margin-top: 20px;
+          margin-top: 16px;
         }
       }
       p{

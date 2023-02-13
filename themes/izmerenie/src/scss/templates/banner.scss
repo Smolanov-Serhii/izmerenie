@@ -45,7 +45,7 @@
       width: 20vw;
     }
     .top{
-      left: 300vw * $px;
+      left: 41vw;
       top: -100vw * $px;
       width: 20vw;
     }
@@ -275,7 +275,7 @@
   .swiper-pagination{
     position: absolute;
     left: 0;
-    bottom: 6vh;
+    bottom: 3.3vh;
     display: flex;
     @media all and (max-width: 1024px){
       bottom: 3vh;
