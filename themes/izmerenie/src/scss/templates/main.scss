@@ -24,3 +24,14 @@
   display: inline-block;
   cursor: pointer;
 }
+.tax-videos-category{
+  .main{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-bottom: 20px;
+    .page-videos{
+      flex: 1;
+    }
+  }
+}

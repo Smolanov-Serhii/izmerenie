@@ -77,24 +77,24 @@ $post_id = get_the_ID();
                 <section class="person height-section vertical-center scroll-section">
                     <?php if($counter == 1){
                         ?>
-                        <svg class="abs1" width="423" height="472" viewBox="0 0 423 472" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.2" filter="url(#filter0_d_1101_3957)">
-                                <path d="M76.5 271.507C49.1667 255.726 49.1666 216.274 76.5 200.493L307.5 67.125C334.833 51.3441 369 71.0702 369 102.632L369 369.368C369 400.93 334.833 420.656 307.5 404.875L76.5 271.507Z" fill="white"/>
-                                <path d="M77 270.641C50.3334 255.245 50.3333 216.755 77 201.359L308 67.9911C334.667 52.595 368 71.84 368 102.632L368 369.368C368 400.16 334.667 419.405 308 404.009L77 270.641Z" stroke="#BFD9EB" stroke-width="2"/>
-                            </g>
-                            <defs>
-                                <filter id="filter0_d_1101_3957" x="0" y="9.57092" width="425" height="460.858" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                    <feOffset dy="4"/>
-                                    <feGaussianBlur stdDeviation="28"/>
-                                    <feComposite in2="hardAlpha" operator="out"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 1 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1101_3957"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1101_3957" result="shape"/>
-                                </filter>
-                            </defs>
-                        </svg>
+<!--                        <svg class="abs1" width="423" height="472" viewBox="0 0 423 472" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <g opacity="0.2" filter="url(#filter0_d_1101_3957)">-->
+<!--                                <path d="M76.5 271.507C49.1667 255.726 49.1666 216.274 76.5 200.493L307.5 67.125C334.833 51.3441 369 71.0702 369 102.632L369 369.368C369 400.93 334.833 420.656 307.5 404.875L76.5 271.507Z" fill="white"/>-->
+<!--                                <path d="M77 270.641C50.3334 255.245 50.3333 216.755 77 201.359L308 67.9911C334.667 52.595 368 71.84 368 102.632L368 369.368C368 400.16 334.667 419.405 308 404.009L77 270.641Z" stroke="#BFD9EB" stroke-width="2"/>-->
+<!--                            </g>-->
+<!--                            <defs>-->
+<!--                                <filter id="filter0_d_1101_3957" x="0" y="9.57092" width="425" height="460.858" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">-->
+<!--                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>-->
+<!--                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>-->
+<!--                                    <feOffset dy="4"/>-->
+<!--                                    <feGaussianBlur stdDeviation="28"/>-->
+<!--                                    <feComposite in2="hardAlpha" operator="out"/>-->
+<!--                                    <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 1 0"/>-->
+<!--                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1101_3957"/>-->
+<!--                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1101_3957" result="shape"/>-->
+<!--                                </filter>-->
+<!--                            </defs>-->
+<!--                        </svg>-->
                         <?php
                     } else if($counter == 2){
                         ?>
@@ -133,23 +133,23 @@ $post_id = get_the_ID();
 
                     } else if($counter == 3){
                         ?>
-                        <svg width="423" height="462" viewBox="0 0 423 462" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.2" filter="url(#filter0_d_1101_3962)">
-                                <path d="M76.5 262.507C49.1667 246.726 49.1666 207.274 76.5 191.493L307.5 58.125C334.833 42.344 369 62.0701 369 93.632L369 360.368C369 391.93 334.833 411.656 307.5 395.875L76.5 262.507Z" fill="white"/>
-                            </g>
-                            <defs>
-                                <filter id="filter0_d_1101_3962" x="0" y="0.570801" width="425" height="460.858" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                    <feOffset dy="4"/>
-                                    <feGaussianBlur stdDeviation="28"/>
-                                    <feComposite in2="hardAlpha" operator="out"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 1 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1101_3962"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1101_3962" result="shape"/>
-                                </filter>
-                            </defs>
-                        </svg>
+<!--                        <svg width="423" height="462" viewBox="0 0 423 462" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <g opacity="0.2" filter="url(#filter0_d_1101_3962)">-->
+<!--                                <path d="M76.5 262.507C49.1667 246.726 49.1666 207.274 76.5 191.493L307.5 58.125C334.833 42.344 369 62.0701 369 93.632L369 360.368C369 391.93 334.833 411.656 307.5 395.875L76.5 262.507Z" fill="white"/>-->
+<!--                            </g>-->
+<!--                            <defs>-->
+<!--                                <filter id="filter0_d_1101_3962" x="0" y="0.570801" width="425" height="460.858" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">-->
+<!--                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>-->
+<!--                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>-->
+<!--                                    <feOffset dy="4"/>-->
+<!--                                    <feGaussianBlur stdDeviation="28"/>-->
+<!--                                    <feComposite in2="hardAlpha" operator="out"/>-->
+<!--                                    <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 1 0"/>-->
+<!--                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1101_3962"/>-->
+<!--                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1101_3962" result="shape"/>-->
+<!--                                </filter>-->
+<!--                            </defs>-->
+<!--                        </svg>-->
 
 
                         <?php
@@ -221,22 +221,22 @@ $post_id = get_the_ID();
     ?>
 </main>
 <a href="#main" class="to-up">
-    <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_d_381_1971)">
-            <rect x="23" y="19" width="60" height="60" rx="30" fill="#A0BCC8"/>
+    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_381_1951)">
+            <rect x="23" y="19" width="42" height="42" rx="21" fill="#A0BCC8"/>
         </g>
-        <rect x="61.9707" y="50.4854" width="2" height="12" rx="1" transform="rotate(135 61.9707 50.4854)" fill="white"/>
-        <rect x="53.4854" y="42.0001" width="2" height="12" rx="1" transform="rotate(45 53.4854 42.0001)" fill="white"/>
+        <rect x="50.2795" y="41.0397" width="1.4" height="8.4" rx="0.7" transform="rotate(135 50.2795 41.0397)" fill="white"/>
+        <rect x="44.3398" y="35.1" width="1.4" height="8.4" rx="0.7" transform="rotate(45 44.3398 35.1)" fill="white"/>
         <defs>
-            <filter id="filter0_d_381_1971" x="0" y="0" width="106" height="106" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter0_d_381_1951" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset dy="4"/>
                 <feGaussianBlur stdDeviation="11.5"/>
                 <feComposite in2="hardAlpha" operator="out"/>
                 <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 0.73 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_381_1971"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_381_1971" result="shape"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_381_1951"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_381_1951" result="shape"/>
             </filter>
         </defs>
     </svg>

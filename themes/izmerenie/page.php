@@ -186,10 +186,10 @@ $post_id = get_the_ID();
                                 ?>
                                 <div class="power__nav-item tabs-nav-item" data-aos="fade-right" data-aos-delay="<?php echo $counter;?>">
                                     <?php the_title(); ?>
-                                    <span class="arrow"></span>
-                                    <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17155 0.496976L4.35353 4.38589C4.54879 4.62453 4.54879 5.01145 4.35353 5.25009L1.17155 9.13901C0.976284 9.37765 0.659702 9.37765 0.46444 9.13901C0.269178 8.90037 0.269178 8.51345 0.46444 8.27481L3.29287 4.81799L0.46444 1.36118C0.269178 1.12254 0.269178 0.735619 0.46444 0.496976C0.659702 0.258332 0.976284 0.258332 1.17155 0.496976Z" fill="#213540"/>
-                                    </svg>
+<!--                                    <span class="arrow"></span>-->
+<!--                                    <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17155 0.496976L4.35353 4.38589C4.54879 4.62453 4.54879 5.01145 4.35353 5.25009L1.17155 9.13901C0.976284 9.37765 0.659702 9.37765 0.46444 9.13901C0.269178 8.90037 0.269178 8.51345 0.46444 8.27481L3.29287 4.81799L0.46444 1.36118C0.269178 1.12254 0.269178 0.735619 0.46444 0.496976C0.659702 0.258332 0.976284 0.258332 1.17155 0.496976Z" fill="#213540"/>-->
+<!--                                    </svg>-->
                                 </div>
                             <?php
                                 $counter = $counter + 100;
@@ -304,7 +304,7 @@ $post_id = get_the_ID();
             </h2>
             <div class="person__decoration">
                 <img class="person__decoration-left" src="<?php echo get_template_directory_uri() . '/img/person/dec-left.svg'; ?>" alt="decoration">
-                <img class="person__decoration-right" src="<?php echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?>" alt="decoration">
+<!--                <img class="person__decoration-right" src="--><?php //echo get_template_directory_uri() . '/img/person/dec-right.svg'; ?><!--" alt="decoration">-->
             </div>
             <div class="person__container main-container">
                 <div class="person__text">
@@ -379,7 +379,7 @@ $post_id = get_the_ID();
         </section>
         <section class="reviews height-section vertical-center scroll-section" id="reviews">
             <div class="reviews__decoration">
-                <img class="reviews__decoration-left" src="<?php echo get_template_directory_uri() . '/img/reviews/dec-left.svg'; ?>" alt="decoration">
+<!--                <img class="reviews__decoration-left" src="--><?php //echo get_template_directory_uri() . '/img/reviews/dec-left.svg'; ?><!--" alt="decoration">-->
 <!--                <img class="reviews__decoration-right" src="--><?php //echo get_template_directory_uri() . '/img/reviews/dec-right.svg'; ?><!--" alt="decoration">-->
             </div>
             <div class="reviews__container main-container">
@@ -474,22 +474,22 @@ $post_id = get_the_ID();
 </div>
 <?php wp_footer(); ?>
 <a href="#main" class="to-up">
-    <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_d_381_1971)">
-            <rect x="23" y="19" width="60" height="60" rx="30" fill="#A0BCC8"/>
+    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_381_1951)">
+            <rect x="23" y="19" width="42" height="42" rx="21" fill="#A0BCC8"/>
         </g>
-        <rect x="61.9707" y="50.4854" width="2" height="12" rx="1" transform="rotate(135 61.9707 50.4854)" fill="white"/>
-        <rect x="53.4854" y="42.0001" width="2" height="12" rx="1" transform="rotate(45 53.4854 42.0001)" fill="white"/>
+        <rect x="50.2795" y="41.0397" width="1.4" height="8.4" rx="0.7" transform="rotate(135 50.2795 41.0397)" fill="white"/>
+        <rect x="44.3398" y="35.1" width="1.4" height="8.4" rx="0.7" transform="rotate(45 44.3398 35.1)" fill="white"/>
         <defs>
-            <filter id="filter0_d_381_1971" x="0" y="0" width="106" height="106" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter0_d_381_1951" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset dy="4"/>
                 <feGaussianBlur stdDeviation="11.5"/>
                 <feComposite in2="hardAlpha" operator="out"/>
                 <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 0.73 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_381_1971"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_381_1971" result="shape"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_381_1951"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_381_1951" result="shape"/>
             </filter>
         </defs>
     </svg>

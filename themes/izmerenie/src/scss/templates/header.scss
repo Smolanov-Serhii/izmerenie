@@ -295,7 +295,7 @@
       }
       a{
         font-weight: 600;
-        font-size: 18vw * $px;
+        font-size: 20vw * $px;
         line-height: 25vw * $px;
         letter-spacing: 0.04em;
         color: #213540;
@@ -312,8 +312,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2.2vh;
     @media all and (max-width: 1350px){
-      padding-bottom: 80px;
+      padding-bottom: 1vw;
     }
     a{
       margin: 0 7vw * $px;

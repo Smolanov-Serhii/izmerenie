@@ -11,9 +11,9 @@ $px: 0.0520833333333333;
     }
     .footer__bottom{
       position: static;
-      padding-bottom: 38vw * $px;
+      padding-bottom: 20px;
       @media all and (max-width: 1400px){
-        padding-bottom: 38px;
+        padding-bottom: 20px;
       }
     }
   }
@@ -560,8 +560,8 @@ $px: 0.0520833333333333;
 }
 .to-up{
   position: fixed;
-  bottom: 62vw * $px;
-  right: 62vw * $px;
+  bottom: 2vh;
+  right: 2vh;
   z-index: 50;
   width: 106vw * $px;
   height: auto;
@@ -589,5 +589,12 @@ $px: 0.0520833333333333;
     bottom: 0px;
     width: 70px;
     height: 70px;
+  }
+}
+.page-template-contacts{
+  @media all and (max-width: 1400px){
+    .footer__form .wpcf7 .wpcf7-submit{
+      margin-top: 10px;
+    }
   }
 }
