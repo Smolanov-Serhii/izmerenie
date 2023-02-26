@@ -17,6 +17,15 @@ $px: 0.0520833333333333;
       }
     }
   }
+  .footer__bottom{
+    position: absolute;
+    bottom: 4.2vh;
+    top: auto!important;
+    left: 0;
+    @media all and (max-width: 1024px){
+      bottom: 68px;
+    }
+  }
   &.footer-page-contacts{
     @media all and (max-width: 1024px){
       margin-top: 140px;
@@ -560,11 +569,21 @@ $px: 0.0520833333333333;
 }
 .to-up{
   position: fixed;
-  bottom: 2.2vh;
-  right: 2vh;
+  bottom: 3.4vh;
+  right: 3vh;
   z-index: 50;
-  width: 106vw * $px;
+  //width: 106vw * $px;
   height: auto;
+  svg{
+    g{
+      rect{
+        fill: #BFD9EB;
+      }
+    }
+    > rect{
+      fill: #A0BCC8;
+    }
+  }
   @media all and (max-width: 1400px){
     right: 75px;
     bottom: 75px;

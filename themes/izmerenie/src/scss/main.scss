@@ -101,6 +101,15 @@ main{
   @extend .padding-left;
   @extend .padding-right;
 }
+.back-button{
+  position: fixed!important;
+  bottom: 3.3vh!important;
+  left: 230vw * $px;
+  width: 42px;
+  height: 42px;
+  top: auto!important;
+  right: auto!important;
+}
 .small-container{
   max-width: 1475vw * $px;
   margin: auto;

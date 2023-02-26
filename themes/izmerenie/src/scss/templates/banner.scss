@@ -12,8 +12,8 @@
   }
   .swiper-slide{
     &-num1{
-      @media all and (max-width: 1400px) and (aspect-ratio: 16/10){
-
+      @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
+        padding-bottom: 20vh;
       }
       @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
         padding-bottom: 20vh;
@@ -26,15 +26,26 @@
       @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
         padding-bottom: 20vh;
       }
+      @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
+        padding-bottom: 20vh;
+      }
       @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
         padding-bottom: 20vh;
       }
     }
     &-num3{
+      @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
+        padding-bottom: 20vh;
+      }
       @media screen and (aspect-ratio: 16/9) and (min-width: 1025px) {
         padding-bottom: 240vw * $px;
       }
       @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
+        .banner__logo{
+          width: calc(28.333% - 12px);
+        }
+      }
+      @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
         .banner__logo{
           width: calc(28.333% - 12px);
         }
@@ -103,7 +114,13 @@
       width: 47vw;
       height: 47vw;
     }
-    @media all and (max-width: 1400px) and (aspect-ratio: 16/10){
+    @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
+      width: 60vw;
+      height: 60vw;
+      top: 32%;
+      right: -50vw * $px;
+    }
+    @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
       width: 60vw;
       height: 60vw;
       top: 42%;
@@ -178,6 +195,14 @@
       height: 100%;
     }
     @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
+      width: 68vw;
+      height: 68vw;
+    }
+    @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
+      width: 68vw;
+      height: 68vw;
+    }
+    @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
       width: 68vw;
       height: 68vw;
     }
@@ -333,7 +358,7 @@
       justify-content: center;
     }
     @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
-      bottom: 6.8vh;
+      bottom: 3.2vh;
     }
     @media screen and (aspect-ratio: 16/10) {
 

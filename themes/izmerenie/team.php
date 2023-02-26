@@ -51,13 +51,6 @@ $post_id = get_the_ID();
             </svg>
         </div>
         <div class="team-page__container main-container">
-            <div class="back-button" onclick="window.history.back()">
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle opacity="0.2" cx="21" cy="21" r="21" fill="#BFD9EB"/>
-                    <rect x="23.4854" y="13" width="2" height="12" rx="1" transform="rotate(45 23.4854 13)" fill="#A0BCC8"/>
-                    <rect x="15" y="21.4853" width="2" height="12" rx="1" transform="rotate(-45 15 21.4853)" fill="#A0BCC8"/>
-                </svg>
-            </div>
             <h1 class="team-page__title page-title">
                 <?php echo the_field("zagolovok_storinky", $post_id); ?>
             </h1>
@@ -212,6 +205,17 @@ $post_id = get_the_ID();
                             <div class="person__image">
                                 <img src="<?php echo $img ?>" alt="<?php echo $fio;?>">
                             </div>
+                            <footer id="footer" class="footer footer__static">
+                                <div class="footer__container">
+                                    <div class="footer__bottom">
+                                        <div class="footer__copyright">
+                                            <?php echo the_field("tekst_2022_chetvertoe_izmerenie_vse_prava_zashhishheny", 'options'); ?>
+                                        </div>
+                                        <a class="footer__phone" href="tel:<?php echo the_field("tulufon_na_sajt", 'options'); ?>"><?php echo the_field("tulufon_na_sajt", 'options'); ?></a>
+                                        <a class="footer__mail" href="mailto:<?php echo the_field("pochta_na_sajt", 'options'); ?>"><?php echo the_field("pochta_na_sajt", 'options'); ?></a>
+                                    </div>
+                                </div>
+                            </footer>
                         </div>
                     </div>
                 </section>
@@ -221,26 +225,19 @@ $post_id = get_the_ID();
     ?>
 </main>
 <a href="#main" class="to-up">
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_d_381_1951)">
-            <rect x="23" y="19" width="42" height="42" rx="21" fill="#A0BCC8"/>
-        </g>
-        <rect x="50.2795" y="41.0397" width="1.4" height="8.4" rx="0.7" transform="rotate(135 50.2795 41.0397)" fill="white"/>
-        <rect x="44.3398" y="35.1" width="1.4" height="8.4" rx="0.7" transform="rotate(45 44.3398 35.1)" fill="white"/>
-        <defs>
-            <filter id="filter0_d_381_1951" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="4"/>
-                <feGaussianBlur stdDeviation="11.5"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0.756863 0 0 0 0 0.858824 0 0 0 0 0.929412 0 0 0 0.73 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_381_1951"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_381_1951" result="shape"/>
-            </filter>
-        </defs>
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle opacity="0.2" cx="21" cy="21" r="21" transform="rotate(90 21 21)" fill="#BFD9EB"/>
+        <rect x="29" y="23.4853" width="2" height="12" rx="1" transform="rotate(135 29 23.4853)" fill="#A0BCC8"/>
+        <rect x="20.5156" y="15" width="2" height="12" rx="1" transform="rotate(45 20.5156 15)" fill="#A0BCC8"/>
     </svg>
 </a>
+<div class="back-button" onclick="window.history.back()">
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle opacity="0.2" cx="21" cy="21" r="21" fill="#BFD9EB"/>
+        <rect x="23.4854" y="13" width="2" height="12" rx="1" transform="rotate(45 23.4854 13)" fill="#A0BCC8"/>
+        <rect x="15" y="21.4853" width="2" height="12" rx="1" transform="rotate(-45 15 21.4853)" fill="#A0BCC8"/>
+    </svg>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

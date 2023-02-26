@@ -58,6 +58,13 @@ $post_id = get_the_ID();
             </div>
         </div>
     </footer>
+    <a href="#main" class="to-up">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity="0.2" cx="21" cy="21" r="21" transform="rotate(90 21 21)" fill="#BFD9EB"/>
+            <rect x="29" y="23.4853" width="2" height="12" rx="1" transform="rotate(135 29 23.4853)" fill="#A0BCC8"/>
+            <rect x="20.5156" y="15" width="2" height="12" rx="1" transform="rotate(45 20.5156 15)" fill="#A0BCC8"/>
+        </svg>
+    </a>
 </main>
 
 <?php wp_footer(); ?>

@@ -47,6 +47,13 @@ get_header();
 <!--                <a class="footer__phone" href="tel:--><?php //echo the_field("tulufon_na_sajt", 'options'); ?><!--">--><?php //echo the_field("tulufon_na_sajt", 'options'); ?><!--</a>-->
 <!--                <a class="footer__mail" href="mailto:--><?php //echo the_field("pochta_na_sajt", 'options'); ?><!--">--><?php //echo the_field("pochta_na_sajt", 'options'); ?><!--</a>-->
 <!--            </div>-->
+            <div class="footer__bottom main-container">
+                <div class="footer__copyright">
+                    <?php echo the_field("tekst_2022_chetvertoe_izmerenie_vse_prava_zashhishheny", 'options'); ?>
+                </div>
+                <a class="footer__phone" href="tel:<?php echo the_field("tulufon_na_sajt", 'options'); ?>"><?php echo the_field("tulufon_na_sajt", 'options'); ?></a>
+                <a class="footer__mail" href="mailto:<?php echo the_field("pochta_na_sajt", 'options'); ?>"><?php echo the_field("pochta_na_sajt", 'options'); ?></a>
+            </div>
         </div>
     </footer>
 </main>
