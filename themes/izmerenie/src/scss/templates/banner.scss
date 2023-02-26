@@ -10,6 +10,37 @@
   @media all and (max-width: 500px){
 
   }
+  .swiper-slide{
+    &-num1{
+      @media all and (max-width: 1400px) and (aspect-ratio: 16/10){
+
+      }
+      @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
+        padding-bottom: 20vh;
+      }
+      @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
+        padding-bottom: 20vh;
+      }
+    }
+    &-num2{
+      @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
+        padding-bottom: 20vh;
+      }
+      @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
+        padding-bottom: 20vh;
+      }
+    }
+    &-num3{
+      @media screen and (aspect-ratio: 16/9) and (min-width: 1025px) {
+        padding-bottom: 240vw * $px;
+      }
+      @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
+        .banner__logo{
+          width: calc(28.333% - 12px);
+        }
+      }
+    }
+  }
   .position1{
     .left{
       top: -140vw * $px;
@@ -63,7 +94,7 @@
   &__image{
     position: absolute;
     //top: 106px;
-    top: 49%;
+    top: 43%;
     transform: translateY(-50%);
     right: -170vw * $px;
     border-radius: 50%;
@@ -71,6 +102,14 @@
     @media all and (max-width: 1400px){
       width: 47vw;
       height: 47vw;
+    }
+    @media all and (max-width: 1400px) and (aspect-ratio: 16/10){
+      width: 60vw;
+      height: 60vw;
+      top: 42%;
+    }
+    @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
+      top: 39%;
     }
     @media all and (max-width: 1024px){
 
@@ -85,6 +124,9 @@
     }
     @media all and (max-width: 500px){
 
+    }
+    @media screen and (aspect-ratio: 16/9) {
+      top: 37%;
     }
   }
   &__block{
@@ -128,12 +170,16 @@
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center center;
-    width: 1190vw * $px;
-    height: 1190vw * $px;
+    width: 1100vw * $px;
+    height: 1100vw * $px;
     position: relative;
     @media all and (max-width: 1400px){
       width: 100%;
       height: 100%;
+    }
+    @media all and (min-width: 1400px) and (aspect-ratio: 4/3){
+      width: 68vw;
+      height: 68vw;
     }
     @media all and (max-width: 1024px){
 
@@ -220,9 +266,11 @@
     align-items: flex-start;
     flex-wrap: wrap;
     position: relative;
+    padding-bottom: 7vh;
     &.last-slide{
       .banner__block{
         padding-top: 0;
+
       }
     }
   }
@@ -275,7 +323,7 @@
   .swiper-pagination{
     position: absolute;
     left: 0;
-    bottom: 3.3vh;
+    bottom: 6.8vh;
     display: flex;
     @media all and (max-width: 1024px){
       bottom: 3vh;
@@ -283,6 +331,18 @@
     @media all and (max-width: 768px){
       width: 100%;
       justify-content: center;
+    }
+    @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
+      bottom: 6.8vh;
+    }
+    @media screen and (aspect-ratio: 16/10) {
+
+    }
+    @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
+      bottom: 6.8vh;
+    }
+    @media screen and (aspect-ratio: 3/4) {
+      bottom: 6.4vh;
     }
     > div{
       margin-right: 22px;

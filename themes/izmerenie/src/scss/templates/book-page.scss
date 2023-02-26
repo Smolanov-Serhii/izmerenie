@@ -24,7 +24,7 @@
     justify-content: space-between;
   }
   &__img{
-    width: 48%;
+    width: 44%;
     @media all and (max-width: 1400px){
       width: 35%;
     }
@@ -92,7 +92,7 @@
     }
   }
   &__about{
-    padding: 60vw * $px 45vw * $px;
+    padding: 40vw * $px 45vw * $px;
     background-color: rgba(160,188,200,0.1);
     border-radius: 15vw * $px;
     @media all and (max-width: 1400px){
