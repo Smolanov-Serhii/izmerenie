@@ -586,28 +586,27 @@ $px: 0.0520833333333333;
     }
   }
   @media all and (max-width: 1400px){
-
     svg{
       width: 100%;
       height: 100%;
     }
   }
-  @media all and (max-width: 1024px){
-    width: 100px;
-    height: 100px;
-  }
-  @media all and (max-width: 768px){
-    right: 15px;
-    bottom: 15px;
-    width: 90px;
-    height: 90px;
-  }
-  @media all and (max-width: 500px){
-    right: 0px;
-    bottom: 0px;
-    width: 70px;
-    height: 70px;
-  }
+  //@media all and (max-width: 1024px){
+  //  width: 100px;
+  //  height: 100px;
+  //}
+  //@media all and (max-width: 768px){
+  //  right: 15px;
+  //  bottom: 15px;
+  //  width: 90px;
+  //  height: 90px;
+  //}
+  //@media all and (max-width: 500px){
+  //  right: 0px;
+  //  bottom: 0px;
+  //  width: 70px;
+  //  height: 70px;
+  //}
 }
 .page-template-contacts{
   @media all and (max-width: 1400px){

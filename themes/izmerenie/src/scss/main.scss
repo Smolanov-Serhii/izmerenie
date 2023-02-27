@@ -109,6 +109,9 @@ main{
   height: 42px;
   top: auto!important;
   right: auto!important;
+  @media all and (max-width: 1024px){
+    display: none!important;
+  }
 }
 .small-container{
   max-width: 1475vw * $px;
