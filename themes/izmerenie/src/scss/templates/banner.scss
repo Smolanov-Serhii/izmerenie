@@ -110,10 +110,12 @@
     right: -170vw * $px;
     border-radius: 50%;
     //overflow: hidden;
-    @media all and (max-width: 1400px){
-      width: 47vw;
-      height: 47vw;
-    }
+    width: 60vw;
+    height: 60vw;
+    //@media all and (max-width: 1400px){
+    //  width: 47vw;
+    //  height: 47vw;
+    //}
     @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
       width: 60vw;
       height: 60vw;
@@ -348,7 +350,7 @@
   .swiper-pagination{
     position: absolute;
     left: 0;
-    bottom: 6.8vh;
+    bottom: 3.2vh;
     display: flex;
     @media all and (max-width: 1024px){
       bottom: 3vh;
@@ -360,14 +362,17 @@
     @media all and (min-width: 1400px) and (aspect-ratio: 16/10){
       bottom: 3.2vh;
     }
+    @media all and (min-width: 1400px){
+      bottom: 3.2vh;
+    }
     @media screen and (aspect-ratio: 16/10) {
-
+      bottom: 3.2vh;
     }
     @media all and (min-width: 1400px) and (aspect-ratio: 16/9){
-      bottom: 6.8vh;
+      bottom: 3.2vh;
     }
     @media screen and (aspect-ratio: 3/4) {
-      bottom: 6.4vh;
+      bottom: 3.2vh;
     }
     > div{
       margin-right: 22px;

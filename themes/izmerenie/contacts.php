@@ -19,6 +19,13 @@ get_header();
 
     <footer id="footer" class="footer height-section vertical-center scroll-section footer-page-contacts">
         <div class="footer__container main-container">
+            <div class="back-button" onclick="window.history.back()">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.2" cx="21" cy="21" r="21" fill="#BFD9EB"/>
+                    <rect x="23.4854" y="13" width="2" height="12" rx="1" transform="rotate(45 23.4854 13)" fill="#A0BCC8"/>
+                    <rect x="15" y="21.4853" width="2" height="12" rx="1" transform="rotate(-45 15 21.4853)" fill="#A0BCC8"/>
+                </svg>
+            </div>
             <div class="footer__form">
                 <h2 class="footer__title section-title">
                     Как связаться

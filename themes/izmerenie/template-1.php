@@ -167,8 +167,8 @@ $post_id = get_the_ID();
                 <?php echo do_shortcode('[contact-form-7 id="14" title="footer form"]'); ?>
             </div>
         </div>
-        <div class="footer__container main-container">
-            <div class="footer__bottom">
+        <div class="footer__container">
+            <div class="footer__bottom main-container">
                 <div class="footer__copyright">
                     <?php echo the_field("tekst_2022_chetvertoe_izmerenie_vse_prava_zashhishheny", 'options'); ?>
                 </div>

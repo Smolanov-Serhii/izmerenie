@@ -1,6 +1,7 @@
 .publications-page{
   padding-bottom: 187px;
   padding-top: 63px;
+  min-height: 100vh;
   @media all and (max-width: 1400px){
     padding-bottom: 187vw * $px;
     padding-top: 63vw * $px;
